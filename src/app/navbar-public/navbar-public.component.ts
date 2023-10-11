@@ -1,5 +1,5 @@
 
-import { Component, ElementRef, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, AfterViewInit, OnInit, HostListener} from '@angular/core';
 @Component({
   selector: 'app-navbar-public',
   templateUrl: './navbar-public.component.html',
@@ -40,5 +40,30 @@ export class NavbarPublicComponent implements AfterViewInit  {
         }
       });
     });
+  }
+
+  //=======
+  ngOnInit() {
+    // Esto se ejecutará cuando se inicie el componente.
+  }
+
+  @HostListener("window:scroll", ["$event"])
+  onWindowScroll() {
+    const udHeader = document.querySelector(".ud-header") as HTMLElement;
+    const logo = document.querySelector(".navbar-brand img") as HTMLImageElement;
+
+    if (!udHeader || !logo) {
+      return; // Asegurarse de que los elementos existen
+    }
+
+    const sticky = udHeader.offsetTop;
+
+    if (window.pageYOffset > sticky) {
+      udHeader.classList.add("sticky");
+      logo.src = "assets/images/logo/logo-2.svg";
+    } else {
+      udHeader.classList.remove("sticky");
+      logo.src = "assets/images/logo/logo.svg";
+    }
   }
 }

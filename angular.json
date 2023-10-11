@@ -30,7 +30,12 @@
               "src/assets/css/animate.css",
               "node_modules/animate.css/animate.min.css",
               "src/assets/css/ud-styles.css",
-              "src/assets/css/lineicons.css"
+              "src/assets/css/lineicons.css",
+              "src/assets/css/main.css",
+              "src/assets/css/glightbox.min.css",
+              
+              "src/assets/css/responsive.css",
+              "src/assets/css/tiny-slider.css"
             ],
             "scripts": ["./src/assets/js/bootstrap.bundle.min.js",
             "node_modules/jquery/dist/jquery.js",
