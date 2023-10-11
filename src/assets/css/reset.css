@@ -36,7 +36,7 @@ footer,
 header,
 main,
 menu,
-nav,
+
 section,
 summary {
 	display: block;
@@ -64,9 +64,7 @@ a:hover {
 	outline: 0;
 	text-decoration:none;
 }
-.slicknav_menu{
-	display:none;
-}
+
 .table {
 	display: table;
 	width: 100%;
@@ -233,41 +231,7 @@ th {
 	width:80px;
 	background:#3E54FF;
 }
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav {
-	background: transparent;
-	border-radius: 0;
-	margin-bottom: 0;
-	padding: 0;
-	display: block;
-	display: inline-block;
-	float: right;
-}
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav li{
-	display:inline-block;
-}
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav li,
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav li a{
-    color: #fff;
-    font-size: 14px;
-	font-weight:500;
-}
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav li a{
-    padding-right: 15px;
-    margin-right: 15px;
-    position: relative;
-}
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav li a:hover{
-    color: #0C59DB;
-}
-.breadcrumbs .breadcrumbs-content .breadcrumb-nav li a:after{
-    content: '';
-    height: 80%;
-    width: 2px;
-    background-color: #fff;
-    position: absolute;
-    top: 2px;
-    right: 0;
-}
+
 /* Pagination CSS */
 .pagination {
 	text-align: left;
@@ -689,94 +653,7 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
-	clear: both;
-	display: block;
-	float: left;
-	width: 100%;
-}
 
-.main-navigation ul {
-	display: none;
-	list-style: none;
-	margin: 0;
-	padding-left: 0;
-}
-
-.main-navigation ul ul {
-	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
-	float: left;
-	position: absolute;
-	top: 100%;
-	left: -999em;
-	z-index: 99999;
-}
-
-.main-navigation ul ul ul {
-	left: -999em;
-	top: 0;
-}
-
-.main-navigation ul ul li:hover > ul,
-.main-navigation ul ul li.focus > ul {
-	left: 100%;
-}
-
-.main-navigation ul ul a {
-	width: 200px;
-}
-
-.main-navigation ul li:hover > ul,
-.main-navigation ul li.focus > ul {
-	left: auto;
-}
-
-.main-navigation li {
-	float: left;
-	position: relative;
-}
-
-.main-navigation a {
-	display: block;
-	text-decoration: none;
-}
-
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
-}
-
-@media screen and (min-width: 37.5em) {
-	.menu-toggle {
-		display: none;
-	}
-	.main-navigation ul {
-		display: block;
-	}
-}
-
-.site-main .comment-navigation, .site-main
-.posts-navigation, .site-main
-.post-navigation {
-	margin: 0 0 1.5em;
-	overflow: hidden;
-}
-
-.comment-navigation .nav-previous,
-.posts-navigation .nav-previous,
-.post-navigation .nav-previous {
-	float: left;
-	width: 50%;
-}
-
-.comment-navigation .nav-next,
-.posts-navigation .nav-next,
-.post-navigation .nav-next {
-	float: right;
-	text-align: right;
-	width: 50%;
-}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -890,9 +767,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-.sticky {
-	display: block;
-}
 
 .hentry {
 	margin: 0 0 1.5em;
