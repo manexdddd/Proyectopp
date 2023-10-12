@@ -6,24 +6,8 @@ Author: GrayGrids
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-html {
-	font-family: 'Poppins', sans-serif;
-	-moz-text-size-adjust: 100%;
-	-webkit-text-size-adjust: 100%;
-	-ms-text-size-adjust: 100%;
-	text-size-adjust: 100%;
-}
-html,body {
-	height: 100%;
-	margin: 0;
-}
-*{
-	padding:0;
-	margin:0;
-}
-body {
-	margin: 0;
-}
+
+
 img{
 	max-width:100%;
 }
@@ -285,7 +269,7 @@ select,
 optgroup,
 textarea {
 	color: #333;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppis', sans-serif;
 	font-weight:400;
 	font-size: 14px;
 	line-height: 24px;
@@ -341,7 +325,7 @@ ul, ul li{
 }
 pre {
 	background: #eee;
-	font-family: 'Poppins', sans-serif;
+	font-family: 'Poppis', sans-serif;
 	font-size: 15px;
 	font-size: 0.9375rem;
 	line-height: 1.6;
@@ -497,6 +481,7 @@ big {
 }
 .button .btn.white-bg{
 	border:2px solid transparent;
+	border-radius: 30px;
 }
 .button .btn.white-bg:hover{
 	border-color:#3E54FF;
