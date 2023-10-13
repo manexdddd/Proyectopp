@@ -15,8 +15,13 @@
   --font: "Inter", sans-serif;
   --body-color: #637381;
   --heading-color: #212b36;
+<<<<<<< HEAD
   --primary-color:    #3E54FF;
   --white: #ffffff;
+=======
+  --primary-color: #b5b5b5;
+  --white: #17396A;
+>>>>>>> a7a1d67 (nose)
 }
 
 body {
