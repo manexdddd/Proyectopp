@@ -11,7 +11,7 @@ import { EncuestasPublicComponent } from './encuestas-public/encuestas-public.co
 import { FooterPublicComponent } from './footer-public/footer-public.component';
 import { NavbarPublicComponent } from './navbar-public/navbar-public.component';
 import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
-import { AcercaDePublicComponent } from './acerca-de-public/acerca-de-public.component';
+
 
 
 
@@ -26,7 +26,6 @@ import { AcercaDePublicComponent } from './acerca-de-public/acerca-de-public.com
     FooterPublicComponent,
     NavbarPublicComponent,
     AvisosPublicComponent,
-    AcercaDePublicComponent
   ],
   imports: [
     BrowserModule,
