@@ -35,6 +35,8 @@
               "src/assets/css/glightbox.min.css",
               "src/assets/css/reset.css",
               "src/assets/css/responsive.css",
+              "src/assets/css/theme.min.css",
+              "src/assets/css/theme.css",
               "src/assets/css/tiny-slider.css"
             ],
             "scripts": ["./src/assets/js/bootstrap.bundle.min.js",
