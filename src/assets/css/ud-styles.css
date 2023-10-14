@@ -15,7 +15,7 @@
   --font: "Inter", sans-serif;
   --body-color: #637381;
   --heading-color: #212b36;
-  --primary-color:    #0000b3;
+  --primary-color:    #3E54FF;
   --white: #ffffff;
 }
 
@@ -509,6 +509,7 @@ p {
 .ud-hero {
   background: var(--primary-color);
   padding-top: 180px;
+ 
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
@@ -2634,8 +2635,8 @@ p {
 
 
 .area{
-  background: #0000b3;  
-  background: -webkit-linear-gradient(to left, #0000b3, #0000b3);  
+  background: #3E54FF;  
+  background: -webkit-linear-gradient(to left, #0000b3, #3E54FF);  
   width: 100%;
   height:100vh;
   
@@ -2757,22 +2758,40 @@ p {
   }
 
 }
-@import url(//fonts.googleapis.com/css?family=Montserrat:400,700);
+
 .static-slider10 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 300;
-	padding: 15% 0;
+ 
+  position: relative;
+  width: 100%; /* Ajusta el ancho del contenedor según tus necesidades */
+ 
+  overflow: hidden;
+  padding: 15% 0;
   background-size: cover;
   background-position: center center;
 }
+
+.static-slider10::before {
+  content: "";
+  background: rgba(0, 0, 0, 0.5); /* Color oscuro con transparencia (ajusta según tu preferencia) */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Toma el 100% del ancho del div contenedor */
+  height: 100%;
+}
+
+
 .static-slider10 .title {
   font-weight: 700;
   font-size: 48px;
   line-height: 50px;
+  position: relative;
+  z-index: 2;
 }
 
 .static-slider10 .subtitle {
     line-height: 24px;
+   filter: brightness(120%);
 }
 
 @media (max-width: 900px) {
@@ -2798,3 +2817,8 @@ p {
 .static-slider10 .op-8 {
 	opacity: 0.8;
 }
+
+
+
+
+
