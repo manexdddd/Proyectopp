@@ -1,23 +1,10 @@
-/* =======
-
-	Template Name: Play Bootstrap
-	Author: UIdeck
-	Author URI: https://uideck.com/
-	Support: https://github.com/uideck/
-	Version: 1.0
-
-======== */
-/*===========================
-  COMMON css 
-===========================*/
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
 :root {
   --font: "Inter", sans-serif;
   --body-color: #637381;
   --heading-color: #212b36;
-
   --primary-color:    #3E54FF;
-
+  --white: #ffffff;
 }
 
 body {
@@ -2818,6 +2805,9 @@ p {
 .static-slider10 .op-8 {
 	opacity: 0.8;
 }
+
+
+
 
 
 
