@@ -854,3 +854,175 @@ object {
     -o-transform: scale(2);
     transform: scale(2);
     opacity: 0; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	.overlay-mf {
+		background-color: #0078ff;
+	  }
+	  
+	  .overlay-mf {
+		position: absolute;
+		top: 0;
+		left: 0px;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+		opacity: .7;
+	  }
+	  
+	  .paralax-mf {
+		position: relative;
+		padding: 8rem 0;
+	  }
+	  
+	  .display-table {
+		width: 100%;
+		height: 100%;
+		display: table;
+	  }
+	  
+	  .table-cell {
+		display: table-cell;
+		vertical-align: middle;
+	  }
+	  
+	  
+	
+	  .paralax-mf {
+		position: relative;
+		padding: 8rem 0;
+	  }
+	  
+	  .display-table {
+		width: 100%;
+		height: 100%;
+		display: table;
+	  }
+	  
+	  .table-cell {
+		display: table-cell;
+		vertical-align: middle;
+	  }
+	  
+	  /*--/ Sections /--*/
+	  
+	  .sect-4 {
+		padding: 4rem 0;
+	  }
+	  
+	  .sect-pt4 {
+		padding-top: 4rem;
+	  }
+	  
+	  .sect-mt4 {
+		margin-top: 4rem;
+	  }
+	  
+	  /*--/ Title s /--*/
+	  
+	  .title-s {
+		font-weight: 600;
+		color: #1e1e1e;
+		font-size: 1.1rem;
+	  }
+	
+	
+	
+	  element.style {
+		animation-iteration-count: 0;
+	}
+	
+	.intro {
+		height: 100vh;
+		position: relative;
+		color: #fff;
+	  }
+	  
+	  .intro .intro-content {
+		text-align: center;
+		position: absolute;
+	  }
+	  
+	  .intro .overlay-itro {
+		background-color: rgba(0, 0, 0, 0.6);
+		position: absolute;
+		top: 0;
+		left: 0px;
+		padding: 0;
+		height: 100%;
+		width: 100%;
+		opacity: .9;
+	  }
+	  
+	  .intro .intro-title {
+		color: #fff;
+		font-weight: 600;
+		font-size: 3rem;
+	  }
+	  
+	  .intro .intro-subtitle {
+		font-size: 1.5rem;
+		font-weight: 300;
+	  }
+	  
+	  .intro .text-slider-items {
+		display: none;
+	  }
+	  
+	  .intro-single {
+		height: 350px;
+	  }
+	  
+	  .intro-single .intro-content {
+		margin-top: 30px;
+	  }
+	  
+	  .intro-single .intro-title {
+		text-transform: uppercase;
+		font-size: 3rem;
+	  }
+	  
+	  .intro-single .breadcrumb {
+		background-color: transparent;
+		color: #0078ff;
+	  }
+	  
+	  .intro-single .breadcrumb .breadcrumb-item:before {
+		color: #cde1f8;
+	  }
+	  
+	  .intro-single .breadcrumb .breadcrumb-item.active {
+		color: #cde1f8;
+	  }
+	  
+	  .intro-single .breadcrumb a {
+		color: #fff;
+	  }
+	
+	
