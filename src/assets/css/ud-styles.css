@@ -153,6 +153,7 @@ p {
   -webkit-transition: all 0.4s ease-out 0s;
   transition: all 0.4s ease-out 0s;
   background: var(--primary-color);
+ 
 }
 
 .ud-main-btn:hover {
@@ -306,6 +307,8 @@ p {
   .navbar-nav {
     padding: 20px 30px;
   }
+
+ 
 }
 
 .navbar-nav .nav-item {
@@ -317,12 +320,16 @@ p {
   .navbar-nav .nav-item {
     padding: 0px 12px;
   }
+
+  
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-nav .nav-item {
     padding: 0px;
   }
+
+  
 }
 
 .navbar-nav .nav-item > a {
@@ -341,6 +348,8 @@ p {
     padding: 8px 0;
     color: var(--heading-color);
   }
+
+  
 }
 
 .navbar-nav .nav-item > a:hover, .navbar-nav .nav-item > a.active {
@@ -407,6 +416,7 @@ p {
     color: var(--primary-color);
     opacity: 1;
   }
+ 
 }
 
 .navbar-nav .nav-item:hover > .ud-submenu {
@@ -415,8 +425,14 @@ p {
   top: 100%;
 }
 
+
+.navbar-nav .nav-item.nav-item-has-children  {
+  margin-right: 15px;
+ 
+}
 .navbar-nav .nav-item.nav-item-has-children > a {
   position: relative;
+ 
 }
 
 .navbar-nav .nav-item.nav-item-has-children > a::after {
@@ -433,11 +449,17 @@ p {
   right: -15px;
   top: 50%;
   margin-top: -2px;
+   margin-right: 5px;
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
   .navbar-nav .nav-item.nav-item-has-children > a::after {
     right: 5px;
+  }
+
+  .navbar-nav .nav-item.nav-item-has-children  {
+    
+   
   }
 }
 
