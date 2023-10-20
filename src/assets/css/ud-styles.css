@@ -331,7 +331,7 @@ p {
   color: var(--white);
   -webkit-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
-  padding: 25px 8px;
+  padding-right: 5px;
   position: relative;
 }
 
@@ -2787,6 +2787,7 @@ p {
   line-height: 50px;
   position: relative;
   z-index: 2;
+  margin: 10px;
 }
 
 .static-slider10 .subtitle {
