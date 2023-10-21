@@ -40,7 +40,7 @@
             ],
             "scripts": ["./src/assets/js/bootstrap.bundle.min.js",
             "node_modules/jquery/dist/jquery.js",
-            "./src/assets/js/main.js","./src/assets/js/wow.min.js",
+            "./src/assets/js/main.js","./src/assets/js/wow.min.js","./src/assets/js/isotope.min.js",
             "node_modules/wowjs/dist/wow.js"]
           },
           "configurations": {
