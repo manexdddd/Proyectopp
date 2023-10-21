@@ -6,7 +6,7 @@ Author: GrayGrids
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
-
+@import url('https://fonts.googleapis.com/css2?family=Handlee&display=swap');
 
 img{
 	max-width:100%;
@@ -269,7 +269,7 @@ select,
 optgroup,
 textarea {
 	color: #333;
-    font-family: 'Poppis', sans-serif;
+	font-family: 'Handlee', cursive;
 	font-weight:400;
 	font-size: 14px;
 	line-height: 24px;
