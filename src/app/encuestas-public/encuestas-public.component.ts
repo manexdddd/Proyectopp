@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-encuestas-public',
@@ -6,5 +7,36 @@ import { Component } from '@angular/core';
   styleUrls: ['./encuestas-public.component.css']
 })
 export class EncuestasPublicComponent {
+  encuestaForm! : FormGroup;
+
+
+  constructor(private readonly fb: FormBuilder) {}
+
+  ngOnInit(): void{
+    this.encuestaForm = this.initForm();
+  }
+
+  onSubmit(): void {
+  console.log('Form ->', this.encuestaForm.value);
+  }
+
+  initForm(): FormGroup{
+    return this.fb.group({
+      name: ['', [Validators.required]],
+      numberC: ['', [Validators.required, Validators.minLength(9), Validators.maxLength(9)]],
+      nomTu: ['', [Validators.required]],
+      grupo: ['', [Validators.required]],
+      carrera: ['', [Validators.required]],
+      platica: ['', [Validators.required]],
+      nomPon: ['', [Validators.required]],
+      opcion1: ['', [Validators.required]],
+      opcion2: ['', [Validators.required]],
+      opcion3: ['', [Validators.required]],
+      opcion4: ['', [Validators.required]],
+      comentario0: ['', [Validators.required]],
+      opcion5: ['', [Validators.required]],
+      comentario1: ['', [Validators.required]]
+    })
+  }
 
 }
