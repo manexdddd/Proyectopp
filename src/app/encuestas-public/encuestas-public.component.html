@@ -68,7 +68,7 @@
                     required
                     formControlName="name"
                   />
-                  <div *ngIf="encuestaForm.get('name')?.touched && encuestaForm.get('name')?.errors?.['required']"
+                  <div *ngIf="(enviado && encuestaForm.get('name')?.invalid)  || encuestaForm.get('name')?.touched && encuestaForm.get('name')?.errors?.['required']"
                   class="alert alert-danger">Este campo es Obligatorio</div>
                 </div>
                 <div class="ud-form-group">
@@ -116,7 +116,7 @@
                 <div class="ud-form-group">
                   <label for="carrera"  >Elige tu Carrera </label>
                   <select name="carrera" id="carrera" class="form-select form-select-sm" formControlName="carrera" required>
-                    <option selected  >Ingenierías 🐾</option>
+                    <option selected  value="" >Ingenierías 🐾</option>
                     <option value="Tic's">Ingeniería en Tic's</option>
                     <option value="Nano">Ingeniería en Nanotecnologia</option>
                     <option value="Meca">Ingeniería Mecatrónica</option>
@@ -181,7 +181,7 @@
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta1" formControlName="opcion2" [value]="'No'">
+                    <input class="form-check-input" type="radio" name="opcion2" formControlName="opcion2" [value]="'No'">
                     <label class="form-check-label" for="flexRadioDefault2">
                       NO
                     </label>
@@ -195,13 +195,13 @@
                 <div class="ud-form">
                   <label for="">¿Consideras que el ponente abordó el tema de manera clara e interesante?</label><br>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta2" formControlName="opcion3" [value]="'Si'">
+                    <input class="form-check-input" type="radio" name="opcion3" formControlName="opcion3" [value]="'Si'">
                     <label class="form-check-label" for="flexRadioDefault1">
                       Si
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta2" formControlName="opcion3" [value]="'No'">
+                    <input class="form-check-input" type="radio" name="opcion3" formControlName="opcion3" [value]="'No'">
                     <label class="form-check-label" for="flexRadioDefault2">
                       NO
                     </label>
@@ -215,13 +215,13 @@
                 <div class="ud-form">
                   <label for="">¿Consideras que el tema expuesto es de utilidad en tu formación?</label><br>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta3" formControlName="opcion4" [value]="'Si'">
+                    <input class="form-check-input" type="radio" name="opcion4" formControlName="opcion4" [value]="'Si'">
                     <label class="form-check-label" for="flexRadioDefault1">
                       Si
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta3" formControlName="opcion4" [value]="'No'">
+                    <input class="form-check-input" type="radio" name="opcion4" formControlName="opcion4" [value]="'No'">
                     <label class="form-check-label" for="flexRadioDefault2">
                       NO
                     </label>
@@ -244,13 +244,13 @@
                 <div class="ud-form">
                   <label for="">¿Consideras que el tema expuesto es de utilidad en tu formación?</label><br>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta4" formControlName="opcion5" [value]="'Si'">
+                    <input class="form-check-input" type="radio" name="opcion5" formControlName="opcion5" [value]="'Si'">
                     <label class="form-check-label" for="flexRadioDefault1">
                       Si
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="pregunta4" formControlName="opcion5" [value]="'No'">
+                    <input class="form-check-input" type="radio" name="opcion5" formControlName="opcion5" [value]="'No'">
                     <label class="form-check-label" for="flexRadioDefault2">
                       NO
                     </label>

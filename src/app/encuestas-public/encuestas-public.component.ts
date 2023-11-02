@@ -9,7 +9,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 export class EncuestasPublicComponent {
   encuestaForm! : FormGroup;
 
-
+enviado = false
   constructor(private readonly fb: FormBuilder) {}
 
   ngOnInit(): void{
@@ -17,6 +17,11 @@ export class EncuestasPublicComponent {
   }
 
   onSubmit(): void {
+    this.enviado = true
+    if(!this.encuestaForm.valid) {
+      alert('Please fill all the required fields to create a super hero!')
+     return
+    }
   console.log('Form ->', this.encuestaForm.value);
   }
 
@@ -39,4 +44,6 @@ export class EncuestasPublicComponent {
     })
   }
 
+
+  
 }

@@ -13,6 +13,8 @@ import { NavbarPublicComponent } from './navbar-public/navbar-public.component';
 import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
 import { AboutPublicComponent } from './about-public/about-public.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { HomeStudentComponent } from './home-student/home-student.component';
+import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 
 
 
@@ -26,7 +28,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     EncuestasPublicComponent,
     FooterPublicComponent,
     NavbarPublicComponent,
-    AvisosPublicComponent
+    AvisosPublicComponent,
+    HomeStudentComponent,
+    SidebarStudentComponent
   ],
   imports: [
     BrowserModule,

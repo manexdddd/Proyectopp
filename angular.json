@@ -35,13 +35,20 @@
               "src/assets/css/glightbox.min.css",
               "src/assets/css/reset.css",
               "src/assets/css/responsive.css",
+              "src/assets/css/style.css"
+       
+             
+          
               
-              "src/assets/css/tiny-slider.css"
+            
+              
             ],
             "scripts": ["./src/assets/js/bootstrap.bundle.min.js",
             "node_modules/jquery/dist/jquery.js",
-            "./src/assets/js/main.js","./src/assets/js/wow.min.js","./src/assets/js/isotope.min.js",
-            "node_modules/wowjs/dist/wow.js"]
+            "node_modules/jquery/dist/jquery.min.js",
+            "./src/assets/js/main.js","./src/assets/js/wow.min.js",
+            "node_modules/wowjs/dist/wow.js"
+          ]
           },
           "configurations": {
             "production": {
