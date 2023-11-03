@@ -1,0 +1,290 @@
+[33mcommit c615cbcdb5339112bf99d86b152a5f7b2c87ba95[m[33m ([m[1;36mHEAD -> [m[1;32mrama-Samuel[m[33m, [m[1;31morigin/rama-Samuel[m[33m)[m
+Merge: 4c3b703 b27629c
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Fri Oct 13 22:26:23 2023 -0600
+
+    siuu
+
+[33mcommit b27629cd6c8a35cd89b29da174736064f319ebd9[m[33m ([m[1;32mmaster[m[33m)[m
+Merge: 612e039 0f97f48
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Fri Oct 13 22:06:56 2023 -0500
+
+    inicio
+
+[33mcommit 0f97f487ce0c473c08c99a8b48651d1be5307085[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Fri Oct 13 21:30:34 2023 -0600
+
+    f
+
+[33mcommit 612e03909f3a25217867524f704858930f3d6ae3[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Fri Oct 13 22:04:59 2023 -0500
+
+    inicio
+
+[33mcommit 4c3b70332bd408c6b27c6160b15c1ffbd725e801[m
+Merge: a7a1d67 fbfad7f
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Thu Oct 12 21:56:32 2023 -0600
+
+    siuuu
+
+[33mcommit a7a1d673cba4e5e17c449a6b807c70c217937378[m
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Thu Oct 12 19:43:08 2023 -0600
+
+    nose
+
+[33mcommit fbfad7f50128038e79c812776313e3263207eca6[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Thu Oct 12 19:31:34 2023 -0500
+
+    usuario change
+
+[33mcommit d701e1786931803a4c82b22b3200d423de16ff86[m
+Merge: 57b651a 426f271
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 19:36:40 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 57b651a8c40ff95c4e52ebfb264a1571f660b960[m
+Merge: 7207022 6bf1c05
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 19:17:51 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 72070221876e505a77a9b08ee5a2bdfd6f3ee465[m
+Merge: 77fa7b5 d934cc3
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 19:02:12 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 426f271d6ff70d16ee13938f1d71d236e251f963[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 19:24:13 2023 -0500
+
+    javascript
+
+[33mcommit 6bf1c055df57d94d27ed9e349be2c26f5d69ba70[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 19:15:30 2023 -0500
+
+    final navbar
+
+[33mcommit d934cc3e3ad04093ce9410832b4b95c3fa84e9fe[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 19:01:30 2023 -0500
+
+    navbar
+
+[33mcommit b8212001b0aacfe0cf8c0bd542ab37f321503f5f[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 19:00:57 2023 -0500
+
+    navbar
+
+[33mcommit b70d4b0b02aec9e990e9a63b9296b0ea11f44b74[m
+Merge: 9b6557f 6b1443f
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 18:57:48 2023 -0500
+
+    Merge remote-tracking branch 'manexdddd/Proyectopp/rama-antonio'
+
+[33mcommit 6b1443f0fe87a44d0deaeafe9256e9b1119d7905[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:51:28 2023 -0600
+
+    n
+
+[33mcommit 77fa7b5e8d06de0c421f13728063bee1402aab9b[m
+Merge: ccfa3a9 9b6557f
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 16:49:12 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 7972b73a83de8fed1392e17778220300d8ddecec[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:45:34 2023 -0600
+
+    b
+
+[33mcommit a53b6072229be29907decaafc7c950304db213cf[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:38:21 2023 -0600
+
+    ,
+
+[33mcommit ccfa3a9bf14c49fedffeb3bb0c3ab992533e170a[m
+Merge: a6037bb 06f5dcb
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 16:32:57 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit ce45a89535e3b9007b608340ab7e429f3ffae266[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:30:04 2023 -0600
+
+    b
+
+[33mcommit a6037bb69a96ef9fd18cf545c7044ce263378ec6[m
+Merge: 86ac8e7 643873a
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 16:28:42 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 86ac8e748bc341c96ff045303a08b560ef20ae6e[m
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 16:27:53 2023 -0600
+
+    Update encuestas-public.component.html
+    
+    cambio encuestas
+
+[33mcommit 389f19ce1f8c41aa158f7a5971fcae9fe5a1b62e[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:27:16 2023 -0600
+
+    b
+
+[33mcommit 3153b663d0b08d21fff425907c2aec8ca925915d[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:24:53 2023 -0600
+
+    a
+
+[33mcommit 9c08b43eb8039fa2b83f0bd4fdda64ec1ef7dafb[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:23:59 2023 -0600
+
+    -
+
+[33mcommit c9cc1a91b35e0b0e32b05a51afc334f4e3b9de79[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:23:04 2023 -0600
+
+    -
+
+[33mcommit ce741e8e04a5b18abe702856c11e97c69947a7ac[m
+Merge: 2a710a5 e30c41b
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:21:36 2023 -0600
+
+    Merge branch 'master' into rama-antonio
+
+[33mcommit 2a710a5a93ff58baaa20576353755df08c06488f[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:19:14 2023 -0600
+
+    j
+
+[33mcommit 56cca1044b090f388f02eecdd2ab5b2f3be9c62d[m
+Merge: 8d5dcc7 54e9ad5
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 16:19:09 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 859dfad19a81e03356f18a025eedead96cd52237[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:15:20 2023 -0600
+
+    si
+
+[33mcommit 8d5dcc7d584af5b6365cf953c8aae14687fc2057[m
+Merge: 169d8f4 83555dd
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 16:13:25 2023 -0600
+
+    Merge branch 'master' into rama-Samuel
+
+[33mcommit 54e9ad57b6dba181252e632d8d841f8ae6e50e96[m
+Merge: ca62e61 5ca3547
+Author: manexdddd <119270456+manexdddd@users.noreply.github.com>
+Date:   Wed Oct 11 16:11:11 2023 -0600
+
+    Merge pull request #4 from manexdddd/rama-antonio
+    
+    Update home-public.component.html
+
+[33mcommit 5ca354752062c267aaa6dffe7428bb65690b2549[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:09:30 2023 -0600
+
+    Update home-public.component.html
+    
+    sami
+
+[33mcommit ca62e61b717fff87f3c7f36c50a68f48856869f3[m
+Author: Antonio <antonio.jose.medina.e@gmail.com>
+Date:   Wed Oct 11 16:06:33 2023 -0600
+
+    Update home-public.component.html
+    
+    samuel
+
+[33mcommit 9b6557ff985213ae5dba329cb00a697750bb1ee3[m
+Merge: fd26699 a53b607
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 16:43:06 2023 -0500
+
+    Merge remote-tracking branch 'manexdddd/Proyectopp/rama-antonio'
+
+[33mcommit fd26699a7cd2342c216201d4e03ff1dce0e89aa4[m
+Merge: 9b5e6f2 ce45a89
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 16:40:08 2023 -0500
+
+    Merge remote-tracking branch 'manexdddd/Proyectopp/rama-antonio'
+
+[33mcommit 9b5e6f216d273d9e2a4fe0149acd083348dd7b5d[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 16:39:26 2023 -0500
+
+    d
+
+[33mcommit 06f5dcb8de616d51bd89ed6e04d350afc6abfcf4[m
+Merge: 643873a 3153b66
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 16:29:34 2023 -0500
+
+    Merge remote-tracking branch 'manexdddd/Proyectopp/rama-antonio'
+
+[33mcommit 643873a0417ecd548179c84cdfa95ac99d8455a9[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 16:27:46 2023 -0500
+
+    d
+
+[33mcommit 784f20364a2ccb64eb5fa924e2f6999b38cd2695[m
+Merge: 83555dd 169d8f4
+Author: manexdddd <119270456+manexdddd@users.noreply.github.com>
+Date:   Wed Oct 11 15:22:52 2023 -0600
+
+    Merge pull request #3 from manexdddd/rama-Samuel
+    
+    Update encuestas-public.component.html
+
+[33mcommit 169d8f4b9cbc53ee8d6a2bc219f345037d5ffac5[m
+Author: SamBarzel <s20030169@cdhidalgo.tecnm.mx>
+Date:   Wed Oct 11 15:21:23 2023 -0600
+
+    Update encuestas-public.component.html
+    
+    mod encuestas
+
+[33mcommit e30c41b533f7a6e1c9bdc6b4e8e0c4975e098ebe[m
+Author: manexdddd <manevergara14@gmail.com>
+Date:   Wed Oct 11 16:18:47 2023 -0500
+
+    plantilla 2
+
+[33mcommit 83555ddc404b49b04fbdd36c5b1cef6870535618[m
+Merge: c584292 e

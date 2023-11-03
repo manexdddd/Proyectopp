@@ -11,7 +11,10 @@ import { EncuestasPublicComponent } from './encuestas-public/encuestas-public.co
 import { FooterPublicComponent } from './footer-public/footer-public.component';
 import { NavbarPublicComponent } from './navbar-public/navbar-public.component';
 import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
-
+import { AboutPublicComponent } from './about-public/about-public.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HomeStudentComponent } from './home-student/home-student.component';
+import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 
 
 
@@ -26,10 +29,13 @@ import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
     FooterPublicComponent,
     NavbarPublicComponent,
     AvisosPublicComponent,
+    HomeStudentComponent,
+    SidebarStudentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
    
   ],
   providers: [],
