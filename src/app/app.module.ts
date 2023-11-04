@@ -19,6 +19,7 @@ import { AvisosStudentComponent } from './avisos-student/avisos-student.componen
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
 import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
+import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
 
 
 
@@ -40,6 +41,7 @@ import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-
     PerfilStudentComponent,
     CarnetStudentComponent,
     SidebarPerfilStudentComponent,
+    AreapsicologiaStudentComponent,
 
   ],
   imports: [
