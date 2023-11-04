@@ -12,6 +12,8 @@ import { HomeStudentComponent } from './home-student/home-student.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
+import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
+import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
@@ -23,6 +25,8 @@ const routes: Routes = [
 
   {path:'avisos-student',component:AvisosStudentComponent},
   {path:'perfil-student',component:PerfilStudentComponent},
+  {path:'carnet-student',component:CarnetStudentComponent},
+  {path:'sidebar-perfil-student',component:SidebarPerfilStudentComponent},
   {path:'',redirectTo: '/home-public',pathMatch:'full'},
 ];
 

@@ -17,6 +17,8 @@ import { HomeStudentComponent } from './home-student/home-student.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
+import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
+import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 
 
 
@@ -36,6 +38,8 @@ import { PerfilStudentComponent } from './perfil-student/perfil-student.componen
     SidebarStudentComponent,
     AvisosStudentComponent,
     PerfilStudentComponent,
+    CarnetStudentComponent,
+    SidebarPerfilStudentComponent,
 
   ],
   imports: [
