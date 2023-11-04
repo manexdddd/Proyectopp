@@ -162,5 +162,107 @@
   
   /*_______*/
   
+
+
+/* Estilos para Navbar 2 */
+/* Estilos base para la barra de navegación */
+.navbar-2 {
+  background-color: #f0ffff11;
+  display: flex;
+  justify-content: center;
+  padding: 8px;
+  font-size: 20px;
+}
+
+.nav1-item {
+  margin: 0 20px;
+}
+
+.nav1-item a {
+  color: #000000;
+  text-decoration: none;
+  position: relative; /* Necesario para el posicionamiento de la línea */
+  display: inline-block; /* Hacer que el enlace sea un bloque en línea */
+  padding: 5px 10px; /* Ajusta el relleno alrededor del texto */
+}
+
+.nav1-item a::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 2px; /* Altura de la línea */
+  bottom: 0; /* Alinear la línea con la parte inferior del enlace */
+  background-color: #181511; /* Color de la línea */
+  transform: scaleX(0); /* Inicialmente, la línea no es visible */
+  transform-origin: bottom right; /* La línea se extiende desde la derecha */
+  transition: transform 0.3s; /* Transición suave de la línea al hacer hover */
+}
+
+.nav1-item a:hover::before {
+  transform: scaleX(1); /* Mostrar la línea completa al hacer hover */
+}
+
+/* Estilos para hacerlo responsive en pantallas más pequeñas */
+@media (max-width: 768px) {
+  .navbar-2 {
+    flex-direction: column; /* Cambiar a diseño de columna */
+    align-items: center; /* Centrar elementos verticalmente */
+  }
+
+  .nav1-item {
+    margin: 10px 0; /* Espacio vertical entre elementos */
+  }
+}
+
+
+
+
+
+
+
+
+
+.gradient-custom-2 {
+  /* fallback for old browsers */
+  background: #fbc2eb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
+  }
+
+
+
+   /*__datos alumno_____*/
+   .card1 {
+    position: relative;
+    width: 380px;
+    height: 100%;
+    background-color: #ffffff;
+    
+    border-radius: 15px;
+    display: flex;
+    align-items: left;
+    justify-content: center;
+    
+    perspective: 100px;
+    box-shadow: 100px 0 1px 5px #ffffff00;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
   
   
+  
+  .card1:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+  }
+  
+
+  
+
+
+  
+  
+  /*_______*/

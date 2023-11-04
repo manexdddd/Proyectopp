@@ -15,6 +15,9 @@ import { AboutPublicComponent } from './about-public/about-public.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
+import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
+import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
+
 
 
 
@@ -30,7 +33,10 @@ import { SidebarStudentComponent } from './sidebar-student/sidebar-student.compo
     NavbarPublicComponent,
     AvisosPublicComponent,
     HomeStudentComponent,
-    SidebarStudentComponent
+    SidebarStudentComponent,
+    AvisosStudentComponent,
+    PerfilStudentComponent,
+
   ],
   imports: [
     BrowserModule,
