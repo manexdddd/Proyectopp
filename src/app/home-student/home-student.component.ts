@@ -1,6 +1,6 @@
 
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-
+import { AuthService } from '../services/auth.service';
 @Component({
   selector: 'app-home-student',
   templateUrl: './home-student.component.html',
@@ -8,7 +8,7 @@ import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
 })
 export class HomeStudentComponent {
   
-
+ 
   
 }
 
