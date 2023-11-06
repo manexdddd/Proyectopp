@@ -318,7 +318,7 @@
     position: relative;
   }
   
-  .title {
+  .title1 {
     font-size: 28px;
     color: royalblue;
     font-weight: 600;
@@ -329,7 +329,7 @@
     padding-left: 30px;
   }
   
-  .title::before,.title::after {
+  .title1::before,.title1::after {
     position: absolute;
     content: "";
     height: 16px;
@@ -339,13 +339,13 @@
     background-color: royalblue;
   }
   
-  .title::before {
+  .title1::before {
     width: 18px;
     height: 18px;
     background-color: royalblue;
   }
   
-  .title::after {
+  .title1::after {
     width: 18px;
     height: 18px;
     animation: pulse 1s linear infinite;
