@@ -1692,13 +1692,14 @@ p {
 }
 
 .ud-login-wrapper {
-  max-width: 850px;
+  max-width: 650px;
   margin: auto;
   background: var(--white);
   text-align: left;
   padding: 60px;
-  -webkit-box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  -webkit-box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.12);
 }
 
 .ud-login-wrapper .ud-login-logo {
