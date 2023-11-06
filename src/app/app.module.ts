@@ -15,6 +15,13 @@ import { AboutPublicComponent } from './about-public/about-public.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
+import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
+import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
+import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
+import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
+import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
+import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
 
 
 
@@ -30,7 +37,14 @@ import { SidebarStudentComponent } from './sidebar-student/sidebar-student.compo
     NavbarPublicComponent,
     AvisosPublicComponent,
     HomeStudentComponent,
-    SidebarStudentComponent
+    SidebarStudentComponent,
+    HomeAdminComponent,
+    SesionesAdminComponent,
+    SidebarAdminComponent,
+    PerfilAdminComponent,
+    AttentionAdminComponent,
+    SurveyAdminComponent,
+    NoticesAdminComponent
   ],
   imports: [
     BrowserModule,
