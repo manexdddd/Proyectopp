@@ -7,13 +7,14 @@ import { HelpPublicComponent } from './help-public/help-public.component';
 import { HomePublicComponent } from './home-public/home-public.component';
 import { SignupComponent } from './signup/signup.component';
 import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
-
+import { AboutPublicComponent } from './about-public/about-public.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 import { AuthGuard } from './auth.guard';
 import { Role } from './services/roles';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
+  {path:'about-public',component:AboutPublicComponent},
   {path:'signup',component:SignupComponent},
   {path:'encuestas-public',component:EncuestasPublicComponent},
   {path:'home-student',component:HomeStudentComponent,canActivate: [AuthGuard] ,
