@@ -10,11 +10,14 @@ import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
 
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
+import { AuthGuard } from './auth.guard';
+import { Role } from './services/roles';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'signup',component:SignupComponent},
   {path:'encuestas-public',component:EncuestasPublicComponent},
-  {path:'home-student',component:HomeStudentComponent},
+  {path:'home-student',component:HomeStudentComponent,canActivate: [AuthGuard] ,
+  data: { requiredRole: Role.Alumno}},
   {path:'help-public',component:HelpPublicComponent},
   {path:'home-public',component:HomePublicComponent},
   {path:'avisos-public',component:AvisosPublicComponent},
@@ -22,7 +25,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

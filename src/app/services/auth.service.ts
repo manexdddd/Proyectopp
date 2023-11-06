@@ -16,6 +16,7 @@ export class AuthService {
   role:any
   private progreso = new BehaviorSubject<boolean>(false);
     currentprogreso = this.progreso.asObservable();
+   
     constructor(private afauth:AngularFireAuth,private afs: AngularFirestore,private router: Router,private  storage: AngularFireStorage,
       ) {
       
@@ -23,13 +24,14 @@ export class AuthService {
      changeprogreso(value: boolean) {
       this.progreso.next(value);
     }
-
+   
   
     //inicio de sesion google
     async loginGoogle(){
       try{
          const resultado =await this.afauth.signInWithPopup( new firebase.auth.GoogleAuthProvider());
-           alert("Inicio Correcto")
+         localStorage.setItem('rolx', "alumno");
+         alert("Inicio Correcto")
            this.router.navigate(['/home-student']);
          
       }catch(err){
@@ -43,9 +45,76 @@ export class AuthService {
 
 }
 
+async login(email:string,psw :string){
+  try{
+    localStorage.clear();
+   this.changeprogreso(true)
+    await this.afauth.signInWithEmailAndPassword(email,psw);
+    localStorage.setItem('email', email);
+    alert("incio correcto")
+  const psic = await this.afs.collection('psicologas').doc(email).get().toPromise();
+const alu = await this.afs.collection('alumnos').doc(email).get().toPromise();
+const tut = await this.afs.collection('tutor').doc(email).get().toPromise();
+this.usuario = {
+  ...(psic.data()as any),
+  ...(alu.data()as any),
+  ...(tut.data()as any)
+};
+localStorage.setItem('rolx', this.usuario.rol);
+console.log(localStorage.getItem("rolx")+localStorage.getItem("email"));
+
+ switch(localStorage.getItem("rolx")){
+case 'admin':
+this.router.navigate(['/home-admin']);
+this.changeprogreso(false)
+break;
+case 'alumno':
+this.router.navigate(['/home-student']);
+this.changeprogreso(false)
+break;
+/*case 'root':
+this.router.navigate(['/home-root']);
+this.changeprogreso(false)
+break;
+case 'tutor':
+this.router.navigate(['/home-tutor']);
+this.changeprogreso(false)
+break;*/
+default:
+this.router.navigate(['/login']);
+this.changeprogreso(false)
+ }/*
+    if (localStorage.getItem("rolx")=== 'admin') {
+      this.router.navigate(['/home-admin']);
+    }  if (localStorage.getItem("rolx") === 'alumno') {
+      this.router.navigate(['/home-alumno']);
+    }  else if (localStorage.getItem("rolx") === 'tutor') {
+      this.router.navigate(['/home-tutor']);
+    } else if (localStorage.getItem("rolx") === 'root') {
+      this.router.navigate(['/home-root']);
+    }else {
+      this.router.navigate(['/login']);
+    }*/
+    
+   
+    }catch(err){
+   alert("incio incorrecto")
+  
+   localStorage.clear();
+   this.changeprogreso(false)
+   return null;
+  }
+
+
+  
+
+}
+
+
 //registro alumno (autenticacion)
 async registro(email:string,psw :string){
   try{
+    this.changeprogreso(true)
        return await this.afauth.createUserWithEmailAndPassword( email,psw);
 
   }catch(err){
@@ -64,7 +133,7 @@ crearDocumento(alumnoid: string, data: any) {
   //referencia del documento 
   const documentRef = this.afs.collection('alumnos').doc(alumnoid);
 
-
+  this.changeprogreso(false)
   //ingresa los datos al documento
   return documentRef.set(data)
     .then(() => {
