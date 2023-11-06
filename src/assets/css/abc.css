@@ -375,7 +375,7 @@
     position: relative;
   }
   
-  .form label .input {
+  .form label .inputa {
     width: 100%;
     padding: 10px 10px 20px 10px;
     outline: 0;
@@ -383,7 +383,7 @@
     border-radius: 10px;
   }
   
-  .form label .input + span {
+  .form label .inputa + span {
     position: absolute;
     left: 10px;
     top: 1px;
@@ -393,18 +393,18 @@
     transition: 0.3s ease;
   }
   
-  .form label .input:placeholder-shown + span {
+  .form label .inputa:placeholder-shown + span {
     top: 15px;
     font-size: 0.9em;
   }
   
-  .form label .input:focus + span,.form label .input:valid + span {
+  .form label .inputa:focus + span,.form label .inputa:valid + span {
     top: 0px;
     font-size: 0.7em;
     font-weight: 600;
   }
   
-  .form label .input:valid + span {
+  .form label .inputa:valid + span {
     color: green;
   }
   
@@ -460,7 +460,7 @@
   }
   
   .form button {
-    align-self: flex-end;
+    align-self: flex-center;
   }
   
   .flex-column > label {
@@ -468,7 +468,7 @@
     font-weight: 600;
   }
   
-  .inputForm {
+  .inputoForm {
     border: 1.5px solid #ecedec;
     border-radius: 10px;
     height: 50px;
@@ -478,7 +478,7 @@
     transition: 0.2s ease-in-out;
   }
   
-  .input {
+  .inputo {
     margin-left: 10px;
     border-radius: 10px;
     border: none;
@@ -486,11 +486,11 @@
     height: 100%;
   }
   
-  .input:focus {
+  .inputo:focus {
     outline: none;
   }
   
-  .inputForm:focus-within {
+  .inputoForm:focus-within {
     border: 1.5px solid #2d79f3;
   }
   
@@ -536,7 +536,7 @@
     margin: 5px 0;
   }
   
-  .btn {
+  .btno {
     margin-top: 10px;
     width: 100%;
     height: 50px;
@@ -552,7 +552,7 @@
     transition: 0.2s ease-in-out;
   }
   
-  .btn:hover {
+  .btno:hover {
     border: 1px solid #2d79f3;
     ;
   }
