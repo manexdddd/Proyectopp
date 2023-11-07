@@ -1,4 +1,6 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
+import { AlumnosService } from '../services/alumnos.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-sidebar-student',
@@ -6,9 +8,12 @@ import { Component, ElementRef, Renderer2 } from '@angular/core';
   styleUrls: ['./sidebar-student.component.css']
 })
 export class SidebarStudentComponent {
-  constructor(private renderer: Renderer2, private elementRef: ElementRef) {}
+  constructor(private renderer: Renderer2, private elementRef: ElementRef, private alu:AlumnosService,
+    private auth:AuthService) {}
   isSearchBarVisible: boolean = false;
-
+  currentUsuario: any;
+  usuario: any;
+  email: string;
 
   
   ngOnInit(): void {
@@ -30,5 +35,18 @@ export class SidebarStudentComponent {
         this.renderer.addClass(searchBar, 'search-bar-show');
       });
     }
+
+    this.email = localStorage.getItem('email');
+
+    this.alu.getalumno(this.email).subscribe(usuario => {
+      this.usuario = usuario;
+      console.log(usuario)
+    });
+  }
+
+  cerrar(){
+    localStorage.setItem('email', "");
+    localStorage.setItem('rolx', "");
+    this.auth.logout();
   }
 }

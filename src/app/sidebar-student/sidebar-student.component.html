@@ -167,14 +167,14 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/images/dua02.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            <img src="{{ usuario.foto}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{ usuario.nombre}}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6>{{ usuario.paterno}} {{ usuario.materno}}</h6>
+              <span>{{ usuario.carrera}}</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -211,7 +211,7 @@
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="#">
+              <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" (click)="cerrar()">
                 <i class="bi bi-box-arrow-right"></i>
                 <span>Sign Out</span>
               </a>
@@ -241,13 +241,14 @@
 
       <ul class="nav-item">
         <a class="align-items-center" href="perfil-student" >
-          <img style="height: 145px; width: 140px; margin-left: 45px; margin-bottom: 12px; margin-top: 12px;" src="assets/images/dua02.jpg" alt="Profile" class="rounded-circle">
+          <img style="height: 145px; width: 140px; margin-left: 45px; margin-bottom: 12px; margin-top: 12px;" src="{{ usuario.foto}}" alt="Profile" class="rounded-circle">
+          
           
         </a><!-- End Profile Iamge Icon -->
         
         <li class="nav-item ">
           <a class="nav-link collapsed nav-link nav-profile d-flex" data-bs-target="#components-nav" data-bs-toggle="collapse" href="#">
-            <i class="bi bi-person "></i><span>Samuel Pinede Rodriguex</span><i class="bi bi-chevron-down ms-auto"></i>
+            <i class="bi bi-person "></i><span>{{ usuario.nombre}}  {{ usuario.paterno}} {{ usuario.materno}}</span><i class="bi bi-chevron-down ms-auto"></i>
           </a>
           <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
@@ -261,7 +262,7 @@
                 <i class="bi bi-circle"></i><span>Carnet</span>
 
                 <i class="bi bi-circle"></i><span>Adeudos</span>
-
+                <i class="bi bi-circle"></i><span>Carnet</span>
               </a>
             </li>
             <li>
@@ -271,7 +272,7 @@
             </li>
             <li>
               <a href="https://cdhidalgo.tecnm.mx:8092/login" target="_blank">
-
+                <i class="bi bi-circle"></i><span>Carnet</span>
                 <i class="bi bi-circle"></i><span>Recibos Electronicos</span>
 
                 <i class="bi bi-circle"></i><span>Carnet</span>
@@ -280,7 +281,7 @@
             </li>
             <li>
               <a href="components-breadcrumbs.html">
-
+                <i class="bi bi-circle"></i><span>Creditos</span>
                 <i class="bi bi-circle"></i><span>Canalizaciones</span>
 
                 <i class="bi bi-circle"></i><span>Creditos</span>
@@ -289,11 +290,11 @@
             </li>
             <li>
               <a href="https://cdhidalgo.tecnm.mx:8081/" target="_blank">
-
+<<<<<<<<< Temporary merge branch 1
                 <i class="bi bi-circle"></i><span>Creditos</span>
-
+=========
                 <i class="bi bi-circle"></i><span>Mis Terapias</span>
-
+                <i class="bi bi-circle"></i><span>Creditos</span>
               </a>
             </li>
           </ul>
@@ -323,12 +324,12 @@
               <i class="bi bi-circle"></i><span>Accordion</span>
 
               <i class="bi bi-circle"></i><span>Concursos</span>
-
+              <i class="bi bi-circle"></i><span>Eventos</span>
             </a>
           </li>
           <li>
             <a href="components-badges.html">
-
+              <i class="bi bi-circle"></i><span>Eventos</span>
               <i class="bi bi-circle"></i><span>Jornadas</span>
 
               <i class="bi bi-circle"></i><span>Badges</span>
@@ -340,6 +341,7 @@
           <li>
             <a href="components-breadcrumbs.html">
 
+              <i class="bi bi-circle"></i><span>Jornadas</span>
               <i class="bi bi-circle"></i><span>Concursos</span>
 
               <i class="bi bi-circle"></i><span>Breadcrumbs</span>
@@ -399,10 +401,13 @@
 
               <i class="bi bi-circle"></i><span>Encuestas Disponibles</span>
 
+              <i class="bi bi-circle"></i><span>Encuestas Rapidas</span>
             </a>
           </li>
           <li>
             <a href="tables-data.html">
+              <i class="bi bi-circle"></i><span>Encuestas Rapidas</span>
+              <i class="bi bi-circle"></i><span>Encuestas Disponibles</span>
 
               <i class="bi bi-circle"></i><span>Encuestas Rapidas</span>
             </a>
@@ -512,7 +517,7 @@
           <li>
             <a href="charts-echarts.html">
               <i class="bi bi-circle"></i><span>Otros Asuntos</span>
-
+              <i class="bi bi-circle"></i><span>Historial</span>
             </a>
           </li>
         </ul>
