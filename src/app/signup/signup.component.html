@@ -44,7 +44,8 @@
                 <img src="assets/images/logo/logo-2.svg" alt="logo" />
               </div>
               <div class="" style="display: flex; justify-content: center; ">
-                <form class="form" style="border-radius: 12px; margin-top: -70px;">
+
+                <form class="form" style="border-radius: 12px; margin-top: -70px;" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
                   <p class="title1">Registrate</p><br>
                   <p class="message">
                     ¡Regístrate ahora y obtén acceso completo a nuestra aplicación! </p><br>
@@ -67,19 +68,36 @@
                   
                           
                   <label>
-                      <input class="inputa" type="email" placeholder="" required="">
-                      <span>Correo Institucional</span>
-                  </label> 
-                      
-                  <label>
-                      <input class="inputa" type="password" placeholder="" required="">
-                      <span>Contraseña</span>
+                    <input class="inputa" type="email" placeholder="" required id="email" formControlName="email" (blur)="lowecase()">
+                    <span>Correo Institucional</span>
+                    <div *ngIf="registroForm.get('email')?.hasError('required') && registroForm.get('email')?.touched">
+                      El correo electrónico es obligatorio.
+                    </div>
+                    <div *ngIf="registroForm.get('email')?.hasError('invalidEmail') && registroForm.get('email')?.touched">
+                      El correo electrónico no es válido.
+                    </div>
                   </label>
+                  
                   <label>
-                      <input class="inputa" type="password" placeholder="" required="">
-                      <span>Confirma tu contraseña</span>
-                  </label><br style="line-height: 0.5">
-                  <button class="submit1">Registrarse</button> <br>
+                    <input class="inputa" type="password" placeholder="" required id="password" formControlName="password">
+                    <span>Contraseña</span>
+                    <div *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched">
+                      La contraseña es obligatoria.
+                    </div>
+                    <div *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched">
+                      La contraseña debe tener al menos 6 caracteres.
+                    </div>
+                  </label>
+                  
+                  <label>
+                    <input class="inputa" type="password" placeholder="" required id="confirmPassword" formControlName="confirmPassword">
+                    <span>Confirma tu contraseña</span>
+                    <div *ngIf="registroForm.hasError('mismatch') && registroForm.get('confirmPassword')?.touched">
+                      Las contraseñas no coinciden.
+                    </div>
+                  </label>
+                  <br style="line-height: 0.5">
+                  <button class="submit1" type="submit">Registrarse</button> <br>
                   <p class="signin">¿Ya tienes una cuenta? <a href="#">Iniciar Sesión</a> </p>
 
                   <p class="p line">O Inicia Sesión con:</p>
