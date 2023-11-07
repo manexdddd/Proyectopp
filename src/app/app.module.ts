@@ -36,7 +36,8 @@ import { FormsModule } from '@angular/forms';
     NavbarPublicComponent,
     AvisosPublicComponent,
     HomeStudentComponent,
-    SidebarStudentComponent
+    SidebarStudentComponent,
+    AboutPublicComponent 
   ],
   imports: [
     BrowserModule,
