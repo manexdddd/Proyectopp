@@ -1,20 +1,21 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
-import { AlumnosService } from '../services/alumnos.service';
 import { AuthService } from '../services/auth.service';
+import { AdminService } from '../services/admin.service';
 
 @Component({
-  selector: 'app-sidebar-admin',
-  templateUrl: './sidebar-admin.component.html',
-  styleUrls: ['./sidebar-admin.component.css']
+  selector: 'app-sidebar-root',
+  templateUrl: './sidebar-root.component.html',
+  styleUrls: ['./sidebar-root.component.css']
 })
-export class SidebarAdminComponent {
+export class SidebarRootComponent {
+  constructor(private renderer: Renderer2, private elementRef: ElementRef, private ad:AdminService,
+    private auth:AuthService) {}
+  isSearchBarVisible: boolean = false;
   currentUsuario: any;
   usuario: any;
   email: string;
-  constructor(private renderer: Renderer2, private elementRef: ElementRef, private alu:AlumnosService,
-    private auth:AuthService) {}
+
   ngOnInit(): void {
-     
     const toggleSidebarBtn = document.querySelector('.toggle-sidebar-btn');
     if (toggleSidebarBtn) {
       toggleSidebarBtn.addEventListener('click', () => {
@@ -26,9 +27,9 @@ export class SidebarAdminComponent {
     }
 
     this.email = localStorage.getItem('email');
-
-    this.alu.getalumno(this.email).subscribe(usuario => {
+    this.ad.getadmin(this.email).subscribe(usuario => {
       this.usuario = usuario;
+      console.log(usuario)
     });
   }
 
@@ -37,5 +38,4 @@ export class SidebarAdminComponent {
     localStorage.setItem('rolx', "");
     this.auth.logout();
   }
-
 }

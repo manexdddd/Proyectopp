@@ -52,13 +52,13 @@ async login(email:string,psw :string){
     await this.afauth.signInWithEmailAndPassword(email,psw);
     localStorage.setItem('email', email);
     alert("incio correcto")
-  const psic = await this.afs.collection('psicologas').doc(email).get().toPromise();
+  const ad = await this.afs.collection('admin').doc(email).get().toPromise();
 const alu = await this.afs.collection('alumnos').doc(email).get().toPromise();
-const tut = await this.afs.collection('tutor').doc(email).get().toPromise();
+//const tut = await this.afs.collection('tutor').doc(email).get().toPromise();
 this.usuario = {
-  ...(psic.data()as any),
+  ...(ad.data()as any),
   ...(alu.data()as any),
-  ...(tut.data()as any)
+  //...(tut.data()as any)
 };
 localStorage.setItem('rolx', this.usuario.rol);
 console.log(localStorage.getItem("rolx")+localStorage.getItem("email"));
@@ -72,11 +72,11 @@ case 'alumno':
 this.router.navigate(['/home-student']);
 this.changeprogreso(false)
 break;
-/*case 'root':
+case 'root':
 this.router.navigate(['/home-root']);
 this.changeprogreso(false)
 break;
-case 'tutor':
+/*case 'tutor':
 this.router.navigate(['/home-tutor']);
 this.changeprogreso(false)
 break;*/

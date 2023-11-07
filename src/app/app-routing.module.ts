@@ -9,6 +9,7 @@ import { SignupComponent } from './signup/signup.component';
 import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
 import { AboutPublicComponent } from './about-public/about-public.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
+import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 import { AuthGuard } from './auth.guard';
 import { Role } from './services/roles';
@@ -31,6 +32,7 @@ const routes: Routes = [
   data: { requiredRole: Role.Alumno}},
   {path:'help-public',component:HelpPublicComponent},
   {path:'home-public',component:HomePublicComponent},
+  {path:'home-root',component:HomeRootComponent},
   {path:'avisos-public',component:AvisosPublicComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,
   data: { requiredRole: Role.Admin}},

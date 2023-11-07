@@ -24,6 +24,7 @@ import { environment } from '../enviroments/environment';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
 import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
+
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
@@ -36,6 +37,8 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 
 
 import { FormsModule } from '@angular/forms';
+import { HomeRootComponent } from './home-root/home-root.component';
+import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,8 @@ import { FormsModule } from '@angular/forms';
     CarnetStudentComponent,
     SidebarPerfilStudentComponent,
     AreapsicologiaStudentComponent,
+    HomeRootComponent,
+    SidebarRootComponent,
 
   ],
   imports: [
