@@ -28,6 +28,12 @@ import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
 import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
+import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
+import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
+import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
+import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
+import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
+
 
 import { FormsModule } from '@angular/forms';
 
@@ -51,7 +57,13 @@ import { FormsModule } from '@angular/forms';
     PerfilAdminComponent,
     AttentionAdminComponent,
     SurveyAdminComponent,
-    NoticesAdminComponent
+    NoticesAdminComponent,
+    AvisosStudentComponent,
+    PerfilStudentComponent,
+    CarnetStudentComponent,
+    SidebarPerfilStudentComponent,
+    AreapsicologiaStudentComponent,
+
   ],
   imports: [
     BrowserModule,
