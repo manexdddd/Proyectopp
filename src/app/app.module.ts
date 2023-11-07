@@ -47,10 +47,17 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireDatabaseModule,
+    AngularFirestoreModule,
+    AngularFireStorageModule,
+    AngularFireAuthModule,
    
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+
