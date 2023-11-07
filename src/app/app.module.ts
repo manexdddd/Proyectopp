@@ -21,6 +21,13 @@ import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
 import { AngularFireStorageModule } from '@angular/fire/compat/storage';
 import { environment } from '../enviroments/environment';
+import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
+import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
+import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
+import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
+import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
+import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
 
 import { FormsModule } from '@angular/forms';
 
@@ -37,7 +44,14 @@ import { FormsModule } from '@angular/forms';
     AvisosPublicComponent,
     HomeStudentComponent,
     SidebarStudentComponent,
-    AboutPublicComponent 
+    AboutPublicComponent ,
+    HomeAdminComponent,
+    SesionesAdminComponent,
+    SidebarAdminComponent,
+    PerfilAdminComponent,
+    AttentionAdminComponent,
+    SurveyAdminComponent,
+    NoticesAdminComponent
   ],
   imports: [
     BrowserModule,
