@@ -10,29 +10,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-<<<<<<< HEAD
 /*
   registroForm! : FormGroup;
-=======
-  constructor(private auth :AuthService, private afs: AngularFirestore,
-     private router: Router,private  storage: AngularFireStorage){
-   
-  }
-
-  loging(){
-      
-   
-    this.auth.loginGoogle()
-   .then(() => {
-     // usuario inicio de forma correcta
-     console.log("Usuario Inicio Sesion");
-   })
-   .catch(error => {
-     // manejo de errores
-     console.error("error de", error);
-   });
-  }
->>>>>>> master
 
   constructor(private  fb: FormBuilder) {}
 

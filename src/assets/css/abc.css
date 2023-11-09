@@ -594,7 +594,31 @@
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
 }
 
+  /*edit perfil*/
+.card5 {
+  position: relative;
+  background-color: #ffffff;
+  border-radius: 15px;
+  margin-top: -5px;
+  margin-bottom: 10px;
+  perspective: 100px;
+  
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
 
+
+.card5:hover {
+  transform: scale(1.02);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
+}
+.card-titlee {
+  padding: 20px 0 15px 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #012970;
+  font-family: "Poppins", sans-serif;
+}
   
 
   /*_______*/
