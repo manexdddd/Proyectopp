@@ -1,0 +1,397 @@
+<p>perfil-admin works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+<app-sidebar-admin></app-sidebar-admin>
+
+  <main id="main" class="main">
+
+    <div class="pagetitle">
+      <h1>Atencion Psicologica</h1>
+    </div><!-- End Page Title -->
+    <h5>Atenciones Asignadas</h5>
+    <section class="section dashboard">
+      <div class="row">
+        <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Nueva Atencion</h5>
+                <p class="card-text">Alumno: Antonio Medina</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Más</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Seguimiento</h5>
+                <p class="card-text">Alumno: Manuel Vergara</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-1">Ver Más</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Nueva Atencion</h5>
+                <p class="card-text">Alumno: Isabel Alvarez</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-2">Ver Más</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Seguimiento</h5>
+                <p class="card-text">Alumno: Samuel Pineda </p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-3">Ver Más</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Nueva Atencion</h5>
+                <p class="card-text">Alumno: Alinne</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-4">Ver Más</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-4">
+            <div class="card">
+              <div class="card-body">
+                <h5 class="card-title">Nueva Atencion</h5>
+                <p class="card-text">Alumno: Catherin</p>
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-5">Ver Más</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </section>
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <br>
+                    <h6>Nombre</h6> 
+                    <h6>N° de Control</h6> 
+                    <h6>Carrera</h6> 
+                    <h6>Nombre del Tutor</h6> <br>
+                    <h6>N° de Contacto</h6> 
+                    <h6>Canalizada por</h6> 
+                    <h6>M de Solicitud de Atención</h6> 
+                </div>
+                <div class="col-md-4 ms-auto">
+                    <br>
+                    <p>Antonio Medina</p> 
+                    <p>123456789</p> 
+                    <p>Sistemas</p> 
+                    <p>Juan Carlos</p> <br>
+                    <p>777 1232 132</p>
+                    <p>Voluntario</p> 
+                    <p>Se siente mal por su ex</p> 
+                </div>
+                <div class="col-md-12">
+
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-primary">Completar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de Modal -->
+  <!-- Modal 1-->
+  <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Datos de Alumno</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>Datos del Alumno</h1>
+          <h5>Nombre:</h5>
+          <p>Manuel Vergara</p>
+          <h5>Carrera</h5>
+          <p>Sistemas</p>
+          <h5>Grupo</h5>
+          <p>077CA</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-primary">Completar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de Modal 1-->
+  <!-- Modal 2-->
+  <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>Datos del Alumno</h1>
+          <h5>Nombre:</h5>
+          <p>Isabel Alvarez</p>
+          <h5>Carrera</h5>
+          <p>Sistemas</p>
+          <h5>Grupo</h5>
+          <p>077CA</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-primary">Completar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de Modal 2-->
+  <!-- Modal 3-->
+  <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>Datos del Alumno</h1>
+          <h5>Nombre:</h5>
+          <p>Samuel Pineda </p>
+          <h5>Carrera</h5>
+          <p>Sistemas</p>
+          <h5>Grupo</h5>
+          <p>077CA</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-primary">Completar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de Modal 3-->
+  <!-- Modal 4-->
+  <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>Datos del Alumno</h1>
+          <h5>Nombre:</h5>
+          <p>Alinne</p>
+          <h5>Carrera</h5>
+          <p>Sistemas</p>
+          <h5>Grupo</h5>
+          <p>077CA</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-primary">Completar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de Modal 4-->
+  <!-- Modal 5-->
+  <div class="modal fade" id="exampleModal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <h1>Datos del Alumno</h1>
+          <h5>Nombre:</h5>
+          <p>Catherin</p>
+          <h5>Carrera</h5>
+          <p>Sistemas</p>
+          <h5>Grupo</h5>
+          <p>077CA</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
+          <button type="button" class="btn btn-warning">Modificar</button>
+          <button type="button" class="btn btn-primary">Completar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Fin de Modal -->
+  <hr><br>
+  <div class="pagetitle">
+    <h1>Reagendar Atencion o crear Nueva</h1>
+  </div>
+  <section class="section dashboard">
+    <div class="container">
+      <div class="row">
+          <div class="col"></div>
+          <div class="col">
+              <div class="card mt-10 mb-2">
+                  <div class="card-header">Nueva Atencion</div>
+                  <div class="card-body">
+                      <select name="" id="" class="form-select">
+                          <option value="General">Platica o taller</option>
+                          <option value="Noticia">Noticia Revelante</option>
+                          <option value="Curiosidades">Curiosidades</option>
+                          <option value="Carreras">Carreras</option>
+                      </select>
+                      <input type="text" class="form-control mt-1" >
+                      <button class="btn btn-outline-primary float-end mt-3" >
+                          <i class="bi bi-cloud-upload-fill"></i>
+                      </button>
+                  </div>
+              </div>
+          </div>
+          <div class="col"></div>
+      </div>
+      <div class="row">
+          <div class="col">
+              <table class="table table-hover table-dark">
+                  <thead>
+                      <tr>
+                          <th>No</th>
+                          <th>Nombre</th>
+                          <th>Fecha</th>
+                          <th>Hora</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr >
+                          <td>1</td>
+                          <td>Semana de la Salud </td>
+                          <td>1 de nov al 15</td>
+                          <td class="text-end">
+                              <button class="btn btn-outline-secondary"><i class="bi bi-arrow-right-square-fill"></i></button>
+                              &nbsp;
+                              <button class="btn btn-outline-success"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-fill"></i></button>
+                              &nbsp;  
+                              <button class="btn btn-outline-danger" ><i class="bi bi-trash-fill"></i></button>
+                              
+                          </td>
+                      </tr>
+                  </tbody>
+              </table>
+          </div>
+      </div>
+  </div>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Pregunta</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <input type="text" class="form-control mt-1" >
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Guardar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+  </section>
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
