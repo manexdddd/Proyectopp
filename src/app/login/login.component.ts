@@ -1,8 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { Router } from '@angular/router';
+import { Subscription } from 'rxjs';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -10,38 +13,72 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
+<<<<<<< HEAD
 /*
   registroForm! : FormGroup;
+=======
+  @ViewChild('up', { static: true }) contentPage: ElementRef;
+  constructor(private auth :AuthService, private afs: AngularFirestore,
+     private router: Router,private  storage: AngularFireStorage,private  fb: FormBuilder){
+   
+  }
+  loginForm! : FormGroup;
+  progreso: boolean;
+  subscription: Subscription;
 
-  constructor(private  fb: FormBuilder) {}
+  usuario ={
+    email: '',
+    psw:'',
+    
+   }
 
-  ngOnInit(): void{
-    this.registroForm = this.initForm();
+  loging(){
+      
+   
+    this.auth.loginGoogle()
+   .then(() => {
+     // usuario inicio de forma correcta
+     console.log("Usuario Inicio Sesion");
+     
+   })
+   .catch(error => {
+     // manejo de errores
+     console.error("error de", error);
+     localStorage.setItem('rolx', "");
+   });
+  }
+>>>>>>> 06ae9ab75abffc5b969b45400a3c991a7555477e
+
+  login(){
+    localStorage.clear();
+const {email,psw} = this.usuario
+
+
+this.auth.login(email,psw) 
+// El usuario ha iniciado sesión con éxito
+
+/* this.auth.getUserRole(this.usuario.email).subscribe(user => {
+ if (this.usuario.rol=== 'psicologa') {
+   this.isAdmin = true;
+ } else if (this.usuario.rol === 'alumno') {
+   this.isEditor = true;
+ }
+});*/
+//alert("Inicio correcto")
+//this.router.navigate(["/signup"]);
+
+
+
+}
+
+  ngOnInit(){
+    this.subscription = this.auth.currentprogreso.subscribe(value => {
+      this.progreso = value;
+    });
+    this.showUp();
+  }
+  showUp() {
+    this.contentPage.nativeElement.scrollIntoView();
   }
 
-  onSubmit(): void {
-    console.log('Form ->', this.registroForm.value);
-  }
-  initForm(): FormGroup{
-    return this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]],
-      confirmPassword: ['', [Validators.required]],
-      name: ['', [Validators.required]],
-      surnameM: ['', [Validators.required]],
-      surnameP: ['', [Validators.required]],
-      numberC: ['', [Validators.required]],
-      career: ['', [Validators.required]],
-    },{validators: this.confirmPasswordValidator});
-  }
-  confirmPasswordValidator(control: AbstractControl): ValidationErrors | null {
-    const password = control.get('password');
-    const confirmPassword = control.get('confirmPassword');
-    return password && confirmPassword && password.value == confirmPassword.value ? null : { mismatch: true };
-  }
-  //Funcion para convertir los datos del email a minusculas
-  lowecase(){
-    const emailControl = this.registroForm.get('email');
-    emailControl?.setValue(emailControl.value.toLowerCase(), {emitEvent: false});
-  }*/
 }
