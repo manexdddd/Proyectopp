@@ -13,10 +13,6 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent {
-<<<<<<< HEAD
-/*
-  registroForm! : FormGroup;
-=======
   @ViewChild('up', { static: true }) contentPage: ElementRef;
   constructor(private auth :AuthService, private afs: AngularFirestore,
      private router: Router,private  storage: AngularFireStorage,private  fb: FormBuilder){
@@ -47,7 +43,6 @@ export class LoginComponent {
      localStorage.setItem('rolx', "");
    });
   }
->>>>>>> 06ae9ab75abffc5b969b45400a3c991a7555477e
 
   login(){
     localStorage.clear();

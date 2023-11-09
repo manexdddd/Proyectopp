@@ -1,11 +1,7 @@
 
 import { Component, ElementRef, OnInit, Renderer2 } from '@angular/core';
-<<<<<<< HEAD
-
-=======
 import { AuthService } from '../services/auth.service';
 import { AlumnosService } from '../services/alumnos.service';
->>>>>>> 06ae9ab75abffc5b969b45400a3c991a7555477e
 
 @Component({
   selector: 'app-home-student',
@@ -46,10 +42,7 @@ export class HomeStudentComponent implements OnInit {
     setInterval(nextSlide, 3000); // Cambia de diapositiva cada 3 segundos (ajusta el tiempo según tus necesidades)
   }
 
-<<<<<<< HEAD
-=======
  
->>>>>>> 06ae9ab75abffc5b969b45400a3c991a7555477e
   
 }
 
