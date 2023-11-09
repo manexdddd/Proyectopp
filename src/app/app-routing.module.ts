@@ -20,6 +20,7 @@ import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
 import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
 import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
+import { EditperfilStudentComponent } from './editperfil-student/editperfil-student.component';
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
 import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
@@ -49,6 +50,8 @@ const routes: Routes = [
   {path:'perfil-student',component:PerfilStudentComponent},
   {path:'carnet-student',component:CarnetStudentComponent},
   {path:'sidebar-perfil-student',component:SidebarPerfilStudentComponent},
+  
+  {path:'editperfil-student',component:EditperfilStudentComponent},
   {path:'areapsicologia-student',component:AreapsicologiaStudentComponent},
   {path:'',redirectTo: '/home-public',pathMatch:'full'},
 ];

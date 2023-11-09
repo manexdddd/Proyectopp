@@ -46,6 +46,7 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 import { FormsModule } from '@angular/forms';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
+import { EditperfilStudentComponent } from './editperfil-student/editperfil-student.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +77,7 @@ import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
    
     HomeRootComponent,
     SidebarRootComponent,
+    EditperfilStudentComponent,
 
   ],
   imports: [
