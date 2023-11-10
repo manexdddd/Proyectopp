@@ -40,6 +40,8 @@ import { FormsModule } from '@angular/forms';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
 
+import { ProfileRootComponent } from './profile-root/profile-root.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -68,6 +70,8 @@ import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
     AreapsicologiaStudentComponent,
     HomeRootComponent,
     SidebarRootComponent,
+
+    ProfileRootComponent,
 
   ],
   imports: [

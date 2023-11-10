@@ -234,11 +234,7 @@
   
   
   
-  .card1:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-  }
-  
+ 
   .card2 {
     position: relative;
     width: 100%;
