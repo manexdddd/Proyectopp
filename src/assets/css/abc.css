@@ -282,7 +282,25 @@
   }
   
 
+ 
 
+
+
+
+  .uds-logiin-wrapper {
+    
+    max-width: 700px;
+    margin: auto;
+    background: var(--white);
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.09);
+  
+    .uds-logiin-logo {
+      margin-bottom: 30px;
+    }
+  }
 
   
   
@@ -355,6 +373,28 @@
   flex: 1; /* Hace que cada campo de entrada ocupe el mismo espacio disponible */
   width: 100%; /* Establece un ancho específico para los campos de entrada */
 }
+
+
+
+
+
+.inputa input[type="file"] {
+  display: block;
+  margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+}
+
+.inputa input[type="submit"] {
+  background-color: #1B396A; /* Ajusta el color de fondo según tus preferencias */
+  color: white; /* Ajusta el color del texto según tus preferencias */
+  padding: 10px; /* Ajusta el relleno según tus preferencias */
+  border: none;
+  border-radius: 5px; /* Ajusta el radio de borde según tus preferencias */
+  cursor: pointer;
+}
+
+.inputa input[type="submit"]:hover {
+  background-color: #1B396A; /* Cambia el color de fondo al pasar el ratón por encima */
+}
   
   .form label {
     position: relative;
@@ -362,7 +402,7 @@
   
   .form label .inputa {
     width: 100%;
-    padding: 10px 10px 20px 10px;
+    padding: 22px 10px 12px 10px;
     outline: 0;
     border: 1px solid rgba(105, 105, 105, 0.397);
     border-radius: 10px;
@@ -376,7 +416,7 @@
     font-size: 0.8em;
     cursor: text;
     transition: 0.3s ease;
-    margin-bottom: 15px;
+    padding-bottom: 30px;
   }
   
   .form label .inputa:placeholder-shown + span {
@@ -401,7 +441,7 @@
     margin: 0 auto; /* Centra horizontalmente el botón */
     border: none;
     outline: none;
-    background-color: royalblue;
+    background-color: #1B396A;;
     padding: 10px;
     border-radius: 15px;
     color: #fff;
@@ -411,6 +451,26 @@
 }
   
   .submit1:hover {
+    background-color: rgb(56, 90, 194);
+    cursor: pointer;
+  }
+
+  .submit2 {
+    width: 120px;
+    margin: 0 auto; /* Centra horizontalmente el botón */
+    border: none;
+    outline: none;
+    background-color: #1B396A;;
+    padding: 10px;
+    border-radius: 15px;
+    margin-left: 245px;
+    color: #fff;
+    font-size: 16px;
+    transform: .3s ease;
+    justify-items: end; /* Esto debe ser justify-content en su lugar */
+}
+  
+  .submit2:hover {
     background-color: rgb(56, 90, 194);
     cursor: pointer;
   }
