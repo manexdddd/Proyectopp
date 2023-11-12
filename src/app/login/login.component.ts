@@ -76,4 +76,9 @@ this.auth.login(email,psw)
     this.contentPage.nativeElement.scrollIntoView();
   }
 
+
+
+
+  
+
 }
