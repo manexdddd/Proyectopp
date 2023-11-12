@@ -11,7 +11,7 @@
 
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
 
   
   <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -35,7 +35,7 @@
  <!-- Page Title-->
  
  <!-- / Page Title-->
- <section class="h-100 gradient-custom-2">
+ <section class=" gradient-custom-2">
     <div class="fs-3 fw-bold mb-2">
       <div class=" justify-content-center align-items-center h-100" >
         <div class="col col-lg- col-xl-">
@@ -45,24 +45,26 @@
                 <img src="{{usuario.foto}}"
                   alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                   style="width: 150px; z-index: 1">
-                <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
-                  style="z-index: 1;">
-                  Editar perfil
-                </button>
+                
         
               </div>
               
               <div class="ms-4 text-white" style="margin-top: 130px;">
-                <h5 style="color: #f0ffff;">Lourdes</h5>
+                <h5 style="color: #f0ffff;">{{usuario.nombre}}</h5>
                 <p>{{usuario.carrera}}</p>
+               
               </div>
- 
+             
             </div>
-            
+           
             <div class="rounded-top p-4" style="background-color: #f8f9fa; border-radius: 15px; margin-bottom: -35px;">
               <div class="d-flex justify-content-end  py-1">
                 <div class="navbar-2">
-                    <div class="nav1-item"><a href="#">Mis Datos</a></div>
+                  
+                  <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
+                  style="z-index: 1;">
+                  Mis datos
+                </button>
                     
                     
                     
@@ -75,6 +77,7 @@
       </div>
     </div>
   </section>
+  
 <!-- / Page Title-->
 <section class="section dashboard ">
  
@@ -103,42 +106,42 @@
                 <div class="tab-content pt-2">
   
                   <div class="tab-pane fade show active profile-overview" id="profile-overview">
-                    <h5 class="card-title">Acerca de</h5>
+                    <h5 class="card-title"><i class="bi bi-info-circle"></i> Acerca de</h5>
                     <p class=" fst-italic">
                         Es una profesional altamente cualificada y respetada en el ámbito de la psicopedagogía y la psicología. Con una sólida formación académica
                     </p>
   
-                    <h5 class="card-title">Detalles de Perfil</h5>
+                    <h5 class="card-title"> <i class="bi bi-person"></i>  Detalles de Perfil</h5>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label ">Nombre completo</div>
+                      <div class="col-lg-3 col-md-4 label "> <i class="bi bi-person"></i> Nombre completo</div>
                       <div class="col-lg-9 col-md-8"> {{ usuario.nombre}}  {{ usuario.paterno}} {{ usuario.materno}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Carrera</div>
+                      <div class="col-lg-3 col-md-4 label"><i class="bi bi-person"></i> Carrera</div>
                       <div class="col-lg-9 col-md-8"> {{ usuario.carrera}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Puesto</div>
+                      <div class="col-lg-3 col-md-4 label"><i class="bi bi-person"></i> Puesto</div>
                       <div class="col-lg-9 col-md-8"> {{ usuario.puesto}}</div>
                     </div>
   
                     
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Direccion</div>
+                      <div class="col-lg-3 col-md-4 label"><i class="bi bi-geo-alt"></i> Direccion</div>
                       <div class="col-lg-9 col-md-8"> {{ usuario.direccion}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Telefono</div>
+                      <div class="col-lg-3 col-md-4 label"><i class="bi bi-telephone"></i> Telefono</div>
                       <div class="col-lg-9 col-md-8"> {{ usuario.telefono}}</div>
                     </div>
   
                     <div class="row">
-                      <div class="col-lg-3 col-md-4 label">Email</div>
+                      <div class="col-lg-3 col-md-4 label"><i class="bi bi-envelope"></i> Email</div>
                       <div class="col-lg-9 col-md-8"> {{ usuario.email}}</div>
                     </div>
   

@@ -24,7 +24,7 @@ import { environment } from '../enviroments/environment';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
 import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
-
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
@@ -41,6 +41,8 @@ import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
 
 import { ProfileRootComponent } from './profile-root/profile-root.component';
+import { CavisosRootComponent } from './cavisos-root/cavisos-root.component';
+import { AvisosRootComponent } from './avisos-root/avisos-root.component';
 
 @NgModule({
   declarations: [
@@ -70,8 +72,10 @@ import { ProfileRootComponent } from './profile-root/profile-root.component';
     AreapsicologiaStudentComponent,
     HomeRootComponent,
     SidebarRootComponent,
-
+   
     ProfileRootComponent,
+      CavisosRootComponent,
+      AvisosRootComponent,
 
   ],
   imports: [
@@ -84,6 +88,7 @@ import { ProfileRootComponent } from './profile-root/profile-root.component';
     AngularFireStorageModule,
     AngularFireAuthModule,
     FormsModule,
+    AngularFireMessagingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
