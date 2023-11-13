@@ -277,11 +277,12 @@
     transform: scale(1.02);
     box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2);
   }
+  
 
   .cardd {
     position: relative;
     width: 100%;
-    max-width: 1780px;
+    max-width: 780px;
     height: auto;
     background-color: #ffffff;
     border-radius: 15px;
@@ -413,10 +414,6 @@
   width: 100%; /* Establece un ancho específico para los campos de entrada */
 }
 
-
-
-
-
 .inputa input[type="file"] {
   display: block;
   margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
@@ -533,7 +530,7 @@
 
 
 
-
+/* login    */
   .form {
     display: flex;
     flex-direction: column;
@@ -1149,3 +1146,141 @@
     height: 100vh; /* Ajusta la altura según tus necesidades */
   }
 
+
+  /* Estilos CSS para el carnet */
+  .carnet {
+    width: 300px;
+    height: 200px;
+    border: 2px solid black;
+    margin: 10px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgb(225, 248, 255);
+  }
+
+  .foto {
+    width: 100px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 10px;
+    background-image: url("https://i.imgur.com/9ZJ0wZf.jpg"); /* URL de la foto */
+    background-size: cover;
+    background-position: center;
+  }
+
+  .datos {
+    width: 150px;
+    height: 150px;
+    border: 2px solid black;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+
+  .nombre {
+    font-weight: bold;
+  }
+
+  .codigo {
+    color: red;
+  }
+
+
+  /* Estilos CSS para el id del alumno */
+  
+  
+  .id-card {
+    
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 500px;
+    height: auto;
+    display: flex;    
+  }
+  
+  .profile-picture {
+    width: 90px;
+    height: 30px;
+    border-radius: 8px;
+  }
+  
+  .id-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+  }
+  
+  .student-info {
+    text-align: right;
+    color: #fff;
+  }
+  
+  .student-info label p{
+    font-weight: bold;
+  }
+  
+  .card23 {
+    position: relative;
+    width: auto; /* Cambiar la propiedad width a auto */
+    max-width: 780px;
+    height: auto;
+    background-color: #2d178c;
+    border-radius: 15px;
+    display: flex;
+    perspective: 100px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    align-items: center; /* añadir esta línea para centrar verticalmente */
+    margin: 0 auto; /* añadir esta línea para centrar horizontalmente */
+}
+  
+  .card23:hover {
+    transform: scale(1.02);
+    
+  }
+
+
+  .cardw {
+    border-radius: 5px;
+    width: 60%;
+    justify-content: center;
+    background-color: #2d178c;
+  }
+
+  .cardw h4 {
+    color: #555;
+    margin-bottom: 10px;
+  }
+
+  .cardw p {
+    color: #ffffff;
+    margin-bottom: 5px;
+    text-align: right; /* Alinea el texto a la derecha */
+    font-size: 20px;
+    padding-right: 35px;
+    padding-bottom: 15px;
+   }
+   .profile-picture {
+    width: 30%;
+    height: auto; /* Ajusta la altura automáticamente */
+    border-radius: 8px;
+   }
+  .cardw p strong {
+    color: #a7a7a7;
+  }
+
+  @media (min-width: 768px) {
+    .cardw {
+      width: 100%;
+      display: inline-block;
+    }
+
+   
+  }
