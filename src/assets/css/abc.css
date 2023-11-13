@@ -286,14 +286,24 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  
+  .limitado2 {
+    width: 300px; 
+    height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
   .mercedes {
     object-fit: cover;
     object-position: center;
-    width: 400px;
-    height: 330px;
+    width: 300px;
+    height: 350px;
    }
 
   
   
   /*_______*/
+
+
+  

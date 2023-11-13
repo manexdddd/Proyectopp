@@ -71,7 +71,7 @@
             <p class="small text-muted mb-0">{{ aviso.data.fecha }}</p>
             <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
               <span class="badge bg-success"><a class="text-white"href="javascript:void(0)">Ver</a></span>
-              <span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable">Editar</a></span>
+              <span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"(click)="editar(aviso.id)">Editar</a></span>
               <span class="badge bg-danger"><a class="text-white" href="javascript:void(0)" (click)="eliminar(aviso.id)">Eliminar</a></span>
             </div>
           </div>
@@ -103,10 +103,10 @@
                  
     
                   <!-- Floating Labels Form -->
-                  <form class="row g-3" >
+                  <form class="row g-3" [formGroup]="avisoeditForm">
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="titulo" placeholder="titulo" value="" formControlName="titulo"  >
+                        <input type="text" class="form-control" id="titulo"  value="{{avisoe.titulo}}" [(ngModel)]="avisoe.titulo" formControlName="titulo"  >
                         <label for="titulo"><i class="bi bi-at"></i> titulo</label>
                       </div>
                       
@@ -115,9 +115,9 @@
                       <label for="profileImage" class="col-md-4 col-lg-3 col-form-label"><i class="bi bi-card-image"></i> Imagen de aviso</label>
                       <div class="col-md-8 col-lg-8">
                         <div class="pt-2 text-center">
-                          <img src="" alt="Aviso" class="img-fluid mt-2 mx-auto d-block " style="width:50%;">
-                          <a  href="javascript:void(0)" class="btn btn-primary btn-sm m-3" title="subir foto"><input name="imagen" type="file"     class="form-control"><i class="bi bi-upload"></i></a>
-                          <a   href="javascript:void(0)"  class="btn btn-danger btn-sm mt-2" title="eliminar foto" ><i class="bi bi-trash"></i></a>
+                          <img src="{{avisoe.foto}}" alt="Aviso" class="img-fluid mt-2 mx-auto d-block " style="width:50%;">
+                          <a *ngIf="imagen" href="javascript:void(0)" class="btn btn-primary btn-sm m-3" title="subir foto"><input name="imagen" type="file"     class="form-control" (click)=" uploadImage($event)"><i class="bi bi-upload"></i></a>
+                          <a  *ngIf="!imagen" href="javascript:void(0)"  class="btn btn-danger btn-sm mt-2" title="eliminar foto" (click)="eliminaf()"><i class="bi bi-trash"></i></a>
                           
                           
                         </div>
@@ -127,28 +127,30 @@
                    
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="descripcion" placeholder="" formControlName="descripcion" >
+                        <input type="text" class="form-control" id="descripcion" placeholder="" formControlName="descripcion" 
+                        value="{{avisoe.descripcion}}"
+                        [(ngModel)]="avisoe.descripcion" >
                         <label for="descripcion"><i class="bi bi-file-earmark"></i> Pequeña Descripcion</label>
                       </div>
                       
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="lugar"  placeholder="" formControlName="lugar" >
+                        <input type="text" class="form-control" id="lugar"  value="{{avisoe.lugar}}"formControlName="lugar" [(ngModel)]="avisoe.lugar" >
                         <label for="lugar"><i class="bi bi-geo-alt"></i> Lugar</label>
                       </div>
                       
                     </div>
                     <div class="col-md-6">
                       <div class="form-floating">
-                        <input type="date" class="form-control" id="fecha"  placeholder="" formControlName="fecha" >
+                        <input type="date" class="form-control" id="fecha"  value="{{avisoe.fecha}}" formControlName="fecha" [(ngModel)]="avisoe.fecha" >
                         <label for="fecha"><i class="bi bi-calendar"></i> fecha</label>
                       </div>
                       
                     </div>
                     <div class="col-12">
                       <div class="form-floating">
-                        <textarea class="form-control" placeholder="contenido" id="contenido" style="height: 200px;"  formControlName="contenido"></textarea>
+                        <textarea class="form-control" placeholder="contenido" id="contenido" value="{{avisoe.contenido}}" style="height: 200px;"  formControlName="contenido" [(ngModel)]="avisoe.contenido" ></textarea>
                         <label for="contenido"><i class="bi bi-alphabet-uppercase"></i> Contenido</label>
                       </div>
                     
@@ -166,8 +168,8 @@
      
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-          <button type="button" class="btn btn-primary">Guardar Cambios</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancelar()">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="editardocumento()" >Save changes</button>
         </div>
       </div>
     </div>
