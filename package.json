@@ -22,7 +22,7 @@
     "animate.css": "^4.1.1",
     "bootstrap": "^5.3.2",
     "firebase": "^10.5.2",
-    "firebase-save": "^3.0.0",
+    "font-awesome": "^4.7.0",
     "jquery": "^3.7.1",
     "ngx-wow": "^2.0.1",
     "rxjs": "~7.8.0",

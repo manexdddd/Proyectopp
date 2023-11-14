@@ -24,7 +24,7 @@ import { environment } from '../enviroments/environment';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
 import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
-
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
@@ -39,6 +39,13 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 import { FormsModule } from '@angular/forms';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
+
+import { ProfileRootComponent } from './profile-root/profile-root.component';
+import { CavisosRootComponent } from './cavisos-root/cavisos-root.component';
+import { AvisosRootComponent } from './avisos-root/avisos-root.component';
+import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
+import { BlogPublicComponent } from './blog-public/blog-public.component';
+import { BlogRootComponent } from './blog-root/blog-root.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +75,13 @@ import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
     AreapsicologiaStudentComponent,
     HomeRootComponent,
     SidebarRootComponent,
+   
+    ProfileRootComponent,
+      CavisosRootComponent,
+      AvisosRootComponent,
+      TutorvRootComponent,
+      BlogPublicComponent,
+      BlogRootComponent,
 
   ],
   imports: [
@@ -80,6 +94,7 @@ import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
     AngularFireStorageModule,
     AngularFireAuthModule,
     FormsModule,
+    AngularFireMessagingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

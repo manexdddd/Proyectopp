@@ -232,13 +232,12 @@
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   }
   
+  .ki-verify .path1:before {
+    content: "\ef7e";
+    opacity: 0.3;
+}
   
-  
-  .card1:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
-  }
-  
+ 
   .card2 {
     position: relative;
     width: 100%;
@@ -281,9 +280,36 @@
     box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
   }
   
+  .limitado {
+    width: 100px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .limitado2 {
+    width: 300px; 
+    height: 100px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+ 
+  .mercedes {
+    object-fit: cover;
+    object-position: center;
+    width: 300px;
+    height: 350px;
+   }
 
+   .mercedes2 {
+    object-fit: cover;
+    object-position: center;
+    width: 312px;
+    height: 300px;
+   }
 
-
-  
   
   /*_______*/
+
+
+  
