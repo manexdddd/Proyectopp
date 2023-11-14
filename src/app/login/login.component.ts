@@ -71,6 +71,9 @@ this.auth.login(email,psw)
       this.progreso = value;
     });
     this.showUp();
+
+
+    
   }
   showUp() {
     this.contentPage.nativeElement.scrollIntoView();
