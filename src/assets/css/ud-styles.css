@@ -2463,7 +2463,7 @@ p {
 }
 
 .ud-articles-box .ud-articles-list li {
-  padding: 20px 0;
+  padding: 10px 0;
   border-bottom: 1px solid #f2f3f8;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2485,6 +2485,7 @@ p {
   border-radius: 50%;
   overflow: hidden;
   margin-right: 20px;
+  background:cover;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1199px), (max-width: 767px) {

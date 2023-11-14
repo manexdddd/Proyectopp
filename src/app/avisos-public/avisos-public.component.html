@@ -46,14 +46,14 @@
           <div class="col-lg-4 col-md-6" *ngFor="let aviso of avisos ">
             <div class="ud-single-blog">
               <div class="ud-blog-image contenedor">
-                <a href="">
+                <a href="javascript:void(0)"  (click)="detalle(aviso.id)">
                   <img src="{{aviso.data.foto}}" alt="{{aviso.data.foto}}" />
                 </a>
               </div>
               <div class="ud-blog-content">
                 <span class="ud-blog-date">{{ aviso.data.fecha }}</span>
                 <h3 class="ud-blog-title ">
-                   <a href="limitado2">
+                   <a  href="javascript:void(0)"  (click)="detalle(aviso.id)">
                     {{ aviso.data.titulo }}
                   </a>
                 

@@ -4,6 +4,7 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { finalize } from 'rxjs';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-avisos-root',
@@ -30,7 +31,7 @@ avisos: any[];
 
 constructor(private av:AvisosService,private  storage: AngularFireStorage, private afs: AngularFirestore
   ,private changeDetector: ChangeDetectorRef,
-  private  fb: FormBuilder){
+  private  fb: FormBuilder,private router:Router){
 
  
 
@@ -145,5 +146,11 @@ initForm(): FormGroup{
     contenido: [''],
     
   });
+}
+
+detalle(id:string){
+  localStorage.setItem("detalleid",id)
+  this.router.navigate(['blog-root']);
+
 }
 }

@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { AvisosService } from '../services/avisos.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-avisos-public',
@@ -8,7 +9,7 @@ import { AvisosService } from '../services/avisos.service';
 })
 export class AvisosPublicComponent {
   avisos: any[];
-  constructor(private av:AvisosService){
+  constructor(private av:AvisosService,private router:Router){
   
    
   
@@ -19,5 +20,10 @@ export class AvisosPublicComponent {
    
   }
 
-  
+  detalle(id:string){
+    localStorage.setItem("detalleid",id)
+    this.router.navigate(['blog-public']);
+ 
+  }
+
 }

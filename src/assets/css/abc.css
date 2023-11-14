@@ -301,7 +301,13 @@
     height: 350px;
    }
 
-  
+   .mercedes2 {
+    object-fit: cover;
+    object-position: center;
+    width: 312px;
+    height: 300px;
+   }
+
   
   /*_______*/
 

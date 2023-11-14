@@ -25,7 +25,10 @@
  <app-sidebar-root></app-sidebar-root>
 
   <main id="main" class="main">
-    <section  class="section dashboard;" style="background-color: #0073f74e; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+    <section  class="section dashboard;" style="background: linear-gradient(135deg, #63b9ff80 50%, transparent 0),linear-gradient(-135deg, #63b9ff80 50%, transparent 0);
+    background-size: 2em 2em;
+    background-color: #ffffff;
+    opacity: 1; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
       <div class="pagetitle">
         <h1>Todos los Avisos</h1>
         <nav>
@@ -62,15 +65,15 @@
       <!-- Gallery item -->
       <div class="col-xl-3 col-lg-4 col-md-6 mb-4" *ngFor="let aviso of avisos; index as i">
         <div class="bg-white rounded shadow-sm ">
-          <img src="{{aviso.data.foto}}" alt="{{aviso.data.foto}}" class="img-fluid card-img-top mercedes">
-          <div class="p-4">
+          <img src="{{aviso.data.foto}}" alt="{{aviso.data.foto}}" class="img-fluid card-img-top mercedes2">
+          <div class="p-4 ">
            
             <h5> <a  class="text-dark">{{ aviso.data.titulo }}</a></h5>
           
             <p class="small text-muted mb-0 limitado" >{{ aviso.data.descripcion }}</p>
             <p class="small text-muted mb-0">{{ aviso.data.fecha }}</p>
             <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-              <span class="badge bg-success"><a class="text-white"href="javascript:void(0)">Ver</a></span>
+              <span class="badge bg-success"><a class="text-white"href="javascript:void(0)"(click)="detalle(aviso.id)">Ver</a></span>
               <span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"(click)="editar(aviso.id)">Editar</a></span>
               <span class="badge bg-danger"><a class="text-white" href="javascript:void(0)" (click)="eliminar(aviso.id)">Eliminar</a></span>
             </div>
@@ -169,7 +172,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancelar()">Cancelar</button>
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="editardocumento()" >Save changes</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="editardocumento()" >Guardar Cambios</button>
         </div>
       </div>
     </div>

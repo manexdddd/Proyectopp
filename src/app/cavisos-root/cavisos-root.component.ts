@@ -13,13 +13,14 @@ import { RootService } from '../services/root.service';
 })
 export class CavisosRootComponent {
   constructor(private  fb: FormBuilder,private ro :RootService,private afs: AngularFirestore,private  storage: AngularFireStorage) {}
-
+email = localStorage.getItem('email');
   progreso: boolean;
   subscription: Subscription;
   auth: any;
   avisoForm! : FormGroup;
   imagen:boolean=false;
-  
+
+  usuario: any;
   aviso ={
     titulo:'',
     descripcion:'',
@@ -27,6 +28,7 @@ export class CavisosRootComponent {
     contenido:'',
     foto:'',
        lugar:'',
+       autor:this.email,
    };
   
    
@@ -76,7 +78,10 @@ export class CavisosRootComponent {
   }
 
   onSubmit(): void {
+   
     this.ro.crearDocumento(this.aviso)
+
+    
         
   }
   eliminar() {

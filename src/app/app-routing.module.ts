@@ -5,6 +5,8 @@ import { EncuestasPublicComponent } from './encuestas-public/encuestas-public.co
 import { CavisosRootComponent } from './cavisos-root/cavisos-root.component';
 import { HelpPublicComponent } from './help-public/help-public.component';
 import { HomePublicComponent } from './home-public/home-public.component';
+import { BlogPublicComponent } from './blog-public/blog-public.component';
+import { BlogRootComponent } from './blog-root/blog-root.component';
 import { SignupComponent } from './signup/signup.component';
 import { AvisosPublicComponent } from './avisos-public/avisos-public.component';
 import { AboutPublicComponent } from './about-public/about-public.component';
@@ -28,6 +30,8 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'about-public',component:AboutPublicComponent},
+  {path:'blog-public',component:BlogPublicComponent},
+  {path:'blog-root',component:BlogRootComponent},
   {path:'signup',component:SignupComponent},
   {path:'encuestas-public',component:EncuestasPublicComponent},
   {path:'home-student',component:HomeStudentComponent,canActivate: [AuthGuard] ,

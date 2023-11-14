@@ -43,6 +43,9 @@ import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
 import { ProfileRootComponent } from './profile-root/profile-root.component';
 import { CavisosRootComponent } from './cavisos-root/cavisos-root.component';
 import { AvisosRootComponent } from './avisos-root/avisos-root.component';
+import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
+import { BlogPublicComponent } from './blog-public/blog-public.component';
+import { BlogRootComponent } from './blog-root/blog-root.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +79,9 @@ import { AvisosRootComponent } from './avisos-root/avisos-root.component';
     ProfileRootComponent,
       CavisosRootComponent,
       AvisosRootComponent,
+      TutorvRootComponent,
+      BlogPublicComponent,
+      BlogRootComponent,
 
   ],
   imports: [
