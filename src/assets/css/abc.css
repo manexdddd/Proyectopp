@@ -523,6 +523,44 @@
     }
   }
 
+  @media only screen and (max-width: 600px) {
+    .form {
+      padding: 15px;
+      border-radius: 15px;
+    }
+  
+    .title1 {
+      font-size: 20px;
+      padding-left: 10px;
+    }
+  
+    .title1::before,
+    .title1::after {
+      height: 10px;
+      width: 10px;
+    }
+  
+    .title1::before {
+      width: 12px;
+      height: 12px;
+    }
+  
+    .title1::after {
+      width: 12px;
+      height: 12px;
+      animation: none;
+    }
+  
+    .submit1,
+    .submit2 {
+      width: 100%;
+      margin-left: 0;
+    }
+  
+    .submit2 {
+      margin-top: 10px;
+    }
+  }
 
 
 
@@ -530,119 +568,224 @@
 
 
 
-/* login    */
-  .form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    background-color: #ffffff;
+
+/* login */
+.ud-logiiin-wrapper {
+  max-width: 650px;
+  margin: auto;
+  background: var(--white);
+  text-align: left;
+  padding: 60px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.12);
+}
+
+.ud-logiiin-wrapper .ud-logiiin-logo {
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #ffffff;
+  padding: 30px;
+  width: 450px;
+  border-radius: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Placeholder styles */
+::placeholder {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+/* Input styles */
+.inputoForm {
+  border: 1.5px solid #ecedec;
+  border-radius: 10px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  transition: 0.2s ease-in-out;
+}
+
+.inputo {
+  margin-left: 10px;
+  border-radius: 10px;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.inputo:focus {
+  outline: none;
+}
+
+.inputoForm:focus-within {
+  border: 1.5px solid #2d79f3;
+}
+
+/* Flex row styles */
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+/* Button styles */
+.button-submit {
+  margin: 20px 0 10px 0;
+  background-color: #151717;
+  border: none;
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 10px;
+  height: 50px;
+  width: 100%;
+  cursor: pointer;
+}
+
+/* Paragraph styles */
+.p {
+  text-align: center;
+  color: black;
+  font-size: 14px;
+  margin: 5px 0;
+}
+
+/* Button secondary styles */
+.btno {
+  margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  gap: 10px;
+  border: 1px solid #ededef;
+  background-color: white;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.btno:hover {
+  border: 1px solid #2d79f3;
+}
+
+/* Media Queries */
+
+@media only screen and (max-width: 600px) {
+  .ud-login-wrapper {
     padding: 30px;
-    width: 450px;
-    border-radius: 20px;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
-  
-  ::placeholder {
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+  .ud-login-wrapper .ud-logiiin-logo {
+    margin-bottom: 20px;
   }
-  
-  
-  
-  .flex-column > label {
-    color: #151717;
-    font-weight: 600;
+
+  .form {
+    width: 100%;
+    padding: 15px;
   }
-  
+
   .inputoForm {
-    border: 1.5px solid #ecedec;
-    border-radius: 10px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    padding-left: 10px;
-    transition: 0.2s ease-in-out;
+    height: 40px;
   }
-  
-  .inputo {
-    margin-left: 10px;
-    border-radius: 10px;
-    border: none;
-    width: 100%;
-    height: 100%;
-  }
-  
-  .inputo:focus {
-    outline: none;
-  }
-  
-  .inputoForm:focus-within {
-    border: 1.5px solid #2d79f3;
-  }
-  
-  .flex-row {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 10px;
-    justify-content: space-between;
-  }
-  
-  .flex-row > div > label {
-    font-size: 14px;
-    color: black;
-    font-weight: 400;
-  }
-  
-  .span {
-    font-size: 14px;
-    margin-left: 5px;
-    color: #2d79f3;
-    font-weight: 500;
-    cursor: pointer;
-  }
-  
-  .button-submit {
-    margin: 20px 0 10px 0;
-    background-color: #151717;
-    border: none;
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
-    border-radius: 10px;
-    height: 50px;
-    width: 100%;
-    cursor: pointer;
-  }
-  
-  .p {
-    text-align: center;
-    color: black;
-    font-size: 14px;
-    margin: 5px 0;
-  }
-  
+
+  .button-submit,
   .btno {
-    margin-top: 10px;
-    width: 100%;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 900px) {
+  .ud-login-wrapper {
+    padding: 40px;
+  }
+
+  .ud-login-wrapper .ud-logiiin-logo {
+    margin-bottom: 40px;
+  }
+
+  .form {
+    width: 80%;
+    padding: 20px;
+  }
+
+  .inputoForm {
     height: 50px;
-    border-radius: 10px;
+  }
+
+  .button-submit,
+  .btno {
+    height: 50px;
+    font-size: 16px;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .ud-login-wrapper {
+    padding: 20px;
+  }
+
+  .ud-login-wrapper .ud-logiiin-logo {
+    margin-bottom: 10px;
+  }
+
+  .form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .inputoForm {
+    height: 30px;
+  }
+
+  .button-submit,
+  .btno {
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+@media only screen and (width: 300px) and (height: 600px) {
+  .ud-login-wrapper {
+    
     display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: 500;
-    gap: 10px;
-    border: 1px solid #ededef;
-    background-color: white;
-    cursor: pointer;
-    transition: 0.2s ease-in-out;
   }
-  
-  .btno:hover {
-    border: 1px solid #2d79f3;
-    ;
+
+  .ud-login-wrapper .ud-logiiin-logo {
+    margin-bottom: 10px;
   }
-  
-      
+
+  .form {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .inputoForm {
+    height: 30px;
+  }
+
+  .button-submit,
+  .btno {
+    height: 30px;
+    font-size: 12px;
+  }
+}
+
+
+
+
 
 
 
