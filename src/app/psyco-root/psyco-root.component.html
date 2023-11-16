@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Forms / Layouts - NiceAdmin Bootstrap Template</title>
+  <title>Psicologas</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
 
@@ -33,15 +33,15 @@
         <h1>Todos los Avisos</h1>
         <nav>
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="home-root">Home</a></li>
-            <li class="breadcrumb-item">Avisos</li>
-            <li class="breadcrumb-item active">Todos Avisos</li>
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Psicologas</li>
+            <li class="breadcrumb-item active">Tod@ las Psicologas</li>
           </ol>
         </nav>
       </div><!-- End Page Title -->
    <!-- Page Title-->
 
-   <p class="text-muted ">Todos los avisos se publican en tiempo real</p><br>
+   <p class="text-muted ">Tod@s las Psicologas</p><br>
    
   <div class="circles">
     <li></li>
@@ -63,19 +63,19 @@
     
     <div class="row mt-3">
       <!-- Gallery item -->
-      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" *ngFor="let aviso of avisos; index as i">
-        <div class="bg-white rounded shadow-sm mx-auto align-items-center">
-          <div class="d-flex align-items-center justify-content-center bg-info"><img src="{{aviso.data.foto}}" alt="{{aviso.data.foto}}" class=" card-img-top mercedes2"></div>
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" *ngFor="let admin of admins">
+        <div class="bg-white rounded shadow-sm ">
+          <div class="d-flex align-items-center justify-content-center bg-info"><img src="{{admin.data.foto}}" alt="{{admin.data.foto}}" class=" card-img-top mercedes2"></div>
           <div class="p-4 ">
            
-            <h5> <a  class="text-dark">{{ aviso.data.titulo }}</a></h5>
+            <h5> <a  class="text-dark">{{ admin.data.nombre }}</a></h5>
           
-            <p class="small text-muted mb-0 limitado" >{{ aviso.data.descripcion }}</p>
-            <p class="small text-muted mb-0">{{ aviso.data.fecha }}</p>
+            <p class="small text-muted mb-0 limitado" >{{ admin.data.paterno }}</p>
+            <p class="small text-muted mb-0">{{ admin.data.materno }}</p>
             <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
-              <span class="badge bg-success"><a class="text-white"href="javascript:void(0)"(click)="detalle(aviso.id)">Ver</a></span>
-              <span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"(click)="editar(aviso.id)">Editar</a></span>
-              <span class="badge bg-danger"><a class="text-white" href="javascript:void(0)" (click)="eliminar(aviso.id)">Eliminar</a></span>
+              <!--<span class="badge bg-success"><a class="text-white"href="javascript:void(0)"(click)="detalle(admin.id)">Ver</a></span>-->
+              <span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"(click)="editar(admin.id)">Editar</a></span>
+              <span class="badge bg-danger"><a class="text-white" href="javascript:void(0)" (click)="eliminar(admin.id)">Eliminar</a></span>
             </div>
           </div>
         </div>
@@ -92,7 +92,7 @@
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Editar Aviso</h5>
+          <h5 class="modal-title">Editar Psicologa</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -101,7 +101,7 @@
     
               <div class="card align-self-center">
                 <div class="card-body align-self-center">
-                  <h5 class="card-title"><i class="bi bi-megaphone"></i>  Aviso</h5>
+                  <h5 class="card-title"><i class="bi bi-megaphone"></i>Psicologa</h5>
     
                  
     
@@ -109,20 +109,20 @@
                   <form class="row g-3" [formGroup]="avisoeditForm">
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="titulo"  value="{{avisoe.titulo}}" [(ngModel)]="avisoe.titulo" formControlName="titulo"  >
-                        <label for="titulo"><i class="bi bi-at"></i> titulo</label>
+                        <input type="text" class="form-control" id="nombre"  value="{{admine.nombre}}" [(ngModel)]="admine.nombre" formControlName="nombre"  >
+                        <label for="titulo"><i class="bi bi-at"></i> nombre</label>
                       </div>
                       
                     </div>
                     <div class="row mb-3">
-                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label"><i class="bi bi-card-image"></i> Imagen de aviso</label>
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label"><i class="bi bi-card-image"></i> Imagen de Perfil</label>
                       <div class="col-md-8 col-lg-8">
                         <div class="pt-2 text-center">
-                          <img src="{{avisoe.foto}}" alt="Aviso" class="img-fluid mt-2 mx-auto d-block " style="width:50%;">
-                          <a *ngIf="imagen" href="javascript:void(0)" class="btn btn-primary btn-sm m-3" title="subir foto"><input name="imagen" type="file"     class="form-control" (change)=" uploadImage($event)"><i class="bi bi-upload"></i></a>
-                          <a  *ngIf="!imagen" href="javascript:void(0)"  class="btn btn-danger btn-sm mt-2" title="eliminar foto" (click)="eliminaf()"><i class="bi bi-trash"></i></a>
-                          
-                          
+                            <img src="{{admine.foto}}" alt="Foto" class="img-fluid mt-2 mx-auto d-block " style="width:50%;">
+                            <a *ngIf="imagen" href="javascript:void(0)" class="btn btn-primary btn-sm m-3" title="subir foto"><input name="imagen" type="file"     class="form-control" (change)="uploadImage($event)"><i class="bi bi-upload"></i></a>
+                            <a  *ngIf="!imagen" href="javascript:void(0)"  class="btn btn-danger btn-sm mt-2" title="eliminar foto" (click)="eliminaf()"><i class="bi bi-trash"></i></a>
+                            
+                            
                         </div>
                       </div>
                     </div>
@@ -130,35 +130,41 @@
                    
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="descripcion" placeholder="" formControlName="descripcion" 
-                        value="{{avisoe.descripcion}}"
-                        [(ngModel)]="avisoe.descripcion" >
-                        <label for="descripcion"><i class="bi bi-file-earmark"></i> Pequeña Descripcion</label>
+                        <input type="text" class="form-control" id="paterno" placeholder="" formControlName="paterno" 
+                        value="{{admine.paterno}}"
+                        [(ngModel)]="admine.paterno" >
+                        <label for="paterno"><i class="bi bi-file-earmark"></i> Apellido Paterno</label>
                       </div>
                       
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="lugar"  value="{{avisoe.lugar}}"formControlName="lugar" [(ngModel)]="avisoe.lugar" >
-                        <label for="lugar"><i class="bi bi-geo-alt"></i> Lugar</label>
+                        <input type="text" class="form-control" id="lugar"  value="{{admine.materno}}"formControlName="materno" [(ngModel)]="admine.materno" >
+                        <label for="materno"><i class="bi bi-geo-alt"></i> Apellido Materno</label>
                       </div>
                       
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="date" class="form-control" id="fecha"  value="{{avisoe.fecha}}" formControlName="fecha" [(ngModel)]="avisoe.fecha" >
-                        <label for="fecha"><i class="bi bi-calendar"></i> fecha</label>
+                        <input type="text" class="form-control" id="telefono"  value="{{admine.telefono}}" formControlName="tel" [(ngModel)]="admine.telefono" >
+                        <label for="telefono"><i class="bi bi-calendar"></i> Telefono</label>
                       </div>
                       
                     </div>
-                    <div class="col-12">
-                      <div class="form-floating">
-                        <textarea class="form-control" placeholder="contenido" id="contenido" value="{{avisoe.contenido}}" style="height: 200px;"  formControlName="contenido" [(ngModel)]="avisoe.contenido" ></textarea>
-                        <label for="contenido"><i class="bi bi-alphabet-uppercase"></i> Contenido</label>
+                    <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="direccion"  value="{{admine.direccion}}" formControlName="direccion" [(ngModel)]="admine.direccion" >
+                          <label for="direccion"><i class="bi bi-calendar"></i> Direccion</label>
+                        </div>
+                        
                       </div>
-                    
-                    </div>
-                   
+                      <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="carrera"  value="{{admine.carrera}}" formControlName="carrera" [(ngModel)]="admine.carrera" >
+                          <label for="carrera"><i class="bi bi-calendar"></i>Carrera</label>
+                        </div>
+                        
+                      </div>
                   
                     
                   </form><!-- End floating Labels Form -->

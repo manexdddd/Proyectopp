@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { AvisosService } from '../services/avisos.service';
+import { RootService } from '../services/root.service';
+import { Router } from '@angular/router';
 
 
 
@@ -12,7 +15,21 @@ import { Component, OnInit } from '@angular/core';
 export class HomePublicComponent  {
   counter = 0;
   text = ['CEO DevFolio,Frontend Developer,Graphic Designer', 'Web Developer', ',Web Designer3'];
-  constructor() {}
+  aviso: any;
+  detalleid = localStorage.getItem("detalleid")
+  avises:any[];
+  admin:any
+  constructor(private av:AvisosService,private router:Router,private ro:RootService){
+  
+   
+     this.av.getAll().subscribe(data => {
+      this.avises = this.RecentAvisos(data);
+      console.log(this.avises);
+     });
+
+
+     
+  }
   ngOnInit(): void {
     setInterval(() => this.change(), 3000);
   }
@@ -33,6 +50,22 @@ export class HomePublicComponent  {
 }
 
       
+}
+
+RecentAvisos(avisos) {
+  // Sort the avisos array in descending order based on the date
+  const sortedAvisos = avisos.sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
+ 
+  // Use the slice method to get the first three elements of the sorted array
+  const threeMostRecentAvisos = sortedAvisos.slice(0, 3);
+ 
+  return threeMostRecentAvisos;
+ }
+
+ detalle(id:string){
+  localStorage.setItem("detalleid",id)
+  this.router.navigate(['/blog-public']);
+
 }
 }
 

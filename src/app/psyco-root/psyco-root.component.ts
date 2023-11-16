@@ -1,31 +1,29 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { finalize } from 'rxjs';
-import { PsycoService } from '../services/psyco.service';
+import { AvisosService } from '../services/avisos.service';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Router } from '@angular/router';
-import { TutorService } from '../services/tutor.service';
+import { AngularFirestore } from '@angular/fire/compat/firestore';
+import { PsycoService } from '../services/psyco.service';
 
 @Component({
-  selector: 'app-tutorv-root',
-  templateUrl: './tutorv-root.component.html',
-  styleUrls: ['./tutorv-root.component.css']
+  selector: 'app-psyco-root',
+  templateUrl: './psyco-root.component.html',
+  styleUrls: ['./psyco-root.component.css']
 })
-export class TutorvRootComponent {
-  admins: any[];
+export class PsycoRootComponent {
+ admins: any[];
   adminf:any
   admine ={
    nombre:'',
    paterno:'',
-  rol:'tutor',
+  rol:'admin',
    materno:'',
    foto:'',
    direccion:'',
    telefono:'',
-   division:'',
-   carrera:'',
-   grupo:''
+   carrera:''
   };
   
   
@@ -34,7 +32,7 @@ export class TutorvRootComponent {
   imagen:boolean=false;
   newe:any
  
- constructor(private av:TutorService,private  storage: AngularFireStorage, private afs: AngularFirestore
+ constructor(private av:PsycoService,private  storage: AngularFireStorage, private afs: AngularFirestore
    ,private changeDetector: ChangeDetectorRef,
    private  fb: FormBuilder,private router:Router){
  
@@ -55,7 +53,7 @@ export class TutorvRootComponent {
  }
  
  eliminar(id:string): void {
- this.av.getutor(id).subscribe(adminfa => {
+ this.av.getpsyco(id).subscribe(adminfa => {
      this.adminf = adminfa;
      
    const url = this.adminf.foto
@@ -77,7 +75,7 @@ export class TutorvRootComponent {
    
    localStorage.setItem("avid","");
     localStorage.setItem("avid",id);
-   this.av.getutor(id).subscribe(admine => {
+   this.av.getpsyco(id).subscribe(admine => {
      this.admine = admine as { nombre:'',
      paterno:'',
      materno:'',
@@ -85,9 +83,7 @@ export class TutorvRootComponent {
      foto:'',
      direccion:'',
      telefono:'',
-     division:'',
-     carrera:'',
-     grupo:'',
+     carrera:''
     };
      if(this.admine.foto == ""){
        this.imagen =true;
@@ -139,12 +135,8 @@ export class TutorvRootComponent {
      this.admine.direccion,
      telefono:
      this.admine.telefono,
-     divison:
-     this.admine.division,
      carrera:
      this.admine.carrera,
-     grupo:
-     this.admine.grupo
    }).then(() => {
      
    
@@ -165,9 +157,7 @@ export class TutorvRootComponent {
      materno: [''],
      tel: [''],
      direccion: [''],
-     division: [''],
-     grupo:[''],
-     carrera:[''],
+     carrera: [''],
    });
  }
  

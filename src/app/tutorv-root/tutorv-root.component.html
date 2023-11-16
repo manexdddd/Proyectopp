@@ -1,1 +1,234 @@
-<p>tutorv-root works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Psicologas</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+   
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+ <app-sidebar-root></app-sidebar-root>
+
+  <main id="main" class="main">
+    <section  class="section dashboard;" style="background: linear-gradient(135deg, #63b9ff80 50%, transparent 0),linear-gradient(-135deg, #63b9ff80 50%, transparent 0);
+    background-size: 2em 2em;
+    background-color: #ffffff;
+    opacity: 1; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Todos los Avisos</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+            <li class="breadcrumb-item">Psicologas</li>
+            <li class="breadcrumb-item active">Tod@ las Psicologas</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+
+   <p class="text-muted ">Tod@s las Psicologas</p><br>
+   
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
+    </section>
+    
+    <div class="row mt-3">
+      <!-- Gallery item -->
+      <div class="col-xl-3 col-lg-4 col-md-6 mb-4" *ngFor="let admin of admins">
+        <div class="bg-white rounded shadow-sm ">
+          <div class="d-flex align-items-center justify-content-center bg-info"><img src="{{admin.data.foto}}" alt="{{admin.data.foto}}" class=" card-img-top mercedes2"></div>
+          <div class="p-4 ">
+           
+            <h5> <a  class="text-dark">{{ admin.data.nombre }}</a></h5>
+          
+            <p class="small text-muted mb-0 limitado" >{{ admin.data.paterno }}</p>
+            <p class="small text-muted mb-0">{{ admin.data.materno }}</p>
+            <div class="d-flex align-items-center justify-content-between rounded-pill bg-light px-3 py-2 mt-4">
+              <!--<span class="badge bg-success"><a class="text-white"href="javascript:void(0)"(click)="detalle(admin.id)">Ver</a></span>-->
+              <span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"(click)="editar(admin.id)">Editar</a></span>
+              <span class="badge bg-danger"><a class="text-white" href="javascript:void(0)" (click)="eliminar(admin.id)">Eliminar</a></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End -->
+
+
+    </div>
+    
+    
+   
+
+  <div class="modal fade" id="modalDialogScrollable" tabindex="-1">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Editar Psicologa</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="row align-items-center">
+            <div class="col-lg-12 align-self-center">
+    
+              <div class="card align-self-center">
+                <div class="card-body align-self-center">
+                  <h5 class="card-title"><i class="bi bi-megaphone"></i>Psicologa</h5>
+    
+                 
+    
+                  <!-- Floating Labels Form -->
+                  <form class="row g-3" [formGroup]="avisoeditForm">
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="nombre"  value="{{admine.nombre}}" [(ngModel)]="admine.nombre" formControlName="nombre"  >
+                        <label for="titulo"><i class="bi bi-at"></i> nombre</label>
+                      </div>
+                      
+                    </div>
+                    <div class="row mb-3">
+                      <label for="profileImage" class="col-md-4 col-lg-3 col-form-label"><i class="bi bi-card-image"></i> Imagen de Perfil</label>
+                      <div class="col-md-8 col-lg-8">
+                        <div class="pt-2 text-center">
+                            <img src="{{admine.foto}}" alt="Foto" class="img-fluid mt-2 mx-auto d-block " style="width:50%;">
+                            <a *ngIf="imagen" href="javascript:void(0)" class="btn btn-primary btn-sm m-3" title="subir foto"><input name="imagen" type="file"     class="form-control" (change)="uploadImage($event)"><i class="bi bi-upload"></i></a>
+                            <a  *ngIf="!imagen" href="javascript:void(0)"  class="btn btn-danger btn-sm mt-2" title="eliminar foto" (click)="eliminaf()"><i class="bi bi-trash"></i></a>
+                            
+                            
+                        </div>
+                      </div>
+                    </div>
+                   
+                   
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="paterno" placeholder="" formControlName="paterno" 
+                        value="{{admine.paterno}}"
+                        [(ngModel)]="admine.paterno" >
+                        <label for="paterno"><i class="bi bi-file-earmark"></i> Apellido Paterno</label>
+                      </div>
+                      
+                    </div>
+                    <div class="col-md-6">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="lugar"  value="{{admine.materno}}"formControlName="materno" [(ngModel)]="admine.materno" >
+                        <label for="materno"><i class="bi bi-geo-alt"></i> Apellido Materno</label>
+                      </div>
+                      
+                    </div>
+                    <div class="col-md-12">
+                      <div class="form-floating">
+                        <input type="text" class="form-control" id="telefono"  value="{{admine.telefono}}" formControlName="tel" [(ngModel)]="admine.telefono" >
+                        <label for="telefono"><i class="bi bi-calendar"></i> Telefono</label>
+                      </div>
+                      
+                    </div>
+                    <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="direccion"  value="{{admine.direccion}}" formControlName="direccion" [(ngModel)]="admine.direccion" >
+                          <label for="direccion"><i class="bi bi-calendar"></i> Direccion</label>
+                        </div>
+                        
+                      </div>
+                   
+                      <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="division"  value="{{admine.division}}" formControlName="division" [(ngModel)]="admine.division" >
+                          <label for="division"><i class="bi bi-calendar"></i> Division</label>
+                        </div>
+                        
+                      </div>
+
+                      <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="carrera"  value="{{admine.carrera}}" formControlName="carrera" [(ngModel)]="admine.carrera" >
+                          <label for="carrera"><i class="bi bi-calendar"></i>Carrera</label>
+                        </div>
+                        
+                      </div>
+                      <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="grupo"  value="{{admine.grupo}}" formControlName="direccion" [(ngModel)]="admine.grupo" >
+                          <label for="grupo"><i class="bi bi-calendar"></i> Grupo</label>
+                        </div>
+                        
+                      </div>
+                    
+                  </form><!-- End floating Labels Form -->
+    
+                </div>
+              </div>
+    
+            </div>
+          </div>
+     
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" (click)="cancelar()">Cancelar</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="editardocumento()" >Guardar Cambios</button>
+        </div>
+      </div>
+    </div>
+  </div><!-- End Modal Dialog Scrollable-->
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Spartan Web</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Spartan Web</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
