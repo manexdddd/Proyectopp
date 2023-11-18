@@ -1,0 +1,284 @@
+<!-- =========
+
+	Template Name: Play
+	Author: UIdeck
+	Author URI: https://uideck.com/
+	Support: https://uideck.com/support/
+	Version: 1.1
+
+========== -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="assets/images/favicon.svg"
+      type="image/svg"
+    />
+
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="/../assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/../assets/css/animate.css" />
+    <link rel="stylesheet" href="/../assets/css/lineicons.css" />
+    <link rel="stylesheet" href="/../assets/css/ud-styles.css" />
+    <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+  </head>
+  <body>
+  <app-sidebar-root></app-sidebar-root>
+    <!-- ====== Header End ====== -->
+
+    <!-- ====== Banner Start ====== -->
+    <section class="ud-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-banner-content">
+              <h1>Aviso</h1>
+              <h5 class="text-white">{{aviso.titulo}}</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Banner End ====== -->
+
+    <!-- ====== Blog Details Start ====== -->
+    <section class="ud-blog-details">
+      <div class="container">
+       
+        
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-blog-details-image">
+              <img
+                src="{{aviso.foto}}"
+                alt="blog details"
+              />
+              <div class="ud-blog-overlay">
+                <div class="ud-blog-overlay-content">
+                  <div class="ud-blog-author">
+                    <img src="{{admin.foto}}" alt="author" />
+                    <span>
+                      By <a href="javascript:void(0)"> {{admin.nombre}} </a>
+                    </span>
+                  </div>
+
+                  <div class="ud-blog-meta">
+                    <p class="date">
+                      <i class="lni lni-calendar"></i> <span>{{aviso.fecha}}</span>
+                    </p>
+                    <p class="comment">
+                      <i class="lni lni-comments"></i> <span>50</span>
+                    </p>
+                    <p class="view">
+                      <i class="lni lni-eye"></i> <span>35</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-8">
+            <div class="ud-blog-details-content">
+              <h2 class="ud-blog-details-title">
+                {{aviso.titulo}}
+              </h2>
+              <p class="ud-blog-details-para">
+                {{aviso.descripcion}}
+              </p>
+              <p class="ud-blog-details-para">
+                {{aviso.contenido}}
+              </p>
+             
+
+              <div class="ud-blog-quote">
+                <i class="lni lni-quotation"></i>
+                <p>
+                 
+"La salud mental es tan importante como la salud física, ya que un equilibrio emocional sólido es la base de una vida plena y satisfactoria."
+                </p>
+                <h6>“Anonimo”</h6>
+              </div>
+              <h3 class="ud-blog-details-subtitle">
+                Psicoitsch
+              </h3>
+              <p class="ud-blog-details-para">
+                La importancia de la salud mental es fundamental en la vida de una persona y en la sociedad en su conjunto. Aquí hay algunas razones que destacan su relevancia:
+              </p>
+              <p class="ud-blog-details-para">
+                La salud mental influye directamente en la calidad de vida de una persona. Un buen estado mental permite a las personas experimentar emociones positivas, mantener relaciones satisfactorias, y enfrentar desafíos de manera efectiva. Contribuye a la sensación de felicidad y plenitud en la vida cotidiana.
+                <i class="lni lni-calendar"></i>
+            </p>
+<h5><a class="mb-5"href="javascript:void(0)" (click)="back()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+    <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+    <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+  </svg> Regresar</a></h5>
+              <div class="ud-blog-details-action">
+                <ul class="ud-blog-tags">
+                  <li>
+                    <a >Psicoitsch</a>
+                  </li>
+                  <li>
+                    <a>ITSCH</a>
+                  </li>
+                  <li>
+                    <a >Avisos</a>
+                  </li>
+                </ul>
+                <div class="ud-blog-share">
+                  <h6>Sigue nuestras redes sociales</h6>
+                  <ul class="ud-blog-share-links">
+                    <li>
+                      <a href="javascript:void(0)" class="facebook">
+                        <i class="lni lni-facebook-filled"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" class="twitter">
+                        <i class="lni lni-twitter-filled"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="javascript:void(0)" class="linkedin">
+                        <i class="lni lni-linkedin-original"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="ud-blog-sidebar">
+              <div class="ud-newsletter-box">
+                <img
+                  src="assets/images/blog/dotted-shape.svg"
+                  alt="shape"
+                  class="shape shape-1"
+                />
+                <img
+                  src="assets/images/blog/dotted-shape.svg"
+                  alt="shape"
+                  class="shape shape-2"
+                />
+                <h3 class="ud-newsletter-title">Inicia Sesion</h3>
+                <p>Para poder socilicitar atencion Psicologica.</p>
+                <button class="ud-main-btn" (click)="log()">Iniciar Sesion</button>
+              </div>
+
+              <div class="ud-articles-box">
+                <h3 class="ud-articles-box-title">Avisos Recientes</h3>
+                <ul class="ud-articles-list" *ngFor="let avise of avises; let i = index">
+                  <li *ngIf="i < avises.length - 1">
+                    <div class="ud-article-image" >
+                      <img
+                        src="{{avise.data.foto}}"
+                        alt="author"
+                      />
+                    </div>
+                    <div class="ud-article-content">
+                      <h5 class="ud-article-title">
+                        <a href="javascript:void(0)"  (click)="detalle(avise.id)">
+                            {{avise.data.titulo}}
+                        </a>
+                      </h5>
+                      
+                    </div>
+                  </li>
+                 
+                
+                
+                </ul>
+              </div>
+
+              <div class="ud-banner-ad">
+                <a href="javascript:void(0)">
+                  <img
+                    src="assets/images/info3.jpg"
+                    alt="ad banner"
+                  />
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Blog Details End ====== -->
+
+    <!-- ====== Blog Start ====== -->
+    <section class="ud-blog-grids ud-related-articles">
+      <div class="container">
+        <div class="row col-lg-12">
+          <div class="ud-related-title">
+            <h2 class="ud-related-articles-title">Avisos relacionados</h2>
+          </div>
+        </div>
+        <div class="row">
+          
+          
+          <div class="col-lg-4 col-md-6" *ngFor="let avise of avises">
+            <div class="ud-single-blog">
+              <div class="ud-blog-image">
+                <a href="blog-details.html">
+                  <img src="{{avise.data.foto}}" alt="blog" />
+                </a>
+              </div>
+              <div class="ud-blog-content">
+                <span class="ud-blog-date">{{avise.data.fecha}}</span>
+                <h3 class="ud-blog-title">
+                  <a href="detalle(avise.id)">
+                    {{avise.data.titulo}}
+                  </a>
+                </h3>
+                <p class="ud-blog-desc">
+                    {{avise.data.descripcion}}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Blog End ====== -->
+
+    <!-- ====== Footer Start ====== -->
+     <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Spartan Web</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Spartan Web</a>
+    </div>
+  </footer><!-- End Footer -->
+    <!-- ====== Footer End ====== -->
+
+    <!-- ====== Back To Top Start ====== -->
+   
+    <!-- ====== Back To Top End ====== -->
+
+    <!-- ====== All Javascript Files ====== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

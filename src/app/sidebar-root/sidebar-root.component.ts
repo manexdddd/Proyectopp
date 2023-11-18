@@ -1,6 +1,7 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
 import { AuthService } from '../services/auth.service';
 import { AdminService } from '../services/admin.service';
+import { RootService } from '../services/root.service';
 
 @Component({
   selector: 'app-sidebar-root',
@@ -8,7 +9,7 @@ import { AdminService } from '../services/admin.service';
   styleUrls: ['./sidebar-root.component.css']
 })
 export class SidebarRootComponent {
-  constructor(private renderer: Renderer2, private elementRef: ElementRef, private ad:AdminService,
+  constructor(private renderer: Renderer2, private elementRef: ElementRef, private ro:RootService,
     private auth:AuthService) {}
   isSearchBarVisible: boolean = false;
   currentUsuario: any;
@@ -27,7 +28,7 @@ export class SidebarRootComponent {
     }
 
     this.email = localStorage.getItem('email');
-    this.ad.getadmin(this.email).subscribe(usuario => {
+    this.ro.getroot(this.email).subscribe(usuario => {
       this.usuario = usuario;
       console.log(usuario)
     });
