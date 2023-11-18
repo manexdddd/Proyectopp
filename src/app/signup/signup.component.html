@@ -26,21 +26,21 @@
 
     <!-- ====== Login Start ====== -->
     <section class="ud-login" style="border-radius: 12px; margin-top: -70px; text-align: center;">
-      <div class="container d-flex align-items-center justify-content-center">
+      <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div style="width: 450px; border-radius: 15px;" class="ud-logiiin-wrapper ">
+            <div style="width: 100%; max-width: 550px; border-radius: 15px; margin: auto;" class="ud-logiiin-wrapper ">
               <div class="uds-logiin-logo" style="margin-top: 20px;">
-                <img style="margin-top: 40px;" src="assets/images/logo/logo-2.svg" alt="logo" />
+                <img style="width: 200px; margin-bottom: -30px; margin-left: auto; margin-top: 40px;" src="assets/images/logo/logo-ajjaj.png" alt="logo" />
               </div>
-              <div class="justify-content-center" style="display: flex; justify-content: center; ">
+              <div class="" style="display: flex; justify-content: center; ">
 
-                <form class=" form " style="border-radius: 12px; margin-top: 20px;" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
+                <form class=" form " style="border-radius: 12px; margin-top: 28px;" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
                   <p class="title1 justify-content-start">Registrate Ahora</p><br>
                   <p class="message">
                     ¡Regístrate ahora y obtén acceso completo a nuestra aplicación! </p><br>
                       
-                    <div class="flex-column">
+                    <div class="flex-column ">
                       
                         
                       
@@ -57,22 +57,22 @@
                     </div>
                     <div class="flex justify-content-center">
                       <label>
-                          <input class="inputa" style="width: 192px; " type="text" placeholder="" required="">
+                          <input class="inputa" style="width: 192px; " type="text" placeholder="" required>
                           <span>Nombre</span>
                       </label>
                       <label>
-                          <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
+                          <input class="inputa" style="width: 192px;" type="text" placeholder="" required>
                           <span>Apellido</span>
                       </label>
                       
                   </div>
                   <div class="flex justify-content-center">
                     <label>
-                        <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
-                        <span>Edad</span>
+                      <input class="inputa" style="width: 192px;" type="number" placeholder="" required min="15" max="99">
+                      <span>Edad</span>
                     </label>
                     <label>
-                        <input class="inputa" style="width: 192px;" type="date" placeholder="" required="">
+                        <input class="inputa" style="width: 192px;" type="date" placeholder="" required>
                         <span>Fecha de Nacimiento</span>
                     </label>
                     
@@ -88,37 +88,56 @@
                     <span>Sexo</span>
                   </label>
                   <label>
-                      <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
-                      <span>Telefono</span>
+                    <input class="inputa" style="width: 192px;" type="tel" placeholder="" pattern="[0-9]{10}" required title="Ingresa un número de teléfono válido de 10 dígitos">
+                    <span>Teléfono</span>
                   </label>
                   
               </div> <br>
               
-        
-                  <label class="justify-content-center">
-                    <input class="inputa" type="email" placeholder="" required id="email" formControlName="email" (blur)="lowecase()">
-                    <span>Correo Institucional</span>
-                    <div *ngIf="registroForm.get('email')?.hasError('required') && registroForm.get('email')?.touched">
-                      El correo electrónico es obligatorio.
-                    </div>
-                    <div *ngIf="registroForm.get('email')?.hasError('invalidEmail') && registroForm.get('email')?.touched">
-                      El correo electrónico no es válido.
-                    </div>
-                  </label>
+
+              <label>
+                <select class="inputa" required id="carrera" formControlName="carrera">
+                  <option value="" disabled selected>Selecciona tu Carrera</option>
+                  <option value="ingenieria">Sistemas Computacionales</option>
+                  <option value="informatica">Gestión Empresarial</option>
+                  <option value="nanotecnologia">Nanotecnología</option>
+                  <option value="mecatronica">Mecatrónica</option>
+                  <option value="bioquimica">Bioquímica</option>
+                  <option value="industrial">Industrial</option>
+                  <option value="tics">TIC's</option>
+                  <!-- Agrega más opciones según sea necesario -->
+                </select>
+                <span>Carrera</span>
+                <div *ngIf="registroForm.get('carrera')?.hasError('required') && registroForm.get('carrera')?.touched">
+                  La selección de carrera es obligatoria.
+                </div>
+              </label>
+              
+              
+              
+                  
 
                   <div class="flex justify-content-center">
                     <label>
-                      <select class="inputa" style="width: 192px;" required>
-                        <option value="" disabled selected>Selecciona tu sexo</option>
-                        <option value="masculino">Masculino</option>
-                        <option value="femenino">Femenino</option>
-                        <option value="otro">Otro</option>
-                      </select>
-                      <span>Sexo</span>
+                      <input class="inputa" style="width: 192px;" type="text" placeholder="" required id="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
+                      <span>Grupo</span>
+                      <div *ngIf="registroForm.get('grupo')?.hasError('required') && registroForm.get('grupo')?.touched">
+                        El Grupo es obligatorio.
+                      </div>
+                      <div *ngIf="registroForm.get('grupo')?.hasError('pattern') && registroForm.get('grupo')?.touched">
+                        Ingresa correctamente tu Grupo. Debe seguir el formato 077CA.
+                      </div>
                     </label>
+                    
                     <label>
                         <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
                         <span>Numero de Control</span>
+                        <div *ngIf="registroForm.get('nocontrol')?.hasError('required') && registroForm.get('nocontrol')?.touched">
+                          Tu Numero de Control es obligatorio.
+                        </div>
+                        <div *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched">
+                          El Numero de Control debe tener 9 caracteres.
+                        </div>
                     </label>
                     
                 </div>
@@ -164,12 +183,7 @@
                  
                       Google 
                       
-                    </button><button class="btno apple">
-              <svg xml:space="preserve" style="enable-background:new 0 0 22.773 22.773;" viewBox="0 0 22.773 22.773" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Capa_1" width="20" height="20" version="1.1"> <g> <g> <path d="M15.769,0c0.053,0,0.106,0,0.162,0c0.13,1.606-0.483,2.806-1.228,3.675c-0.731,0.863-1.732,1.7-3.351,1.573 c-0.108-1.583,0.506-2.694,1.25-3.561C13.292,0.879,14.557,0.16,15.769,0z"></path> <path d="M20.67,16.716c0,0.016,0,0.03,0,0.045c-0.455,1.378-1.104,2.559-1.896,3.655c-0.723,0.995-1.609,2.334-3.191,2.334 c-1.367,0-2.275-0.879-3.676-0.903c-1.482-0.024-2.297,0.735-3.652,0.926c-0.155,0-0.31,0-0.462,0 c-0.995-0.144-1.798-0.932-2.383-1.642c-1.725-2.098-3.058-4.808-3.306-8.276c0-0.34,0-0.679,0-1.019 c0.105-2.482,1.311-4.5,2.914-5.478c0.846-0.52,2.009-0.963,3.304-0.765c0.555,0.086,1.122,0.276,1.619,0.464 c0.471,0.181,1.06,0.502,1.618,0.485c0.378-0.011,0.754-0.208,1.135-0.347c1.116-0.403,2.21-0.865,3.652-0.648 c1.733,0.262,2.963,1.032,3.723,2.22c-1.466,0.933-2.625,2.339-2.427,4.74C17.818,14.688,19.086,15.964,20.67,16.716z"></path> </g></g></svg>
-              
-                      Apple 
-                      
-              </button></div>
+                    </button></div>
               </form>
 
               

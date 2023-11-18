@@ -346,7 +346,7 @@
   background-color: #fff;
   padding: 20px;
   border-radius: 20px;
-  position: relative;
+  
   margin: auto; /* Centra el formulario horizontalmente */
 }
 
@@ -406,13 +406,15 @@
 }
 
 .inputa {
-  flex: 1; /* Hace que cada campo de entrada ocupe el mismo espacio disponible */
-  width: 100%; /* Establece un ancho específico para los campos de entrada */
+  flex: 1; 
+  width: 100%;
+  padding: 10px; 
 }
 
 .inputa input[type="file"] {
   display: block;
   margin-bottom: 10px; /* Ajusta el margen inferior según tus preferencias */
+  margin-left: 45px; 
 }
 
 .inputa input[type="submit"] {
@@ -420,9 +422,13 @@
   color: white; /* Ajusta el color del texto según tus preferencias */
   padding: 10px; /* Ajusta el relleno según tus preferencias */
   border: none;
-  border-radius: 5px; /* Ajusta el radio de borde según tus preferencias */
+  border-radius: 19px; /* Ajusta el radio de borde según tus preferencias */
   cursor: pointer;
 }
+
+
+
+
 
 .inputa input[type="submit"]:hover {
   background-color: #1B396A; /* Cambia el color de fondo al pasar el ratón por encima */
@@ -505,9 +511,11 @@ br {
 }
 
 /* Media Queries */
+
+
 @media only screen and (max-width: 600px) {
   .form {
-    padding: 15px;
+    padding: 65px;
     border-radius: 15px;
     max-width: 100%; /* Hacemos que el formulario ocupe el ancho completo */
   }
@@ -596,8 +604,7 @@ br {
   max-width: 650px;
   margin: auto;
   background: var(--white);
-  text-align: left;
-  padding: 60px;
+  padding: 0;
   border-radius: 15px;
   box-shadow: 0px 10px 35px rgba(0, 0, 0, 0.12);
 }
@@ -608,7 +615,7 @@ br {
 }
 
 .containeer {
-  max-width: 1170px;
+  max-width: 100%;
 }
 
 
@@ -676,7 +683,7 @@ br {
 }
 
 .inputo {
-  margin-left: 10px;
+  margin-left: 12px;
   border-radius: 10px;
   border: none;
   width: 100%;
@@ -725,12 +732,14 @@ br {
 /* Button secondary styles */
 .btno {
   margin-top: 10px;
-  width: 100%;
+  width: 50%;
   height: 50px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-left: auto;
+  margin-right: auto;
   font-weight: 500;
   gap: 10px;
   border: 1px solid #ededef;
