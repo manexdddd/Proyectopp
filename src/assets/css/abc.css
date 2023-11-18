@@ -696,6 +696,7 @@ br {
 
 .inputoForm:focus-within {
   border: 1.5px solid #2d79f3;
+  padding-left: 2cap;
 }
 
 /* Flex row styles */
@@ -1489,7 +1490,7 @@ br {
 
 
   .cardw {
-    border-radius: 5px;
+    border-radius: 15px;
    margin-left: 28px;
    justify-content: center;
    position: relative;
@@ -1498,7 +1499,7 @@ br {
    
    align-items: flex-start;
    margin: 0 auto;
-   flex-direction: column;
+   
    flex-wrap: wrap;
   }
 
@@ -1533,6 +1534,8 @@ br {
 
    
   }
+
+  
 
 /* estilos del download, home */
 .bg-primary-gradient {
