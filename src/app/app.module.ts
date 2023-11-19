@@ -80,6 +80,7 @@ import { BlogRootComponent } from './blog-root/blog-root.component';
     PerfilStudentComponent,
     CarnetStudentComponent,
     SidebarPerfilStudentComponent,
+    SidebarPerfilStudentComponent,
     AreapsicologiaStudentComponent,
    
     HomeRootComponent,
