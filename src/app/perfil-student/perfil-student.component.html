@@ -348,23 +348,15 @@
                                       <div class=""> 
                                         <div class="card"  style="  margin-right: 8px;">
                                           <div class="card-body">
-                                            <h5 class="card-title text-center"  style="  margin-bottom: -25px;">TUTORIA INDIVIDUAL (ENTREVISTAS)</h5>
-                              
+                                            <h5 class="card-title text-center"  style="  margin-bottom: 2px;">TUTORIA INDIVIDUAL (ENTREVISTAS) <button class="add-button" onclick="addTable()">+</button><hr></h5>
+                                            
                                             <!-- Table with hoverable rows -->
-                                            <table class="table table-hover">
-                                              <thead>
-                                                <tr>
-                                                  <th scope="col"></th>
-                                                  <th scope="col"></th>
-                                                  <th scope="col"></th>
-                                                  <th scope="col"></th>
-                                                  <th scope="col"></th>
-                                                </tr>
-                                              </thead>
-                                              <tbody>
-                                                <tr>
-                                                  <th scope="row">Fecha</th>
-                                                  <td>15/Diciembre/2023</td>
+                                            <table class="table table-hover ">
+                                             
+                                              <tbody >
+                                                <tr class="hr-container">
+                                                  <th scope="row">Fecha </th>
+                                                  <td>15/Diciembre/2023 </td>
                                                   <td></td>
                                                   <th ></th>
                                                   <td></td>
@@ -397,10 +389,12 @@
                                                   <th scope="col"></th>
                                                   <th scope="col"></th>
                                                   <th scope="col"></th>
-                                                </tr>
+                                                </tr> 
                                                 
                                                 
                                               </tbody>
+                                              
+                                              
                                             </table>
                                             <!-- End Table with hoverable rows -->
                               
@@ -418,83 +412,75 @@
                                               <div class="" > 
                                                 <div class="card" style="  margin-right: 8px;" >
                                                   <div class="card-body">
-                                                    <h5 class="card-title text-center"  style="  margin-bottom: -25px;">CANALIZACIÓN ACADEMICA</h5>
+                                                    <h5 class="card-title text-center"  style="  margin-bottom: -25px;">CANALIZACIÓN ACADEMICA <button class="add-button" onclick="addTable()">+</button><hr></h5>
                                       
                                                     <!-- Table with hoverable rows -->
-                                                    <table class="table table-hover">
+                                                    <table class="table table-hover ">
+
                                                       <thead>
                                                         <tr>
-                                                          <th scope="col"></th>
-                                                          <th scope="col"></th>
-                                                          <th scope="col"></th>
-                                                          <th scope="col"></th>
-                                                          <th scope="col"></th>
+                                                          <th>Asesoría Académica</th>
+                                                          <th style="width: 200px;">Nombre de la Asignatura</th>
+                                                          <th style="width: 2px;"></th>
+                                                          <th>Fecha de Solicitud</th>
+                                                          <th></th>
                                                         </tr>
                                                       </thead>
                                                       <tbody>
                                                         <tr>
-                                                          <th scope="row">1</th>
-                                                          <td>Brandon Jacob</td>
-                                                          <td>Designer</td>
-                                                          <td>28</td>
-                                                          <td>2016-05-25</td>
+                                                          <td><input type="checkbox" id="perfilCheckbox"> <label for="perfilCheckbox">Perfil</label><br>
+                                                            <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Ciencias Básicas</label>
+                                                          </td>
+                                                          <td>Taller de Investigación</td>
+                                                          <td></td>
+                                                          <td>15/Diciembre/2023</td>
+                                                          <td></td>
                                                         </tr>
+                                                        <!-- Agrega más filas según sea necesario -->
+                                                      </tbody>
+                                                      <thead>
                                                         <tr>
-                                                          <th scope="row">2</th>
-                                                          <td>Bridie Kessler</td>
-                                                          <td>Developer</td>
-                                                          <td>35</td>
-                                                          <td>2014-12-05</td>
+                                                          <th>Status</th>
+                                                          <th style="width: 200px;">Nombre y firma del tutor</th>
+                                                          <th style="width: 2px;"></th>
+                                                          <th>Fecha de Atención</th>
+                                                          <th></th>
                                                         </tr>
+                                                      </thead>
+                                                      <tbody>
                                                         <tr>
-                                                          <th scope="row">3</th>
-                                                          <td>Ashleigh Langosh</td>
-                                                          <td>Finance</td>
-                                                          <td>45</td>
-                                                          <td>2011-08-12</td>
+                                                          <td>
+                                                            <input type="checkbox" id="OrdinariaCheckbox"> <label for="OrdinariaCheckbox">Ordinaria</label><br>
+                                                            <input type="checkbox" id="RepeticiónCheckbox"> <label for="RepeticiónCheckbox">Repetición</label><br>
+                                                            <input type="checkbox" id="EspecialCheckbox"> <label for="EspecialCheckbox">Especial</label><br>
+                                                            
+                                                          </td>
+                                                          <td>Juan Carlos Madrigal Perez
+                                                            <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                                              <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                                            </a>
+                                                          </td>
+                                                          <td></td>
+                                                          <td>15/Diciembre/2023</td>
+                                                          <td></td>
                                                         </tr>
-                                                        <tr>
-                                                          <th scope="row">4</th>
-                                                          <td>Angus Grady</td>
-                                                          <td>HR</td>
-                                                          <td>34</td>
-                                                          <td>2012-06-11</td>
-                                                        </tr>
-                                                        <tr>
-                                                          <th scope="row">5</th>
-                                                          <td>Raheem Lehner</td>
-                                                          <td>Dynamic Division Officer</td>
-                                                          <td>47</td>
-                                                          <td>2011-04-19</td>
-                                                        </tr>
+                                                        <!-- Agrega más filas según sea necesario -->
                                                       </tbody>
                                                     </table>
-                                                    <!-- End Table with hoverable rows -->
-                                      
+                                                    <!-- End Table with hoverable rows -->                                    
                                                   </div>
                                                 </div>
                                               </div>
+                                            </div>          
+                                            <div>                                              
                                             </div>
-                                          
-                                            
-          
-                                            <div>
-                                              
-                                            </div>
-                                          </div>
-                      
-                                          
-                                         
-                                                                                                                                             
+                                          </div>                                                                                                                      
                                        </div>
                                       </div>
+                                    </div>  
+                                    <div>                                      
                                     </div>
-  
-                                    <div>
-                                      
-                                    </div>
-                                  </div>
-                                  
+                                  </div>                                 
                                 </div>
                               </div>
                             </div>
@@ -503,7 +489,7 @@
                       </div>
                     </div><br><br>
 
-                <div class="" style="padding-top: 25px; text-align: center; font-size: 65px;">
+                <div class="" style="padding-top: 5px; text-align: center; font-size: 65px;">
                   <p class="mb-1" style=" font-size: 22px; padding-bottom: 15px;"><b>Identificación del alumno</b></p>
                 </div>
 
@@ -517,12 +503,15 @@
                     </div>
                     <div class="col-md-8">
                       <div class="card-body cardw" style="margin-left: 50px;">
-                        <h5 style="margin-top: 30px;" class="col-lg- col-md- label text-center text-white">TECNOLOGICO <br> NACIONAL DE MEXICO</h5>
+                        <div class="col-lg-12 col-md-12 text-center" style="margin-top: 10px;">
+                          <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                            <img style="height: auto; width: 39px; margin-bottom: -6px;" src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                          </a>
+                        </div>
+                        <h5 style="margin-top: 30px;" class=" label text-center text-white">TECNOLOGICO <br> NACIONAL DE MEXICO</h5>
                         
                         
-                        <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
-                          <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
-                        </a>
+                        
                         <p><strong>Nombre:</strong> José Antonio Medina Esquivel</p>
                         <p><strong>Carrera:</strong> Sistemas Computacionales</p>
                         <p><strong>Grupo:</strong> 077CA</p>
@@ -611,6 +600,33 @@
   <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script>
+    let tableCount = 1;
+  
+    function addTable() {
+      const tablesContainer = document.getElementById('tables-container');
+      
+      const newTable = document.createElement('table');
+      newTable.className = 'table table-hover table-no-border'; // Agrega la clase 'table-no-border' para quitar bordes si es necesario
+  
+      const tableBody = document.createElement('tbody');
+      const tableRow = document.createElement('tr');
+      const tableHeader = document.createElement('th');
+      tableHeader.setAttribute('scope', 'row');
+      tableHeader.textContent = 'Nuevo Elemento';
+  
+      const tableData = document.createElement('td');
+      tableData.textContent = 'Contenido';
+  
+      tableRow.appendChild(tableHeader);
+      tableRow.appendChild(tableData);
+      tableBody.appendChild(tableRow);
+      newTable.appendChild(tableBody);
+  
+      tablesContainer.appendChild(newTable);
+      tableCount++;
+    }
+  </script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>

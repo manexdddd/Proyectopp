@@ -965,7 +965,7 @@ br {
 
   @media (max-width: 768px){
 .card55 {
-    width: 67px;
+    width: 100%;
     font-size: 15px;
     display: flex;
     flex-direction: row;
@@ -1036,22 +1036,6 @@ br {
   }
 }
 
-@media (min-width: 765px){
-  .navbar-2 {
-      width: 67px;
-      font-size: 15px;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-  }
-  
-    .nav1-item {
-      margin: 10px 0; /* Espacio vertical entre elementos */
-    }
-  }
 
 
 
@@ -1530,7 +1514,7 @@ br {
   .card23 {
     position: relative;
     width: auto; /* Cambiar la propiedad width a auto */
-    max-width: 780px;
+    max-width: 600px;
     height: auto;
     background-color: #29167e;
     border-radius: 15px;
@@ -1926,3 +1910,71 @@ br {
     text-align: center;
   }
 }
+
+
+
+
+
+
+
+
+table {
+  width: 100%;
+  
+  margin-bottom: 20px;
+}
+
+th, td {
+  border: 0px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+@media (max-width: 600px) {
+  th, td {
+    display: block;
+    width: 100%;
+    
+  }
+
+  th, td {
+    text-align: center;
+  }
+}
+
+.table-no-border, .table-no-border th, .table-no-border td {
+  border: none !important;
+}
+
+.borde-inferior th,
+  .borde-inferior td {
+    border-bottom: 1px solid #dddddd; /* Puedes ajustar el color según tus necesidades */
+  }
+
+  
+
+  .hr-container hr {
+    flex: 1;
+    border: none;
+    border-bottom: 1px solid #ddd; /* Puedes ajustar el color según tus necesidades */
+    margin: 0 10px; /* Ajusta el margen según tus necesidades */
+  }
+
+  .add-button {
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+    background-color: blue;
+    width: 30px;
+    height: 30px;
+    float: right;
+    font-size: 30px;
+    border-radius: 500px;
+  }
