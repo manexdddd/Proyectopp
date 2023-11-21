@@ -19,6 +19,7 @@ export class HomePublicComponent  {
   detalleid = localStorage.getItem("detalleid")
   avises:any[];
   admin:any
+  meta: any;
   constructor(private av:AvisosService,private router:Router,private ro:RootService){
   
    
@@ -32,6 +33,12 @@ export class HomePublicComponent  {
   }
   ngOnInit(): void {
     setInterval(() => this.change(), 3000);
+
+     this.meta.updateTag({
+     name: 'theme-color',
+     content: '#305f88' // Replace with your desired color
+   });
+ 
   }
 
   change() {
