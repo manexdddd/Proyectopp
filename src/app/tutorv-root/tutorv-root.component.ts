@@ -134,7 +134,7 @@ export class TutorvRootComponent {
      materno :
      this.admine.materno,
      rol:
-     "admin",
+     "tutor",
      direccion:
      this.admine.direccion,
      telefono:

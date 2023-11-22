@@ -48,6 +48,7 @@ import { BlogPublicComponent } from './blog-public/blog-public.component';
 import { BlogRootComponent } from './blog-root/blog-root.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
+import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
 
 
 @NgModule({
@@ -87,6 +88,7 @@ import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
       BlogRootComponent,
       PsycoRootComponent,
       CpsycoRootComponent,
+      CtutorRootComponent,
      
 
   ],

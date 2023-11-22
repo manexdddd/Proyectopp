@@ -30,7 +30,7 @@
     background-color: #ffffff;
     opacity: 1; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
       <div class="pagetitle">
-        <h1>Todos los Avisos</h1>
+        <h1>Todos los Tutores</h1>
         <nav>
           <ol class="breadcrumb">
             <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -63,37 +63,6 @@
     
    
 
-    <div class="container rounded mt-5 bg-white p-md-5">
-      <div class="h2 font-weight-bold">tutores</div>
-      <div class="table-responsive">
-          <table class="table" >
-              <thead>
-                  <tr>
-                      <th scope="col">Nombre Completo</th>
-                      <th scope="col">Division</th>
-                      <th scope="col">Grupo</th>
-                      <th scope="col">Estado</th>
-                      <th scope="col">Operaciones</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr class="bg-blue" *ngFor="let admin of admins">
-                      <td class="pt-2"> <img src="{{admin.data.foto}}" class="rounded-circle" alt="">
-                          <div class="pl-lg-5 pl-md-3 pl-1 name">{{ admin.data.nombre }}  {{ admin.data.paterno }} {{ admin.data.materno }}</div>
-                      </td>
-                      <td class="pt-3 mt-1">{{admin.data.division}}</td>
-                      <td class="pt-3">{{admin.data.grupo}}</td>
-                      <td class="pt-3"><span class="fa fa-check pl-3"></span></td>
-                      <td class="pt-3"><span class="badge bg-info"><a class="text-white" href="javascript:void(0)"  data-bs-toggle="modal" data-bs-target="#modalDialogScrollable"(click)="editar(admin.id)">Editar </a></span>
-                        <span class="badge bg-danger"><a class="text-white" href="javascript:void(0)" (click)="eliminar(admin.id)">Eliminar</a></span></td>
-                     
-                  </tr>
-             
-              </tbody>
-          </table>
-      </div>
-  </div>
-
   <div class="container-xl">
     <div class="table-responsive">
         <div class="table-wrapper">
@@ -122,13 +91,13 @@
                 <tbody>
                     <tr *ngFor="let admin of admins index:i">
                         <td>i+1</td>
-                        <td><a href="#"><img src="assets/images/pxfuel.jpg" class="avatar" alt="Avatar">{{ admin.data.nombre }} {{ admin.data.paterno }} {{ admin.data.materno }}</a></td>
+                        <td><a href="#"><img src="{{ admin.data.foto }}" class="avatar" alt="Avatar">{{ admin.data.nombre }} {{ admin.data.paterno }} {{ admin.data.materno }}</a></td>
                         <td>{{ admin.data.division }}</td>                        
                         <td>{{ admin.data.grupo }}</td>
                         <td><span class="status text-success">&bull;</span> Active</td>
                         <td>
-                            <a href="#" class="settings" title="Editar" data-toggle="tooltip"><i class="bi bi-pencil"></i></a>
-                            <a href="#" class="delete" title="Delete" data-toggle="tooltip"><i class="bi bi-trash"></i></a>
+                            <a href="javascript:void(0)" class="settings" title="Editar"  data-bs-target="#modalDialogScrollable" data-bs-toggle="modal" (click)="editar(admin.id)"><i class="bi bi-pencil" ></i></a>
+                            <a href="javascript:void(0)" class="delete" title="Delete"  (click)="eliminar(admin.id)"><i class="bi bi-trash" ></i></a>
                         </td>
                     </tr>
                     
@@ -147,7 +116,7 @@
     <div class="modal-dialog modal-dialog-scrollable">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title">Editar Psicologa</h5>
+          <h5 class="modal-title">Editar tutor</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -156,7 +125,7 @@
     
               <div class="card align-self-center">
                 <div class="card-body align-self-center">
-                  <h5 class="card-title"><i class="bi bi-megaphone"></i>Psicologa</h5>
+                  <h5 class="card-title"><i class="bi bi-megaphone"></i>Tutor</h5>
     
                  
     
@@ -165,7 +134,7 @@
                     <div class="col-md-12">
                       <div class="form-floating">
                         <input type="text" class="form-control" id="nombre"  value="{{admine.nombre}}" [(ngModel)]="admine.nombre" formControlName="nombre"  >
-                        <label for="titulo"><i class="bi bi-at"></i> nombre</label>
+                        <label for="nombre"><i class="bi bi-at"></i> nombre</label>
                       </div>
                       
                     </div>
@@ -201,7 +170,7 @@
                     </div>
                     <div class="col-md-12">
                       <div class="form-floating">
-                        <input type="text" class="form-control" id="telefono"  value="{{admine.telefono}}" formControlName="tel" [(ngModel)]="admine.telefono" >
+                        <input type="text" class="form-control" id="telefono"  value="{{admine.telefono}}" formControlName="telefono" [(ngModel)]="admine.telefono" >
                         <label for="telefono"><i class="bi bi-calendar"></i> Telefono</label>
                       </div>
                       
@@ -224,18 +193,20 @@
 
                       <div class="col-md-12">
                         <div class="form-floating">
-                          <input type="text" class="form-control" id="carrera"  value="{{admine.carrera}}" formControlName="carrera" [(ngModel)]="admine.carrera" >
-                          <label for="carrera"><i class="bi bi-calendar"></i>Carrera</label>
-                        </div>
-                        
-                      </div>
-                      <div class="col-md-12">
-                        <div class="form-floating">
-                          <input type="text" class="form-control" id="grupo"  value="{{admine.grupo}}" formControlName="direccion" [(ngModel)]="admine.grupo" >
+                          <input type="text" class="form-control" id="grupo"  value="{{admine.grupo}}" formControlName="grupo" [(ngModel)]="admine.grupo" >
                           <label for="grupo"><i class="bi bi-calendar"></i> Grupo</label>
                         </div>
                         
                       </div>
+
+                      <div class="col-md-12">
+                        <div class="form-floating">
+                          <input type="text" class="form-control" id="grupo"  value="{{admine.carrera}}" formControlName="carrera" [(ngModel)]="admine.carrera" >
+                          <label for="carrera"><i class="bi bi-calendar"></i> Carrera</label>
+                        </div>
+                        
+                      </div>
+                    
                     
                   </form><!-- End floating Labels Form -->
     

@@ -54,6 +54,23 @@ export class RootService {
       });
   
   }
+
+  crearTuto(usuarioid: string, data: any) {
+    //referencia del documento 
+    const documentRef = this.afs.collection('admin').doc(usuarioid);
+  
+    
+    //ingresa los datos al documento
+    return documentRef.set(data)
+      .then(() => {
+        alert('Documento creado con éxito');
+        
+      })
+      .catch(error => {
+        alert('Error al crear el documento:');
+      });
+  
+  }
     
   
   }

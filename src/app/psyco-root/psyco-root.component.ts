@@ -36,7 +36,8 @@ export class PsycoRootComponent {
    ,private changeDetector: ChangeDetectorRef,
    private  fb: FormBuilder,private router:Router){
  
-  
+    
+    
  
      this.av.getAll().subscribe(data => {
        this.admins = data

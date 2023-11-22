@@ -14,6 +14,7 @@ import { HomeStudentComponent } from './home-student/home-student.component';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { ProfileRootComponent } from './profile-root/profile-root.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
+import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
 import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 import { AuthGuard } from './auth.guard';
@@ -59,6 +60,7 @@ const routes: Routes = [
   data: { requiredRole: Role.Admin}},
 
   {path:'cavisos',component:CavisosRootComponent},
+  {path:'create-tutor',component:CtutorRootComponent},
   {path:'cpsyco',component:CpsycoRootComponent},
   {path:'avisos-student',component:AvisosStudentComponent},
   {path:'perfil-student',component:PerfilStudentComponent},

@@ -1958,57 +1958,6 @@ text-decoration: none;
 
 
 
-
-table {
-width: 100%;
-
-margin-bottom: 20px;
-}
-
-th, td {
-border: 0px solid #dddddd;
-text-align: left;
-padding: 8px;
-}
-
-th {
-background-color: #f2f2f2;
-}
-
-tr:hover {
-background-color: #f5f5f5;
-}
-
-@media (max-width: 600px) {
-th, td {
-  display: block;
-  width: 100%;
-  
-}
-
-th, td {
-  text-align: center;
-}
-}
-
-.table-no-border, .table-no-border th, .table-no-border td {
-border: none !important;
-}
-
-.borde-inferior th,
-.borde-inferior td {
-  border-bottom: 1px solid #dddddd; /* Puedes ajustar el color según tus necesidades */
-}
-
-
-
-.hr-container hr {
-  flex: 1;
-  border: none;
-  border-bottom: 1px solid #ddd; /* Puedes ajustar el color según tus necesidades */
-  margin: 0 10px; /* Ajusta el margen según tus necesidades */
-}
-
 .add-button {
   cursor: pointer;
   color: rgb(255, 255, 255);

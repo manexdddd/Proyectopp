@@ -52,6 +52,7 @@ export class LoginComponent implements AfterViewInit {
   }
 
   login(){
+    
     localStorage.clear();
 const {email,psw} = this.usuario
 
