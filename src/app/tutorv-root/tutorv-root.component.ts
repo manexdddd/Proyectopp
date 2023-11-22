@@ -139,7 +139,7 @@ export class TutorvRootComponent {
      this.admine.direccion,
      telefono:
      this.admine.telefono,
-     divison:
+     division:
      this.admine.division,
      carrera:
      this.admine.carrera,
