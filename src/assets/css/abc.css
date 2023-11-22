@@ -1021,7 +1021,7 @@ br {
 /* Estilos para hacerlo responsive en pantallas más pequeñas */
 @media (max-width: 768px){
 .navbar-2 {
-    width: 67px;
+    
     font-size: 15px;
     display: flex;
     flex-direction: row;
