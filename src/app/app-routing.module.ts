@@ -13,10 +13,13 @@ import { AboutPublicComponent } from './about-public/about-public.component';
 import { HomeStudentComponent } from './home-student/home-student.component';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { ProfileRootComponent } from './profile-root/profile-root.component';
+import { PsycoRootComponent } from './psyco-root/psyco-root.component';
+import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
 import { SidebarStudentComponent } from './sidebar-student/sidebar-student.component';
 import { AuthGuard } from './auth.guard';
 import { Role } from './services/roles';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
+import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
@@ -33,6 +36,7 @@ const routes: Routes = [
   {path:'about-public',component:AboutPublicComponent},
   {path:'blog-public',component:BlogPublicComponent},
   {path:'blog-root',component:BlogRootComponent},
+  {path:'psyco-root',component:PsycoRootComponent},
   {path:'signup',component:SignupComponent},
   {path:'encuestas-public',component:EncuestasPublicComponent},
   {path:'home-student',component:HomeStudentComponent,canActivate: [AuthGuard] ,
@@ -40,6 +44,7 @@ const routes: Routes = [
   {path:'help-public',component:HelpPublicComponent},
   {path:'home-public',component:HomePublicComponent},
   {path:'home-root',component:HomeRootComponent},
+  {path:'tutorv-root',component:TutorvRootComponent},
   {path:'profile-root',component:ProfileRootComponent},
   {path:'avisos-public',component:AvisosPublicComponent},
   {path:'avisos-root',component:AvisosRootComponent},
@@ -53,8 +58,9 @@ const routes: Routes = [
   data: { requiredRole: Role.Admin}},
   {path: 'notices-admin', component:NoticesAdminComponent,canActivate: [AuthGuard] ,
   data: { requiredRole: Role.Admin}},
-  
+
   {path:'cavisos',component:CavisosRootComponent},
+  {path:'cpsyco',component:CpsycoRootComponent},
   {path:'avisos-student',component:AvisosStudentComponent},
   {path:'perfil-student',component:PerfilStudentComponent},
   {path:'carnet-student',component:CarnetStudentComponent},

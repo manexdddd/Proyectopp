@@ -48,6 +48,9 @@ import { AvisosRootComponent } from './avisos-root/avisos-root.component';
 import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
 import { BlogPublicComponent } from './blog-public/blog-public.component';
 import { BlogRootComponent } from './blog-root/blog-root.component';
+import { PsycoRootComponent } from './psyco-root/psyco-root.component';
+import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
+
 
 @NgModule({
   declarations: [
@@ -86,6 +89,9 @@ import { BlogRootComponent } from './blog-root/blog-root.component';
       TutorvRootComponent,
       BlogPublicComponent,
       BlogRootComponent,
+      PsycoRootComponent,
+      CpsycoRootComponent,
+     
 
   ],
   imports: [
