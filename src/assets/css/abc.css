@@ -1154,13 +1154,55 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
 /*____ball                     ___*/
 .ball {
   width: 300px;
-  height: 300px;
-  padding: 1px;
-  border-radius: 100%;
-  background: #e48c08;
-  animation: bounce 3s ease-out forwards;
-  transform: translateY(calc(-50vh - 116px));
+ height: 300px;
+ padding: 1px;
+ position: relative;
+ border-radius: 100%;
+ background: url('../images/skin.svg');
+ animation: bounce 3s ease-out forwards;
+ transform: translateY(calc(-50vh - 116px));
+ transform: rotate(45deg); /* Rotate the ball */
+ transform: skew(30deg); /* Skew the ball */
 }
+/*
+.ball::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url('../images/ear2.svg');
+  border-radius: 50%;
+ }
+ 
+ .ball::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: url('../images/ear1.svg');
+  border-radius: 50%;
+ }
+ 
+ .overlay {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top:-20px;
+  right: 130px;
+  background-color: transparent;
+ }
+
+ 
+ .ball::before {
+  top: 10px;
+  left: 10px;
+ }
+ 
+ .ball::after {
+  top: 10px;
+  right: 10px;
+ }*/
+ 
 
 @keyframes bounce {
   5% {
