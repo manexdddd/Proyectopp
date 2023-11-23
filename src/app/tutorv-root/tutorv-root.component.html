@@ -89,7 +89,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr *ngFor="let admin of admins index:i">
+                    <tr *ngFor="let admin of admins  index as i">
                         <td>i+1</td>
                         <td><a href="#"><img src="{{ admin.data.foto }}" class="avatar" alt="Avatar">{{ admin.data.nombre }} {{ admin.data.paterno }} {{ admin.data.materno }}</a></td>
                         <td>{{ admin.data.division }}</td>                        

@@ -2212,3 +2212,35 @@ text-decoration: none;
     margin-right: var(--dl-space-space-fourunits);
   }
 }
+.limitado {
+  width: 100px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.limitado2 {
+  width: 300px; 
+  height: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.limitado3 {
+  width: 190px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.mercedes {
+  object-fit: cover;
+  object-position: center;
+  width: 300px;
+  height: 350px;
+ }
+
+ .mercedes2 {
+  object-fit: cover;
+  object-position: center;
+  width: 312px;
+  height: 300px;
+ }

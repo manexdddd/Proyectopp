@@ -21,6 +21,8 @@ import { AuthGuard } from './auth.guard';
 import { Role } from './services/roles';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
+import { CplaticasRootComponent } from './cplaticas-root/cplaticas-root.component';
+import { PlaticasRootComponent } from './platicas-root/platicas-root.component';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
@@ -33,6 +35,7 @@ import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-
 import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
+  {path:'cplaticas-root',component:CplaticasRootComponent},
   {path:'about-public',component:AboutPublicComponent},
   {path:'blog-public',component:BlogPublicComponent},
   {path:'blog-root',component:BlogRootComponent},
@@ -46,6 +49,7 @@ const routes: Routes = [
   {path:'home-root',component:HomeRootComponent},
   {path:'tutorv-root',component:TutorvRootComponent},
   {path:'profile-root',component:ProfileRootComponent},
+  {path:'platicas-root',component:PlaticasRootComponent},
   {path:'avisos-public',component:AvisosPublicComponent},
   {path:'avisos-root',component:AvisosRootComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,

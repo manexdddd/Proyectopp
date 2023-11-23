@@ -49,6 +49,8 @@ import { BlogRootComponent } from './blog-root/blog-root.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
 import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
+import { CplaticasRootComponent } from './cplaticas-root/cplaticas-root.component';
+import { PlaticasRootComponent } from './platicas-root/platicas-root.component';
 
 
 @NgModule({
@@ -89,6 +91,8 @@ import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
       PsycoRootComponent,
       CpsycoRootComponent,
       CtutorRootComponent,
+      CplaticasRootComponent,
+      PlaticasRootComponent,
      
 
   ],
