@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <!-- ====== Header Start ====== -->
+   <app-navbar-public></app-navbar-public>
+    <!-- ====== Header End ====== -->
+    
+    <!-- ====== Banner Start ====== -->
+    <section class="ud-page-banner">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-banner-content">
+              <h1>Solicitar Atención 🚀</h1>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Banner End ====== -->
+
+    
+    <!-- ====== Login Start ====== -->
+    <div class="containeer" >
+      <div class="row" >
+        <div class="col-lg-9" >
+          <!-- Aquí va tu formulario de inicio de sesión -->
+          <section class="ud-login" id="#up" style="border-radius: 12px; margin-top: -70px;">
+            <div class="container" style="margin-top: 16px;">
+             
+              
+              <div class="row">
+                <div class="col-lg-12" >
+                  <div class="ud-login-wrapper">
+                    <div class="ud-login-logo">
+                      <img style="width: 200px; margin-bottom: -30px; margin-left: auto;" src="assets/images/logo/logo-ajjaj.png" alt="logo" /> <br><br><br>
+                      <label style="font-size: 28px; margin-bottom: 9px;"><b>Bienvenido a PsicoItsch</b> </label> <br><br>
+
+                      <label style="font-size: 16px; margin-bottom: 9px;"><b>¡Solicita Tu Atención Psicologica ahora!</b> </label>
+                    </div>
+                    <div class="" style="display: flex; justify-content: center; ">
+                      
+                      <form class="form" style="border-radius: 12px; margin-top: -70px;" >
+
+
+                        <div class="flex justify-content-center">
+                            <label>
+                                <input class="inputa" style="width: 192px; " type="text" placeholder="" required>
+                                <span>Nombre</span>
+                                <div
+                          class="alert alert-danger">Este campo es Obligatorio</div>
+                            </label>
+                            <label>
+                                <input class="inputa" style="width: 192px;" type="text" placeholder="" required>
+                                <span>Apellido</span>
+                                <div 
+                          class="alert alert-danger">Este campo es Obligatorio</div>
+                            </label>
+                          </div>
+
+                          <div class="flex justify-content-center">
+                            <label>
+                              <input class="inputa" style="width: 192px;" type="number" placeholder="" required min="15" max="99">
+                              <span>Edad</span>
+                              <div 
+                            class="alert alert-danger">Este campo es Obligatorio</div>
+                            </label>
+                            <label>
+                                <input class="inputa" style="width: 192px;" type="date" placeholder="" required>
+                                <span>Fecha de Nacimiento</span>
+                                <div 
+                            class="alert alert-danger">Este campo es Obligatorio</div>
+                            </label>
+                            
+                        </div>
+
+                        <div class="flex justify-content-center">
+                            <label>
+                              <select class="inputa" style="width: 192px;" required>
+                                <option value="" disabled selected>Selecciona tu sexo</option>
+                                <option value="masculino">Masculino</option>
+                                <option value="femenino">Femenino</option>
+                                <option value="otro">Otro</option>
+                              </select>
+                              <span>Sexo</span>
+                              <div *ngIf="registroForm.get('sex')?.touched && registroForm.get('sex')?.errors?.['required']"
+                              class="alert alert-danger">Este campo es Obligatorio</div>
+                            </label>
+                            <label>
+                              <input class="inputa" style="width: 192px;" type="tel" placeholder="" pattern="[0-9]{10}" required title="Ingresa un número de teléfono válido de 10 dígitos">
+                              <span>Teléfono</span>
+                              <div *ngIf="registroForm.get('tel')?.touched && registroForm.get('tel')?.errors?.['required']"
+                              class="alert alert-danger">Este campo es Obligatorio</div>
+                              
+                          
+                              <div *ngIf="registroForm.get('tel')?.hasError('pattern') && registroForm.get('tel')?.touched"  class="alert alert-danger">
+                                Ingresa correctamente tu Numero.
+                              </div>
+                            </label>
+                            
+                        </div> <br>
+
+
+                        <label>
+                            <select class="inputa" required id="carrera" formControlName="carrera">
+                              <option value="" disabled selected>Selecciona tu Carrera</option>
+                              <option value="ingenieria">Sistemas Computacionales</option>
+                              <option value="informatica">Gestión Empresarial</option>
+                              <option value="nanotecnologia">Nanotecnología</option>
+                              <option value="mecatronica">Mecatrónica</option>
+                              <option value="bioquimica">Bioquímica</option>
+                              <option value="industrial">Industrial</option>
+                              <option value="tics">TIC's</option>
+                              <!-- Agrega más opciones según sea necesario -->
+                            </select>
+                            <span>Carrera</span>
+                            <div *ngIf="registroForm.get('carrera')?.hasError('required') && registroForm.get('carrera')?.touched"  class="alert alert-danger">
+                              La selección de carrera es obligatoria.
+                            </div>
+                          </label>
+
+                          <div class="flex justify-content-center">
+                            <label>
+                              <select  [(ngModel)]="usuario.grupo" class="inputa" style="width: 192px;" type="text" placeholder="" required id="grupo" name="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
+                                <option selected>Elige tu Grupo</option>
+                                <option value="071CA">071CA</option>
+                                <option value="071DB">071DB</option>
+                                <option value="072CA">072CA</option>
+                                <option value="072DB">072DB</option>
+                                <option value="073CA">073CA</option>
+                                <option value="073DB">073DB</option>
+                                <option value="074CA">074CA</option>
+                                <option value="074DB">074DB</option>
+                                <option value="075CA">075CA</option>
+                                <option value="075DB">075DB</option>
+                                <option value="076CA">076CA</option>
+                                <option value="076DB">076DB</option>
+                                <option value="077CA">077CA</option>
+                                <option value="078CA">078CA</option>
+                                <option value="078DB">078DB</option>
+                                <option value="079CA">079CA</option>
+                              </select>
+                              <span>Grupo</span>
+                              <div *ngIf="registroForm.get('grupo')?.touched && registroForm.get('grupo')?.errors?.['required']"
+                              class="alert alert-danger">Este campo es Obligatorio</div>
+
+
+                              
+                      <div *ngIf="registroForm.get('grupo')?.hasError('pattern') && registroForm.get('grupo')?.touched"  class="alert alert-danger">
+                        Ingresa correctamente tu Grupo.
+                      </div>
+                    </label>
+
+                  
+                    
+                    <label>
+                        <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
+                        <span>Numero de Control</span>
+                        <div *ngIf="registroForm.get('nocontrol')?.hasError('required') && registroForm.get('nocontrol')?.touched"  class="alert alert-danger">
+                          Tu Numero de Control es obligatorio.
+                        </div>
+                        <div *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched"  class="alert alert-danger">
+                          El Numero de Control debe tener 9 caracteres.
+                        </div>
+                    </label>
+                        
+                        <div class="flex-column">
+                          <label>Contraseña </label></div>
+                          <div class="inputoForm">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" viewBox="-64 0 512 512" height="20"><path d="m336 512h-288c-26.453125 0-48-21.523438-48-48v-224c0-26.476562 21.546875-48 48-48h288c26.453125 0 48 21.523438 48 48v224c0 26.476562-21.546875 48-48 48zm-288-288c-8.8125 0-16 7.167969-16 16v224c0 8.832031 7.1875 16 16 16h288c8.8125 0 16-7.167969 16-16v-224c0-8.832031-7.1875-16-16-16zm0 0"></path><path d="m304 224c-8.832031 0-16-7.167969-16-16v-80c0-52.929688-43.070312-96-96-96s-96 43.070312-96 96v80c0 8.832031-7.167969 16-16 16s-16-7.167969-16-16v-80c0-70.59375 57.40625-128 128-128s128 57.40625 128 128v80c0 8.832031-7.167969 16-16 16zm0 0"></path></svg>        
+                            <input placeholder="Ingresa tu Contraseña" class="inputo" type="password" name="password">
+                          </div>
+                        
+                          <div class="flex-row" style="display: flex; align-items: center;">
+                            <div style="display: flex; align-items: center;">
+                              <input type="radio" style="margin-right: 5px;">
+                              <label style="margin: 0;">Recuérdame</label>
+                            </div>
+                            <span style="padding-left: 10px;" class="span">¿Olvidaste tu Contraseña?</span>
+                          </div>
+                        <button class="button-submit" type="submit" >Iniciar Sesión</button>
+                        <p class="p">¿No estas Registrado? <span class="span">Registrate aquí</span></p>
+                        <p class="p line">O Inicia Sesión con:</p>
+                    
+                        <div class="flex-row">
+                          <button class="btno google">
+                            <svg xml:space="preserve" style="enable-background:new 0 0 512 512;" viewBox="0 0 512 512" y="0px" x="0px" 
+                            xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" version="1.1">
+                            <path d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
+                              c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
+                              C103.821,274.792,107.225,292.797,113.47,309.408z" style="fill:#FBBB00;"></path>
+                            <path d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
+                              c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
+                              c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z" style="fill:#518EF8;"></path>
+                            <path d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
+                              c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
+                              c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z" style="fill:#28B446;"></path>
+                            <path d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
+                              c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
+                              C318.115,0,375.068,22.126,419.404,58.936z" style="fill:#F14336;"></path></svg>
+                       
+                            Google 
+                            
+                          </button>
+                  </div>
+                          </div>
+                  </form>               
+                     </div>                                     
+                  </div>                  
+                </div>                
+              </div>      
+            </div>
+           
+          </section>
+        </div>
+        <div class="col-lg-3">
+          <!-- Aquí va el contenido de la sección "ball" -->
+          <section class="form__animation" style=" margin-top: 90px; margin-left: -80px;">
+            <div id="ball">
+              <div class="ball">
+                <div id="face">
+                  <div class="ball__eyes">
+                    <div class="eye_wrap"><span class="eye"></span></div>
+                    <div class="eye_wrap"><span class="eye"></span></div>
+                  </div>
+                  <div class="ball__mouth"></div>
+                </div>
+              </div>
+            </div>
+            <div class="ball__shadow" style="margin-left: 30px;"></div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== Login End ====== -->
+
+<app-footer-public></app-footer-public>
+
+    <!-- ====== Back To Top Start ====== -->
+    
+    <!-- ====== Back To Top End ====== -->
+
+    <!-- ====== All Javascript Files ====== -->
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/main.js"></script>
+     <script  src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-79264a40-3c75-01f9-5df8-3943faaf4806" crossorigin></script>
+  </body>
+</html>
+

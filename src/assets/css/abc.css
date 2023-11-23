@@ -179,20 +179,9 @@
 }
 
 .nav1-item a:hover::before {
-  transform: scaleX(1); /* Mostrar la línea completa al hacer hover */
+  
 }
 
-/* Estilos para hacerlo responsive en pantallas más pequeñas */
-@media (max-width: 768px) {
-  .navbar-2 {
-    flex-direction: column; /* Cambiar a diseño de columna */
-    align-items: center; /* Centrar elementos verticalmente */
-  }
-
-  .nav1-item {
-    margin: 10px 0; /* Espacio vertical entre elementos */
-  }
-}
 
 
 
@@ -982,25 +971,8 @@ br {
 
 /* Estilos para Navbar 2 */
 /* Estilos base para la barra de navegación */
-.navbar-2 {
-  background-color: #f0ffff11;
-  display: flex;
-  justify-content: center;
-  padding: 8px;
-  font-size: 20px;
-}
 
-.nav1-item {
-  margin: 0 20px;
-}
 
-.nav1-item a {
-  color: #000000;
-  text-decoration: none;
-  position: relative; /* Necesario para el posicionamiento de la línea */
-  display: inline-block; /* Hacer que el enlace sea un bloque en línea */
-  padding: 5px 10px; /* Ajusta el relleno alrededor del texto */
-}
 
 .nav1-item a::before {
   content: '';
