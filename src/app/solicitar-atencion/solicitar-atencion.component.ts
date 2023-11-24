@@ -13,6 +13,8 @@ import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators }
 export class SolicitarAtencionComponent {
   registroForm! : FormGroup;
   progreso: boolean;
+  canalizadoPorTutor: boolean = false;
+  canalizadoPorVoluntario: boolean = false;
   subscription: Subscription;
   constructor(private  fb: FormBuilder,private auth :AuthService,private afs: AngularFirestore,private  storage: AngularFireStorage) {}
   usuario ={
