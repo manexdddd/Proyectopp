@@ -32,6 +32,8 @@ import { CarnetStudentComponent } from './carnet-student/carnet-student.componen
 import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
 import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
+import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
+import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -51,6 +53,9 @@ const routes: Routes = [
   {path:'avisos-public',component:AvisosPublicComponent},
 
   {path:'solicitar-atencion',component:SolicitarAtencionComponent},
+  {path:'home-tutores',component:HomeTutoresComponent},
+  {path:'grupoalumnos-tutores',component:GrupoalumnosTutoresComponent},
+
   {path:'avisos-root',component:AvisosRootComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,
   data: { requiredRole: Role.Admin}},

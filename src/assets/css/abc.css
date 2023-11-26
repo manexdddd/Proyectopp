@@ -163,7 +163,7 @@
   text-decoration: none;
   position: relative; /* Necesario para el posicionamiento de la línea */
   display: inline-block; /* Hacer que el enlace sea un bloque en línea */
-  padding: 5px 10px; /* Ajusta el relleno alrededor del texto */
+  padding: 17px 17px; /* Ajusta el relleno alrededor del texto */
 }
 
 .nav1-item a::before {
@@ -854,12 +854,6 @@ br {
 }
 
 
-
-
-
-
-
-
   /*carrusel*/
   .card-boody {
     padding: 10px 10px 10px 10px;
@@ -1387,152 +1381,9 @@ br {
   }
 
 
-  /* Estilos CSS para el carnet */
-  .carnet {
-    width: 300px;
-    height: 200px;
-    border: 2px solid black;
-    margin: 10px auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: rgb(225, 248, 255);
-  }
+ 
 
-  .foto {
-    width: 100px;
-    height: 150px;
-    border: 2px solid black;
-    margin: 10px;
-    background-image: url("https://i.imgur.com/9ZJ0wZf.jpg"); /* URL de la foto */
-    background-size: cover;
-    background-position: center;
-  }
-
-  .datos {
-    width: 150px;
-    height: 150px;
-    border: 2px solid black;
-    margin: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-  }
-
-  .nombre {
-    font-weight: bold;
-  }
-
-  .codigo {
-    color: red;
-  }
-
-
-  /* Estilos CSS para el id del alumno */
   
-  
-  .id-card {
-    
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    width: 500px;
-    height: auto;
-    display: flex;    
-  }
-  
-  .profile-picture {
-    width: 90px;
-    height: 30px;
-    border-radius: 8px;
-  }
-  
-  .id-card-body {
-    padding: 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-  }
-  
-  .student-info {
-    text-align: right;
-    color: #fff;
-  }
-  
-  .student-info label p{
-    font-weight: bold;
-  }
-  
-  .card23 {
-    position: relative;
-    width: auto; /* Cambiar la propiedad width a auto */
-    max-width: 600px;
-    height: auto;
-    background-color: #29167e;
-    border-radius: 15px;
-    display: flex;
-    perspective: 100px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    align-items: center; /* añadir esta línea para centrar verticalmente */
-    margin: 0 auto; /* añadir esta línea para centrar horizontalmente */
-}
-  
-  .card23:hover {
-    transform: scale(1.02);
-    
-  }
-
-
-  .cardw {
-    border-radius: 15px;
-   margin-left: 28px;
-   justify-content: center;
-   position: relative;
-  
-   display: flex;
-   
-   align-items: flex-start;
-   margin: 0 auto;
-   
-   flex-wrap: wrap;
-  }
-
-  .cardw h4 {
-    color: #555;
-    margin-bottom: 10px;
-  }
-
-  .cardw p {
-    color: #ffffff;
-    margin-bottom: 5px;
-   
-    font-size: 20px;
-    
-    padding-bottom: 15px;
-   }
-   .profile-picture {
-    width: 30%;
-    height: auto; /* Ajusta la altura automáticamente */
-    border-radius: 8px;
-   }
-  .cardw p strong {
-    color: #a7a7a7;
-  }
-
-  @media (min-width: 768px) {
-    .cardw {
-      width: 100%;
-      
-      flex-direction: column;
-    }
-
-   
-  }
-
   
 
 /* estilos del download, home */
@@ -1629,16 +1480,7 @@ br {
   -webkit-transform: translate3d(0,0,0);
 }
 /* footer perron */
-  .add-button {
-    cursor: pointer;
-    color: rgb(255, 255, 255);
-    background-color: blue;
-    width: 30px;
-    height: 30px;
-    float: right;
-    font-size: 30px;
-    border-radius: 500px;
-  }
+ 
   /* card desktop */
 .tabla-desktop{
   width: 100%;
@@ -1648,25 +1490,25 @@ br {
 .tabla-desktop tr th{
   background-color: #000;
   color: white;
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(223, 222, 222);
   padding: 5px;
   text-align: left;
 }
 .tabla-desktop td{
   
  
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(198, 198, 198);
   padding: 5px;
   text-align: left;
 }
 
 .tabla-desktop tr td{
-  border-bottom: 1px solid gray;
+  border-bottom: 1px solid rgb(210, 210, 210);
   padding: 5px;
 }
 
 .tabla-desktop tr:nth-of-type(odd){
-  background-color: gray;
+  background-color: rgb(226, 225, 225);
   padding: 5px;
 }
 
@@ -1715,100 +1557,7 @@ br {
   }
 
   /*id card perrona*/
-  .contaaineer{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
-    
-    
-  }
-
-  .card-boox{
-    background-color: #29167e;
-    display: flex;
-    max-width: 600px;
-    padding: 10px;
-    height: auto;
-    border-radius: 20px;
-    margin: 10px auto;
-    box-shadow: 1px 1px 4px 2px rgb(0, 0, 0, .2);
-  }
-
-  .card-boox img{
-    width: 400px;
-    display: block;
-    object-fit: cover;
-    
-    border-radius: 20px;
-    transition: .2s;
-    box-shadow: 0 0 0 8px rgb(0, 0, 0, .6);
-  }
-
-  .heading a{
-    position: relative;
-    display: block;
-  }
-
-  .heading a:hover img{
-    box-shadow: 0 0 0 12px rgb(0, 0, 0, .1);
-  }
-
-  .heading,
-  .textoo {
-    text-align: center;
-    
-    
-  }
-
-  .textoo h2{
-    color: white;
-    font-size: 18px;
-  }
-
-  .textoo{
-    position: relative;
-  }
-
-  .textoo p{
-    margin: 20px 30px;
-  }
-
-  @media (max-width: 640px){
-    .contaaineer{
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      width: 100%;
-    }
-    .heading{
-      padding: 20px 20px 5px 20px;
-      border: 0;
-      display: flex;
-      flex-direction: column;
-    }
-    .textoo{
-      padding: 5px 20px 20px 20px;
-    }
-    .textoo h2{
-      display: block;
- width: 100%;
- text-align: justify;
-}
-
-.card-boox img{
-  width: 400px;
-  display: block;
-  object-fit: cover;
   
-  border-radius: 20px;
-  transition: .2s;
-  box-shadow: 0 0 0 8px rgb(0, 0, 0, .6);
-}
-   }
-   
 
 
   /*______________________________________*/
@@ -1876,3 +1625,95 @@ br {
     cursor: pointer;
    }
    
+/*boton  +*/
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  float: right; /* Alinea el botón a la derecha */
+  
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  right: 0; /* Alinea el texto a la derecha */
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+  z-index: 1;
+  transition: all 0.3s ease; /* Hace que la transición sea más lenta */
+}
+
+.dropdown-content a {
+  color: black;
+  text-decoration: none;
+  display: block;
+  font-size: 0.8em; /* Hace el texto más pequeño */
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd; /* Agrega un hover al texto */
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.add-button {
+  
+  color: white;
+  
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  background-color: blue;
+  width: 30px;
+  height: 30px;
+  
+  font-size: 30px;
+  border-radius: 500px;
+}
+
+.add-button:hover {
+  background-color: #45a049;
+}
+
+/*_______________*/
+input[type="checkbox"] {
+  display: none;
+}
+
+.btn-canalizar,
+.btn-ver-carnet,
+.btn-enviar-aviso,
+.btn-editar,
+.btn-eliminar {
+  padding: 10px;
+  border: 2px solid transparent;
+}
+
+.btn-canalizar {
+  border-color: #4CAF50; /* Verde */
+}
+
+.btn-ver-carnet {
+  border-color: #008CBA; /* Azul */
+}
+
+.btn-enviar-aviso,
+.btn-eliminar {
+  border-color: #f44336; /* Rojo */
+}
+
+.btn-editar {
+  border-color: #e7e7e7; /* Gris */
+}
+
+input[type="checkbox"]:checked + label {
+  background-color: #ddd;
+}
+
+
+

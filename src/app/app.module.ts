@@ -51,6 +51,9 @@ import { BlogRootComponent } from './blog-root/blog-root.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
 import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
+import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
+import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
+import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
 
 
 @NgModule({
@@ -93,6 +96,9 @@ import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atenc
       PsycoRootComponent,
       CpsycoRootComponent,
       SolicitarAtencionComponent,
+      HomeTutoresComponent,
+      SidebarTutorComponent,
+      GrupoalumnosTutoresComponent,
      
 
   ],
