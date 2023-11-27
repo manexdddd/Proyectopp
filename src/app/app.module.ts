@@ -57,6 +57,10 @@ import { VplaticasAdminComponent } from './vplaticas-admin/vplaticas-admin.compo
 import { SatisfactionsurveyAdminComponent } from './satisfactionsurvey-admin/satisfactionsurvey-admin.component';
 import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey-admin.component';
 import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
+import { PsycoRootComponent } from './psyco-root/psyco-root.component';
+import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
+import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
+
 
 @NgModule({
   declarations: [
@@ -104,6 +108,10 @@ import { SurveysessionAdminComponent } from './surveysession-admin/surveysession
       SatisfactionsurveyAdminComponent,
       ServicesurveyAdminComponent,
       SurveysessionAdminComponent,
+      PsycoRootComponent,
+      CpsycoRootComponent,
+      CtutorRootComponent,
+     
 
   ],
   imports: [

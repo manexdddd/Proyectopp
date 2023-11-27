@@ -24,6 +24,7 @@ export class SignupComponent {
     foto:'',
    control:'',
    carrera:'Elige tu Carrera',
+   grupo:'Elige tu Carrera',
    }
    
   ngOnInit(): void{
@@ -61,6 +62,7 @@ export class SignupComponent {
       surnameP: ['', [Validators.required]],
       numberC: ['', [Validators.required]],
       career: ['', [Validators.required]],
+      grupo: ['', [Validators.required]],
     },{validators: this.confirmPasswordValidator});
   }
   confirmPasswordValidator(control: AbstractControl): ValidationErrors | null {

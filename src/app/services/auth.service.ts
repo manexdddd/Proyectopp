@@ -127,7 +127,14 @@ async registro(email:string,psw :string){
 
 }
 
-    
+async sendPasswordResetEmail(email: string) {
+  
+
+ return await this.afauth.sendPasswordResetEmail(email);
+  
+ 
+ 
+}
 
 crearDocumento(alumnoid: string, data: any) {
   //referencia del documento 
@@ -151,7 +158,7 @@ async logout() {
   localStorage.setItem('email', "");
   localStorage.setItem('rolx', "");
     await this.afauth.signOut();
-    
+    this.changeprogreso(false)
     this.router.navigate(['/login']);
  
 

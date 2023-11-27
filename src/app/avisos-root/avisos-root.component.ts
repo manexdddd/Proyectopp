@@ -35,10 +35,10 @@ constructor(private av:AvisosService,private  storage: AngularFireStorage, priva
 
  
 
-  this.av.getAll().subscribe(data => {
-    this.avisos = data;
-    console.log(this.avisos)
-   });
+    this.av.getAll().subscribe(data => {
+      this.avisos = data.sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
+      console.log(this.avisos);
+     });
  
 }
 
