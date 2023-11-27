@@ -1681,39 +1681,36 @@ br {
 }
 
 /*_______________*/
-input[type="checkbox"] {
+
+.dropdown1 {
+  position: relative;
+  display: inline-flex;
+  float: right;
+}
+
+.dropdown1-content {
   display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  margin-top: 50px;
+  
+}
+.dropdown1:hover .dropdown1-content {
+  display: block;
+ }
+
+.dropdown1-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
 }
 
-.btn-canalizar,
-.btn-ver-carnet,
-.btn-enviar-aviso,
-.btn-editar,
-.btn-eliminar {
-  padding: 10px;
-  border: 2px solid transparent;
+.dropdown1:hover .dropdown1-content {
+  display: block;
 }
-
-.btn-canalizar {
-  border-color: #4CAF50; /* Verde */
-}
-
-.btn-ver-carnet {
-  border-color: #008CBA; /* Azul */
-}
-
-.btn-enviar-aviso,
-.btn-eliminar {
-  border-color: #f44336; /* Rojo */
-}
-
-.btn-editar {
-  border-color: #e7e7e7; /* Gris */
-}
-
-input[type="checkbox"]:checked + label {
-  background-color: #ddd;
-}
-
 
 

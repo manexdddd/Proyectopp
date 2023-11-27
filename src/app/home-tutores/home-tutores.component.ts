@@ -9,6 +9,7 @@ import { AngularFirestore } from '@angular/fire/compat/firestore';
   styleUrls: ['./home-tutores.component.css']
 })
 export class HomeTutoresComponent {
+  
   constructor(private renderer: Renderer2, private elementRef: ElementRef, private ro:RootService,
     private auth:AuthService, private afs: AngularFirestore) {}
     usuario: any;

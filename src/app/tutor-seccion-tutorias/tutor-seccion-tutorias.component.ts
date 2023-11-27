@@ -6,13 +6,13 @@ import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { finalize } from 'rxjs';
 import * as $ from 'jquery';
 
-
 @Component({
-  selector: 'app-grupoalumnos-tutores',
-  templateUrl: './grupoalumnos-tutores.component.html',
-  styleUrls: ['./grupoalumnos-tutores.component.css']
+  selector: 'app-tutor-seccion-tutorias',
+  templateUrl: './tutor-seccion-tutorias.component.html',
+  styleUrls: ['./tutor-seccion-tutorias.component.css']
 })
-export class GrupoalumnosTutoresComponent {
+export class TutorSeccionTutoriasComponent {
+
   constructor(private renderer: Renderer2, private elementRef: ElementRef, private ro:RootService,
     private auth:AuthService, private afs: AngularFirestore,private storage: AngularFireStorage) {
       this.usuarioe = afs.doc("admin"+"/"+localStorage.getItem('email'))

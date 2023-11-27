@@ -34,6 +34,8 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
 import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
 import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
+import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
+import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -55,6 +57,8 @@ const routes: Routes = [
   {path:'solicitar-atencion',component:SolicitarAtencionComponent},
   {path:'home-tutores',component:HomeTutoresComponent},
   {path:'grupoalumnos-tutores',component:GrupoalumnosTutoresComponent},
+  {path:'edit-alumno-tutor',component:EditAlumnoTutorComponent},
+  {path:'tutor-seccion-tutorias',component:TutorSeccionTutoriasComponent },
 
   {path:'avisos-root',component:AvisosRootComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,

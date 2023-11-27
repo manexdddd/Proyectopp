@@ -54,6 +54,8 @@ import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atenc
 import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
 import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
 import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
+import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
+import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
 
 
 @NgModule({
@@ -99,6 +101,8 @@ import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumno
       HomeTutoresComponent,
       SidebarTutorComponent,
       GrupoalumnosTutoresComponent,
+      EditAlumnoTutorComponent,
+      TutorSeccionTutoriasComponent,
      
 
   ],
