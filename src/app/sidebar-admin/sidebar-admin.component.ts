@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2 } from '@angular/core';
-import { AlumnosService } from '../services/alumnos.service';
+import { AdminService } from '../services/admin.service';
 import { AuthService } from '../services/auth.service';
 
 @Component({
@@ -11,7 +11,7 @@ export class SidebarAdminComponent {
   currentUsuario: any;
   usuario: any;
   email: string;
-  constructor(private renderer: Renderer2, private elementRef: ElementRef, private alu:AlumnosService,
+  constructor(private renderer: Renderer2, private elementRef: ElementRef, private alu:AdminService,
     private auth:AuthService) {}
   ngOnInit(): void {
      
@@ -27,7 +27,7 @@ export class SidebarAdminComponent {
 
     this.email = localStorage.getItem('email');
 
-    this.alu.getalumno(this.email).subscribe(usuario => {
+    this.alu.getadmin(this.email).subscribe(usuario => {
       this.usuario = usuario;
     });
   }

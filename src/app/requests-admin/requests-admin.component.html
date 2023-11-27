@@ -1,0 +1,38 @@
+<hr>
+<div class="table-responsive">
+  <h1>Solicitudes de Sesión</h1> <br>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">Nombre Completo</th>
+        <th scope="col">Grupo</th>
+        <th scope="col">N° Control</th>
+        <th scope="col">Carrera</th>
+        <th scope="col">Telefono</th>
+        <th scope="col">Fecha</th>
+        <th scope="col">Nombre Tutor</th>
+        <th scope="col">Canalización</th>
+        <th scope="col">Motivo</th>
+        <th scope="col">Observaciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Iterar sobre las solicitudes y mostrar cada una en una fila de la tabla -->
+      <tr *ngFor="let solicitud of solicitudes">    
+        <td>{{solicitud.data.nombre}}</td>
+        <td>{{solicitud.data.grupo}}</td>
+        <td>{{solicitud.data.numeroC}}</td>
+        <td>{{solicitud.data.carrera}}</td>
+        <td>{{solicitud.data.telefono}}</td>
+        <td>{{solicitud.data.fecha}}</td>
+        <td>{{solicitud.data.tutor}}</td>
+        <td>{{solicitud.data.canalizacion}}</td>
+        <td>{{solicitud.data.motivo}}</td>
+        <td>{{solicitud.data.observaciones}}</td>
+        <td>
+          <button type="button" class="btn btn-danger" (click)="eliminarSolicitud(solicitud.id)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

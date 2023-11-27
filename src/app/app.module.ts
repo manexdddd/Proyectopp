@@ -46,6 +46,17 @@ import { AvisosRootComponent } from './avisos-root/avisos-root.component';
 import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
 import { BlogPublicComponent } from './blog-public/blog-public.component';
 import { BlogRootComponent } from './blog-root/blog-root.component';
+import { NewsessionAdminComponent } from './newsession-admin/newsession-admin.component';
+import { FollowupAdminComponent } from './followup-admin/followup-admin.component';
+import { RescheduledAdminComponent } from './rescheduled-admin/rescheduled-admin.component';
+import { RequestsAdminComponent } from './requests-admin/requests-admin.component';
+import { CavisosAdminComponent } from './cavisos-admin/cavisos-admin.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { CplaticasAdminComponent } from './cplaticas-admin/cplaticas-admin.component';
+import { VplaticasAdminComponent } from './vplaticas-admin/vplaticas-admin.component';
+import { SatisfactionsurveyAdminComponent } from './satisfactionsurvey-admin/satisfactionsurvey-admin.component';
+import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey-admin.component';
+import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +93,17 @@ import { BlogRootComponent } from './blog-root/blog-root.component';
       TutorvRootComponent,
       BlogPublicComponent,
       BlogRootComponent,
+      NewsessionAdminComponent,
+      FollowupAdminComponent,
+      RescheduledAdminComponent,
+      RequestsAdminComponent,
+      CavisosAdminComponent,
+      BlogAdminComponent,
+      CplaticasAdminComponent,
+      VplaticasAdminComponent,
+      SatisfactionsurveyAdminComponent,
+      ServicesurveyAdminComponent,
+      SurveysessionAdminComponent,
 
   ],
   imports: [

@@ -7,11 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-notices-admin',
-  templateUrl: './notices-admin.component.html',
-  styleUrls: ['./notices-admin.component.css']
+  selector: 'app-vplaticas-admin',
+  templateUrl: './vplaticas-admin.component.html',
+  styleUrls: ['./vplaticas-admin.component.css']
 })
-export class NoticesAdminComponent {
+export class VplaticasAdminComponent {
   avisos: any[];
   avisof:any
   avisoe ={

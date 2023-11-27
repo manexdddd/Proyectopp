@@ -163,14 +163,14 @@
         <li class="nav-item dropdown pe-3">
 
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/images/dua02.jpg" alt="Profile" class="rounded-circle">
-            <span class="d-none d-md-block dropdown-toggle ps-2">K. Anderson</span>
+            <img src="{{usuario.foto}}" alt="Profile" class="rounded-circle">
+            <span class="d-none d-md-block dropdown-toggle ps-2">{{usuario.nombre}}</span>
           </a><!-- End Profile Iamge Icon -->
 
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
-              <h6>Kevin Anderson</h6>
-              <span>Web Designer</span>
+              <h6>{{ usuario.paterno}} {{ usuario.materno}}</h6>
+              <span>{{usuario.carrera}}</span>
             </li>
             <li>
               <hr class="dropdown-divider">
@@ -233,6 +233,12 @@
         </a>
       </li><!-- End Dashboard Nav -->
 
+      <li class="nav-item">
+       <a class="align-items-center" href="perfil-admin" >
+          <img style="height: 145px; width: 140px; margin-left: 45px; margin-bottom: 12px; margin-top: 12px;" src="{{ usuario.foto}}" alt="Profile" class="rounded-circle">
+        </a>
+      </li> 
+
       <!-- Profile  -->
       <li class="nav-item">
         <a class="nav-link collapsed" href="perfil-admin">
@@ -249,23 +255,72 @@
           <span>Atencion </span>
         </a>
       </li>
-      <!-- Fin de Atencion -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#avisos" data-bs-toggle="collapse" href="avisos-student">
+          <i class="bi bi-menu-button-wide"></i><span>Actividades</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="avisos" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="notices-admin">
+              <i class="bi bi-circle"></i><span>Avisos</span>
+            </a>
+          </li>
+          <li>
+            <a href="cavisos-admin" >
+              <i class="bi bi-circle"></i><span>Crear Aviso</span>
+      
+            </a>
+          </li>
+        </ul>
+      </li><!-- End Components Nav -->
+      <li class="nav-item">
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Platicas</span><i class="bi bi-chevron-down ms-auto"></i>
+        </a>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="cplaticas-admin">
+              <i class="bi bi-circle"></i><span>Crear Platicas</span>
+            </a>
+          </li>
+          <li>
+            <a href="vplaticas-admin">
+              <i class="bi bi-circle"></i><span>Ver Platicas</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- End Forms Nav -->
       <!-- Ecuestas -->
       <li class="nav-item">
-        <a class="nav-link collapsed" href="survey-admin">
-            <i class="bi bi-clipboard-data-fill"></i>
-          <span>Encuestas </span>
+        <a class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" href="#">
+          <i class="bi bi-journal-text"></i><span>Encuestas</span><i class="bi bi-chevron-down ms-auto"></i>
         </a>
-      </li>
+        <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+          <li>
+            <a href="survey-admin">
+              <i class="bi bi-circle"></i><span>Encuestas Realizadas</span>
+            </a>
+          </li>
+          <li>
+            <a href="satisfacsurvey-admin">
+              <i class="bi bi-circle"></i><span>Encuestas de Satisfación</span>
+            </a>
+          </li>
+          <li>
+            <a href="servicesurvey-admin">
+              <i class="bi bi-circle"></i><span>Encuestas de Servicios</span>
+            </a>
+          </li>
+          <li>
+            <a href="surveysession-admin">
+              <i class="bi bi-circle"></i><span>Encuestas de Sesión</span>
+            </a>
+          </li>
+          
+        </ul>
+      </li><!-- End Forms Nav -->
       <!-- Fin Encuestas -->
-      <!-- Avisos -->
-      <li class="nav-item">
-        <a class="nav-link collapsed" href="notices-admin">
-            <i class="bi bi-journal"></i>
-          <span>Avisos </span>
-        </a>
-      </li>
-      <!-- Fin de Avisos -->
 
 
 

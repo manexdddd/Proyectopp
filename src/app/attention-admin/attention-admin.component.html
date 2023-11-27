@@ -38,329 +38,87 @@
 <app-sidebar-admin></app-sidebar-admin>
 
   <main id="main" class="main">
-
-    <div class="pagetitle">
-      <h1>Atencion Psicologica</h1>
-    </div><!-- End Page Title -->
-    <h5>Atenciones Asignadas</h5>
-    <section class="section dashboard">
-      <div class="row">
-        <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Nueva Atencion</h5>
-                <p class="card-text">Alumno: Antonio Medina</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Ver Más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Seguimiento</h5>
-                <p class="card-text">Alumno: Manuel Vergara</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-1">Ver Más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Nueva Atencion</h5>
-                <p class="card-text">Alumno: Isabel Alvarez</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-2">Ver Más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Seguimiento</h5>
-                <p class="card-text">Alumno: Samuel Pineda </p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-3">Ver Más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Nueva Atencion</h5>
-                <p class="card-text">Alumno: Alinne</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-4">Ver Más</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-4">
-            <div class="card">
-              <div class="card-body">
-                <h5 class="card-title">Nueva Atencion</h5>
-                <p class="card-text">Alumno: Catherin</p>
-                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal-5">Ver Más</button>
-              </div>
-            </div>
-          </div>
-      </div>
+    <section  class="section dashboard;" style="background-color: #0073f74e; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Atencion Psicologica</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="home-admi">Home</a></li>
+            <li class="breadcrumb-item active">Atención</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+   <h2 class="fs-3 fw-bold mb-2">Agenda de Sesiones👋</h2>
+   <p class="text-muted ">Podras ver las sesiones que tengas pendientes, cancelar, crear y más</p><br>
+   <div class="navbar-2" style="size: 200px;">
+    <div class="nav1-item" ><a href="attention-admin">Inicio Crear</a></div>
+    <div class="nav1-item"><a href="newsession-admin">Nueva Sesión</a></div>
+    <div class="nav1-item"><a href="followup-admin">Seguimiento</a></div>
+    <div class="nav1-item"><a href="rescheduled-admin">Reprogramado</a></div>
+  </div>
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
     </section>
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    <section class="section dashboard">
+      <form class="row g-3" (ngSubmit)="onSubmit()" [formGroup]="sesionForm">
+        <div class="col-md-4">  
+          <label for="validationDefault01" class="form-label">Nombre de Alumno</label>
+          <input type="text" class="form-control" id="validationDefault01" formControlName="nombreAlumno" value="Alumno" required>
         </div>
-        <div class="modal-body">
-          <div class="container-fluid">
-            <div class="row">
-                <div class="col-md-6">
-                    <br>
-                    <h6>Nombre</h6> 
-                    <h6>N° de Control</h6> 
-                    <h6>Carrera</h6> 
-                    <h6>Nombre del Tutor</h6> <br>
-                    <h6>N° de Contacto</h6> 
-                    <h6>Canalizada por</h6> 
-                    <h6>M de Solicitud de Atención</h6> 
-                </div>
-                <div class="col-md-4 ms-auto">
-                    <br>
-                    <p>Antonio Medina</p> 
-                    <p>123456789</p> 
-                    <p>Sistemas</p> 
-                    <p>Juan Carlos</p> <br>
-                    <p>777 1232 132</p>
-                    <p>Voluntario</p> 
-                    <p>Se siente mal por su ex</p> 
-                </div>
-                <div class="col-md-12">
+        <div class="col-md-4">
+          <label for="validationDefault04" class="form-label">Nombre del Psicologo</label>
+          <select class="form-select" id="validationDefault04" formControlName="nombreMedico" required>
+            <option selected disabled value="">Psicologo</option>
+            <option>Narce</option>
+            <option>Citalli</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault04" class="form-label">Tipo de sesion</label>
+          <select class="form-select" id="validationDefault04" formControlName="tipo" required>
+            <option selected disabled value="">Tipo</option>
+            <option>Nueva Sesión</option>
+            <option>Seguimiento</option>
+            <option>Reprogramado</option>
+          </select>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault03" class="form-label">Hora</label>
+          <input type="time" class="form-control" id="validationDefault03" formControlName="hora" value="10:30 pm Ej" required>
+        </div>
+        <div class="col-md-4">
+          <label for="validationDefault05" class="form-label">Fecha</label>
+          <input type="date" class="form-control" id="validationDefault05" formControlName="fecha" value="11/22/2023 Ej" required>
+        </div>
+        <div class="col-md-4">  
+          <label for="validationDefault01" class="form-label">Numero de Control</label>
+          <input type="text" class="form-control" id="validationDefault01" formControlName="numeroC" value="Numero de Control" required>
+        </div>
+        <div *ngIf="successMessage" class="alert alert-success mt-3">
+          {{ successMessage }}
+        </div>
+        <div class="col-12">
+          <button class="btn btn-primary" type="submit">Crear Sesión</button>
+        </div>
+      </form>
+      <app-requests-admin></app-requests-admin>
 
-                </div>
-            </div>
-          </div>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-primary">Completar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin de Modal -->
-  <!-- Modal 1-->
-  <div class="modal fade" id="exampleModal-1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Datos de Alumno</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h1>Datos del Alumno</h1>
-          <h5>Nombre:</h5>
-          <p>Manuel Vergara</p>
-          <h5>Carrera</h5>
-          <p>Sistemas</p>
-          <h5>Grupo</h5>
-          <p>077CA</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-primary">Completar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin de Modal 1-->
-  <!-- Modal 2-->
-  <div class="modal fade" id="exampleModal-2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h1>Datos del Alumno</h1>
-          <h5>Nombre:</h5>
-          <p>Isabel Alvarez</p>
-          <h5>Carrera</h5>
-          <p>Sistemas</p>
-          <h5>Grupo</h5>
-          <p>077CA</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-primary">Completar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin de Modal 2-->
-  <!-- Modal 3-->
-  <div class="modal fade" id="exampleModal-3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h1>Datos del Alumno</h1>
-          <h5>Nombre:</h5>
-          <p>Samuel Pineda </p>
-          <h5>Carrera</h5>
-          <p>Sistemas</p>
-          <h5>Grupo</h5>
-          <p>077CA</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-primary">Completar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin de Modal 3-->
-  <!-- Modal 4-->
-  <div class="modal fade" id="exampleModal-4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h1>Datos del Alumno</h1>
-          <h5>Nombre:</h5>
-          <p>Alinne</p>
-          <h5>Carrera</h5>
-          <p>Sistemas</p>
-          <h5>Grupo</h5>
-          <p>077CA</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-primary">Completar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin de Modal 4-->
-  <!-- Modal 5-->
-  <div class="modal fade" id="exampleModal-5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-        <div class="modal-body">
-          <h1>Datos del Alumno</h1>
-          <h5>Nombre:</h5>
-          <p>Catherin</p>
-          <h5>Carrera</h5>
-          <p>Sistemas</p>
-          <h5>Grupo</h5>
-          <p>077CA</p>
-        </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-          <button type="button" class="btn btn-danger">Cancelar Atencion</button>
-          <button type="button" class="btn btn-warning">Modificar</button>
-          <button type="button" class="btn btn-primary">Completar</button>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- Fin de Modal -->
-  <hr><br>
-  <div class="pagetitle">
-    <h1>Reagendar Atencion o crear Nueva</h1>
-  </div>
-  <section class="section dashboard">
-    <div class="container">
-      <div class="row">
-          <div class="col"></div>
-          <div class="col">
-              <div class="card mt-10 mb-2">
-                  <div class="card-header">Nueva Atencion</div>
-                  <div class="card-body">
-                      <select name="" id="" class="form-select">
-                          <option value="General">Platica o taller</option>
-                          <option value="Noticia">Noticia Revelante</option>
-                          <option value="Curiosidades">Curiosidades</option>
-                          <option value="Carreras">Carreras</option>
-                      </select>
-                      <input type="text" class="form-control mt-1" >
-                      <button class="btn btn-outline-primary float-end mt-3" >
-                          <i class="bi bi-cloud-upload-fill"></i>
-                      </button>
-                  </div>
-              </div>
-          </div>
-          <div class="col"></div>
-      </div>
-      <div class="row">
-          <div class="col">
-              <table class="table table-hover table-dark">
-                  <thead>
-                      <tr>
-                          <th>No</th>
-                          <th>Nombre</th>
-                          <th>Fecha</th>
-                          <th>Hora</th>
-                      </tr>
-                  </thead>
-                  <tbody>
-                      <tr >
-                          <td>1</td>
-                          <td>Semana de la Salud </td>
-                          <td>1 de nov al 15</td>
-                          <td class="text-end">
-                              <button class="btn btn-outline-secondary"><i class="bi bi-arrow-right-square-fill"></i></button>
-                              &nbsp;
-                              <button class="btn btn-outline-success"  data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-pencil-fill"></i></button>
-                              &nbsp;  
-                              <button class="btn btn-outline-danger" ><i class="bi bi-trash-fill"></i></button>
-                              
-                          </td>
-                      </tr>
-                  </tbody>
-              </table>
-          </div>
-      </div>
-  </div>
-  
-  <!-- Modal -->
-  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h1 class="modal-title fs-5" id="exampleModalLabel">Modificar Pregunta</h1>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body">
-              <input type="text" class="form-control mt-1" >
-          </div>
-          <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal" >Guardar</button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-  </section>
+    </section>
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->

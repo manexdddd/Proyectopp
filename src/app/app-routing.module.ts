@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login/login.component';
 import { EncuestasPublicComponent } from './encuestas-public/encuestas-public.component';
@@ -27,6 +27,17 @@ import { PerfilStudentComponent } from './perfil-student/perfil-student.componen
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
 import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
+import { NewsessionAdminComponent } from './newsession-admin/newsession-admin.component';
+import { FollowupAdminComponent } from './followup-admin/followup-admin.component';
+import { RescheduledAdminComponent } from './rescheduled-admin/rescheduled-admin.component';
+import { RequestsAdminComponent } from './requests-admin/requests-admin.component';
+import { CavisosAdminComponent } from './cavisos-admin/cavisos-admin.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { CplaticasAdminComponent } from './cplaticas-admin/cplaticas-admin.component';
+import { VplaticasAdminComponent } from './vplaticas-admin/vplaticas-admin.component';
+import { SatisfactionsurveyAdminComponent } from './satisfactionsurvey-admin/satisfactionsurvey-admin.component';
+import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey-admin.component';
+import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'about-public',component:AboutPublicComponent},
@@ -59,6 +70,17 @@ const routes: Routes = [
   {path:'carnet-student',component:CarnetStudentComponent},
   {path:'sidebar-perfil-student',component:SidebarPerfilStudentComponent},
   {path:'areapsicologia-student',component:AreapsicologiaStudentComponent},
+  {path: 'newsession-admin',component:NewsessionAdminComponent},
+  {path: 'followup-admin',component:FollowupAdminComponent},
+  {path: 'rescheduled-admin', component:RescheduledAdminComponent},
+  {path: 'requests-admin', component:RequestsAdminComponent},
+  {path: 'cavisos-admin', component: CavisosAdminComponent},
+  {path: 'blog-admin', component: BlogAdminComponent},
+  {path: 'cplaticas-admin', component: CplaticasAdminComponent},
+  {path: 'vplaticas-admin', component: VplaticasAdminComponent},
+  {path: 'satisfacsurvey-admin', component: SatisfactionsurveyAdminComponent},
+  {path: 'servicesurvey-admin', component: ServicesurveyAdminComponent},
+  {path: 'surveysession-admin', component: SurveysessionAdminComponent},
   {path:'',redirectTo: '/home-public',pathMatch:'full'},
 ];
 
