@@ -24,13 +24,13 @@ email = localStorage.getItem('email');
   platica ={
     ponente:'',
     tema:'',
-    asistentes:'',
     cupo:'',
     foto:'',
        descripcion:'',
        lugar:'',
        fecha:'',
-       hora:''
+       hora:'',
+       asistentes: []
    };
   
    
@@ -72,7 +72,6 @@ email = localStorage.getItem('email');
     return this.fb.group({
       ponente: ['', [Validators.required]],
       tema: ['', [Validators.required]],
-      asistentes: ['', [Validators.required]],
       cupo: ['', [Validators.required]],
       lugar: ['', [Validators.required]],
       fecha: ['', [Validators.required]],

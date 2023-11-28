@@ -1164,7 +1164,7 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
  transform: rotate(45deg); /* Rotate the ball */
  transform: skew(30deg); /* Skew the ball */
 }
-/*
+
 .ball::before {
   content: "";
   position: absolute;
@@ -1183,25 +1183,25 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
   border-radius: 50%;
  }
  
- .overlay {
+ .overlayx {
   position: absolute;
-  width: 50px;
-  height: 50px;
-  top:-20px;
+  width: 100px;
+  height: 100px;
+  top:-65px;
   right: 130px;
-  background-color: transparent;
+  background:transparent;
  }
 
  
  .ball::before {
-  top: 10px;
+  top: 20px;
   left: 10px;
  }
  
  .ball::after {
-  top: 10px;
+  top: 20px;
   right: 10px;
- }*/
+ }
  
 
 @keyframes bounce {
@@ -1405,7 +1405,25 @@ background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238
   .form__title {
     font-size: 28px;
   }
-
+  .ball::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('../images/ear2.svg');
+    border-radius: 50%;
+    top:-5px;
+   }
+   
+   .ball::after {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url('../images/ear1.svg');
+    border-radius: 50%;
+    top:-5px;
+   }
   .ball {
     width: 100px;
     height: 100px;

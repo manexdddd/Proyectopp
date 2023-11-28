@@ -6,6 +6,7 @@ import { Router } from '@angular/router';
 import { finalize } from 'rxjs';
 import { AvisosService } from '../services/avisos.service';
 import { PlaticasService } from '../services/platicas.service';
+import * as firebase from 'firebase/compat';
 
 @Component({
   selector: 'app-platicas-root',
@@ -134,8 +135,7 @@ export class PlaticasRootComponent {
      ponente :
      this.platicae.ponente,
      cupo :
-     this.platicae.cupo,
-     asistentes:''
+     this.platicae.cupo
    }).then(() => {
      
    
