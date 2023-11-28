@@ -103,6 +103,9 @@
                   </li>
                   
                   <li class="nav-item">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#carnet">Carnet del Alumno</button>
+                  </li>
+                  <li class="nav-item-right">
                     <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Carnet del Alumno</button>
                   </li>
   
@@ -142,9 +145,18 @@
                                                       <!-- Contenido de la segunda tarjeta -->
                                                       <h5 class="card-title">Datos Personales</h5>
                                   
+                                                      <div class="row"> 
+                                                        <div class="col-lg-3 col-md-4 label ">Foto del Alumno</div>
+                                                        <div class="col-lg-9 col-md-8">
+                                                          <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                                        </div>
+                                                      </div><hr>
+
                                                     <div class="row"> 
-                                                      <div class="col-lg-3 col-md-4 label ">Nombre Completo</div>
-                                                      <div class="col-lg-9 col-md-8">José Antonio Medina Esquivel</div>
+                                                      <div class="col-lg-3 col-md-4 label ">Nombre</div>
+                                                      <div class="col-lg-9 col-md-8">José Antonio</div><br><br>
+                                                      <div class="col-lg-3 col-md-4 label ">Apellido</div>
+                                                      <div class="col-lg-9 col-md-8"> Medina Esquivel</div>
                                                     </div><hr>
                                   
                                                     <div class="row">
@@ -181,6 +193,12 @@
                                                     <div class="tab-pane fade show active profile-overview" id="profile-overview">
                                                       <!-- Contenido de la primera tarjeta -->
                                                       <h5 class="card-title" >Datos Academicos</h5>
+                                                      <div class="row"> 
+                                                        <div class="col-lg-3 col-md-4 label ">Firma del Alumno</div>
+                                                        <div class="col-lg-9 col-md-8">
+                                                          <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                                        </div>
+                                                      </div><hr>
                                   
                                                       <div class="row"> 
                                                         <div class="col-lg-3 col-md-4 label ">Carrera</div>
@@ -236,7 +254,7 @@
                                                 <div class="row">
                                                   <div class="col-md-6">
                                                     <div class="cardo">
-                                                      <div class="tab-pane fade show active profile-overview" id="carnet">
+                                                      <div class="tab-pane fade show active profile-overview" >
                                                         <!-- Contenido de la segunda tarjeta -->
                                                         <h5 class="card-title text-center" style="margin-bottom: 30px;" >Aplicación del carnet del alumno</h5>
                                     
@@ -247,7 +265,7 @@
                                     
                                                       
                                                       <div class="row" >
-                                                        <div class="col-lg-3 col-md-4 label">CANALIZACIÓN: </div>
+                                                        <div class="col-lg-3 col-md-4 label"  style="font-size: 14px;">CANALIZACIÓN: </div>
                                                         <div style="font-size: 16px;" class="col-lg-9 col-md-8">Este apartado será llenado si el tutor o alguna otra persona canaliza al alumno a alguna área (médica, Psicológica, académica, administrativa) por alguna situación en particular, el tutor deberá de colocar la fecha de solicitud de canalización, el área a la que se canaliza en el espacio indicado y el responsable del área deberá poner su firma y la fecha del servicio otorgado.</div>
                                                       </div><hr><br>
                                   
@@ -264,7 +282,7 @@
                                                 
                                                   <div class="col-md-6" >
                                                     <div class="cardo" >
-                                                      <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                                      <div class="tab-pane fade show active profile-overview" >
                                                         <!-- Contenido de la primera tarjeta --><a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
                                                           <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
                                                         </a>
@@ -284,10 +302,11 @@
                                     
                                                         <div class="row justify-content-center">
                                                           <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                                                            
                                                             AGOSTO - JUNIO 2023
                                                           </div><hr>
                                                           <div class="col-lg- col-md- label text-center highlight-container" style="margin-top: -18px; margin-bottom: -5px; color: royalblue;">
-                                                            <mark style="background-color: #2c178ce1; color: rgb(255, 255, 255);">DEPARTAMENTO DE TUTORÍAS Y SERVICIOS</mark>
+                                                            <mark style="background-color: #2c178ce1; color: rgb(255, 255, 255);">Semestre (Cliclo)</mark>
                                                           </div>
                                                         </div>
                                     
@@ -364,7 +383,7 @@
                                             <div class="" >
                     
                                               <div class="card" style=" padding-left: 5px; padding-right: px;">
-                                                <div class="card-boody pt-3" id="carnet">
+                                                <div class="card-boody pt-3">
                                                   <!-- Bordered Tabs -->
                                                   <div class="row">
                                                     <div class="col-md-6">
@@ -466,7 +485,7 @@
                                                   
                                                     <div class="col-md-6" >
                                                       <div class="" >
-                                                        <div class="tab-pane fade show active profile-overview" id="profile-overview">
+                                                        <div class="tab-pane fade show active profile-overview">
                                                           <!-- Contenido de la primera tarjeta -->
                                                           <div class="row">
                                                             <div class="col-md-">
@@ -791,7 +810,7 @@
 
   
                   </div>
-  
+  <!-- _____________________________________________editar perfil___________________________________ -->
                   <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
                     
                     <div class="card" style="margin: 10px;">
@@ -825,20 +844,24 @@
                                       <h5 class="card-title">Datos Personales</h5>
                                         
                                       <div class="row mb-3">
-                                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Foto de Perfil</label>
+                                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Foto del Alumno</label>
                                         <div class="col-md-8 col-lg-9">
                                           <img src="assets/img/profile-img.jpg" alt="Profile">
                                           <div class="pt-2">
-                                            <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                                            <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                            <a href="#" class="btn btn-outline-primary btn-sm" style="margin: 10px;" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
                                           </div>
                                         </div>
                                       </div><hr>
                   
                                       <div class="row mb-3">
-                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nombre Completo</label>
+                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label" style="padding: 3px; margin-bottom: 10px;" >Nombre</label>
                                         <div class="col-md-8 col-lg-9">
-                                          <input name="fullName" type="text" class="form-control" id="fullName" value="Antonio Medina">
+                                          <input name="fullName" type="text" class="form-control" id="fullName" value="Antonio">
+                                        </div>
+                                        <label for="fullName" class="col-md-4 col-lg-3 col-form-label" style="padding: 3px;" >Apellido</label>
+                                        <div class="col-md-8 col-lg-9">
+                                          <input name="fullName" type="text" class="form-control" id="fullName" value="Medina">
                                         </div>
                                       </div><hr>
                                       <div class="row mb-3">
@@ -851,6 +874,14 @@
                                         <label for="Job" class="col-md-4 col-lg-3 col-form-label">Fecha de Nacimiento</label>
                                         <div class="col-md-8 col-lg-9">
                                           <input name="job" type="datetime" class="form-control" id="Job" value="20/09/2003">
+                                        </div>
+                                        
+                                      </div><hr>
+                                      
+                                      <div class="row mb-3">
+                                        <label for="company" class="col-md-4 col-lg-3 col-form-label">Direccion</label>
+                                        <div class="col-md-8 col-lg-9">
+                                          <input name="company" type="text" class="form-control" id="company" value="A108 Adam Street, New York, NY 535022">
                                         </div>
                                       </div><hr>
                   
@@ -874,29 +905,102 @@
                                     <div class="tab-pane fade show active profile-overview" >
                                       <!-- Contenido de la primera tarjeta -->
                                       <h5 class="card-title">Datos Academicos</h5>
-                  
-                                      <div class="row"> 
-                                        <div class="col-lg-3 col-md-4 label ">Carrera</div>
-                                        <div class="col-lg-9 col-md-8">Ing. Sistemas Computacionales</div>
+                                      <div class="row mb-3">
+                                        <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Firma del Alumno</label>
+                                        <div class="col-md-8 col-lg-9">
+                                          <img src="assets/img/profile-img.jpg" alt="Profile">
+                                          <div class="pt-2">
+                                            <a href="#" class="btn btn-outline-primary btn-sm" style="margin: 10px;" title="Upload new profile image"><i class="bi bi-upload"></i></a>
+                                            <a href="#" class="btn btn-outline-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
+                                          </div>
+                                        </div>
                                       </div><hr>
+                                      
+                                      <div class="row mb-3">
+                                        <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Carrera</label>
+                                        <div class="col-md-8 col-lg-9">
+
+                                          <label>
+                                            <select class="form-control" required id="carrera" formControlName="carrera "value="Ing. Sistemas Computacionales">
+                                              <option value="" disabled selected>Selecciona tu Carrera</option>
+                                              <option value="ingenieria">Sistemas Computacionales</option>
+                                              <option value="informatica">Gestión Empresarial</option>
+                                              <option value="nanotecnologia">Nanotecnología</option>
+                                              <option value="mecatronica">Mecatrónica</option>
+                                              <option value="bioquimica">Bioquímica</option>
+                                              <option value="industrial">Industrial</option>
+                                              <option value="tics">TIC's</option>
+                                              <!-- Agrega más opciones según sea necesario -->
+                                            </select>
+                                           
+                                            <div *ngIf="registroForm.get('carrera')?.hasError('required') && registroForm.get('carrera')?.touched"  class="alert alert-danger">
+                                              La selección de carrera es obligatoria.
+                                            </div>
+                                          </label>
+                                        </div>
+
+                                        
                   
-                                    <div class="row">
-                                      <div class="col-lg-3 col-md-4 label">Especialidad</div>
-                                      <div class="col-lg-9 col-md-8">Ingenieria de Software</div>
-                                    </div><hr>
+                                      </div><hr>
+
+                                      <div class="row mb-3">
+                                        <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Especialidad</label>
+                                        <div class="col-md-8 col-lg-9">
+                                          <input name="phone" type="text" class="form-control" id="Especialidad" value="Ingenieria de Software">
+
+                                          
+                                        </div>
+                                      </div><hr>
+                                    
+                                      <div class="row mb-3">
+                                        <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Grupo</label>
+                                        <div class="col-md-8 col-lg-9">
+                                         
+                                          <label>
+                                            <select  [(ngModel)]="usuario.grupo" class="form-control" style="width: 192px;" type="text" placeholder="" required id="grupo" name="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
+                                              <option selected>Elige tu Grupo</option>
+                                              <option value="071CA">071CA</option>
+                                              <option value="071DB">071DB</option>
+                                              <option value="072CA">072CA</option>
+                                              <option value="072DB">072DB</option>
+                                              <option value="073CA">073CA</option>
+                                              <option value="073DB">073DB</option>
+                                              <option value="074CA">074CA</option>
+                                              <option value="074DB">074DB</option>
+                                              <option value="075CA">075CA</option>
+                                              <option value="075DB">075DB</option>
+                                              <option value="076CA">076CA</option>
+                                              <option value="076DB">076DB</option>
+                                              <option value="077CA">077CA</option>
+                                              <option value="078CA">078CA</option>
+                                              <option value="078DB">078DB</option>
+                                              <option value="079CA">079CA</option>
+                                            </select>
+                                            
+                                            <div *ngIf="registroForm.get('grupo')?.touched && registroForm.get('grupo')?.errors?.['required']"
+                                            class="alert alert-danger">Este campo es Obligatorio</div>
+                                            
+                                        
+                                            <div *ngIf="registroForm.get('grupo')?.hasError('pattern') && registroForm.get('grupo')?.touched"  class="alert alert-danger">
+                                              Ingresa correctamente tu Grupo.
+                                            </div>
+                                          </label>
+                                          
+                                        </div>
+                                      </div><hr>
+
+
+                                      <div class="row mb-3">
+                                        <label for="Numeró de Control" class="col-md-4 col-lg-3 col-form-label">Numeró de Control</label>
+                                        <div class="col-md-8 col-lg-9">
+                                          <input name="Numeró de Control" type="text" class="form-control" id="Numeró de Control" value="S20030139">
+                                        </div>
+                                      </div><hr> 
                   
-                                    <div class="row">
-                                      <div class="col-lg-3 col-md-4 label">Grupo</div>
-                                      <div class="col-lg-9 col-md-8">077CA</div>
-                                    </div><hr>
-                  
-                                    <div class="row">
-                                      <div class="col-lg-3 col-md-4 label">Numeró de Control</div>
-                                      <div class="col-lg-9 col-md-8">S20030139</div>
-                                    </div><hr>
+                                    
                   
                                     <div class="row mb-3">
-                                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                      <label for="Email" class="col-md-4 col-lg-3 col-form-label">Correo Institucional</label>
                                       <div class="col-md-8 col-lg-9">
                                         <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
                                       </div>
@@ -920,7 +1024,603 @@
                   </div>
   
                 
+  <!-- _____________________________________________Edit Carnet___________________________________ -->
+  <div class="tab-pane fade profile-edit pt-3" id="carnet">
+                    
+    <div class="card" style="margin: 10px;">
+      
+      <div>
+        <div class="dropdown1" tabindex="0">
+          <button class="dropbtn btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+          style="float: inline-end; margin: 12px 23px -2px 36px;">
+            Selecciona un Alumno</button>
+          <div class="dropdown1-content">
+            <a href="#canalizar">Alvarez Moreno Maria Isabel</a>
+            <a href="#enviar-aviso">Coria Soria Alejandro</a>
+            <a href="#ver-carnet">Dominguez Figueroa Mario</a>
+            <a href="#ver-info">Escobedo Martinez Joahan Noe</a>
+            <a href="#ver-info">...</a>
+          </div>
+        </div>
+      </div>
+     <!-- Profile Edit Form -->
+     <div>
+        <div class="" >
+          <div class="card-boody pt-3 text-center">
+            <!-- Bordered Tabs -->
+            
+            <form action="">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="cardo">
+                    <div class="tab-pane fade show active profile-overview" >
+                      <!-- Contenido de la segunda tarjeta -->
+                      <h5 class="card-title text-center" style="margin-bottom: 30px;" >Aplicación del carnet del alumno</h5>
   
+                    <div class="row" > 
+                      <div class="col-lg-3 col-md-4 label ">ENTREVISTAS: </div>
+                      <div style="font-size: 16px;" class="col-lg-9 col-md-8">Este apartado debera ser llenado cuando el tutor realice alguna entrevista al alumno en caso de ser necesario, ademas deberá contener la firma del alumno.</div>
+                    </div><hr><br>
+  
+                    
+                    <div class="row" >
+                      <div class="col-lg-3 col-md-4 label"  style="font-size: 14px;">CANALIZACIÓN: </div>
+                      <div style="font-size: 16px;" class="col-lg-9 col-md-8">Este apartado será llenado si el tutor o alguna otra persona canaliza al alumno a alguna área (médica, Psicológica, académica, administrativa) por alguna situación en particular, el tutor deberá de colocar la fecha de solicitud de canalización, el área a la que se canaliza en el espacio indicado y el responsable del área deberá poner su firma y la fecha del servicio otorgado.</div>
+                    </div><hr><br>
+
+  
+                    <div class="row">
+                      <div class="col-lg-3 col-md-4 label"></div>
+                      <div class="col-lg-9 col-md-8">LA FINALIDAD DE ESTE CARNET ES LLEVAR UN CONTROL MAS CLARO DE LOS ALUMNOS Y SU PARTICIPACIÓN DENTRO DEL PROGRAMA INSTITUCIONAL DE TUTORÍAS Y LOS SERVICIOS QUE ESTE PROGRAMA OFRECE, ADEMÁS DE QUE SERVIRÁ COMO EVIDENCIA PARA QUE EL ALUMNO LIBERE SU CRÉDITO DE TUTORÍAS.</div>
+                    </div><hr>
+  
+                    
+                    </div>
+                  </div>
+                </div>
+              
+                <div class="col-md-6" >
+                  <div class="cardo" >
+                    <div class="tab-pane fade show active profile-overview" >
+                      <!-- Contenido de la primera tarjeta --><a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                        <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                      </a>
+                      <h5 class="card-title col-lg- col-md- label text-center" style="margin-bottom: -25px; border: #000;" >TECNOLÓGICO NACIONAL DE MÉXICO CAMPUS CIUDAD HIDALGO</h5>
+                      <hr style="color: #000 solid;">
+  
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: -10px; margin-bottom: 20px;">
+                          DEPARTAMENTO DE TUTORÍAS Y SERVICIOS
+                        </div>
+                      </div>
+                      <div class="row justify-content-center" style="font-size: 25px;">
+                        <div class="col-lg- col-md- label text-center">
+                         <b> CARNET DE CANALIZACIÓN TUTORIAS</b>
+                        </div>
+                      </div>
+  
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                          <div class="col-md-8 col-lg-9 mx-auto justify-content-center">
+                            <input name="fullName" type="text" class="form-control" style="text-align: center;" id="fullName" value=" AGOSTO - JUNIO 2023">
+                           </div>
+                           
+                         
+                        </div><hr>
+                        <div class="col-lg- col-md- label text-center highlight-container" style="margin-top: -18px; margin-bottom: -5px; color: royalblue;">
+                          <mark style="background-color: #2c178ce1; color: rgb(255, 255, 255);">Semestre (Cliclo)</mark>
+                        </div>
+                      </div>
+  
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                          
+                          <div class="col-md-8 col-lg-9 mx-auto justify-content-center">
+                            <input name="fullName" type="text" class="form-control" style="text-align: center;" id="fullName" value=" SISTEMAS COMPUTACIONALES">
+                           </div>
+                        </div><hr>
+                        <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
+                          CARRERA
+                          
+                        </div>
+                      </div>
+  
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                         
+                          <div class="col-md-8 col-lg-9 mx-auto justify-content-center">
+                            <input name="fullName" type="text" class="form-control" style="text-align: center;" id="fullName" value="  077CA">
+                           </div>
+                        </div><hr>
+                        <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
+                          GRUPO
+                        </div>
+                      </div>
+  
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                          
+                          <div class="col-md-8 col-lg-9 mx-auto justify-content-center">
+                            <input name="fullName" type="text" class="form-control" style="text-align: center;" id="fullName" value="S20030139">
+                           </div>
+                        </div><hr>
+                        <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
+                          NO. CONTROL
+                        </div>
+                      </div>  
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                          
+                         <div class="col-md-8 col-lg-9 mx-auto justify-content-center">
+                          <input name="fullName" type="text" class="form-control" style="text-align: center;" id="fullName" value=" MEDINA ESQUIVEL JOSÉ ANTONIO">
+                         </div>
+                        </div><hr>
+                        <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
+                          NOMBRE (Apellidos y nombres)
+                        </div>
+                      </div>
+                      <div class="row justify-content-center">
+                        <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
+                          <div class="col-md-8 col-lg-9 mx-auto justify-content-center">
+                            <input name="fullName" type="text" class="form-control" style="text-align: center;" id="fullName" value=" Madrigal Perez Juan Carlos">
+                            <label for="myFile">Selecciona un archivo:</label>
+                            <input type="file" id="myFile" name="myFile">
+
+                           </div>
+                         
+                        </div><hr>
+                        <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: 15px;">
+                          NOMBRE Y FIRMA DEL TUTOR
+                        </div>
+                      </div><br>
+                                                                                                                         
+                   </div>
+                  </div>
+                </div>
+              </div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+              </div>
+            </form>   
+            
+            
+          </div>
+
+          
+        </div>
+
+       
+        <!-- Profile Edit Form -->
+       
+
+      </div>
+      
+   </div>
+  
+
+   <div class="card" style="margin: 10px;">
+      
+    <div>
+      <div class="dropdown1" tabindex="0">
+        <button class="dropbtn btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+        style="float: inline-end; margin: 12px 23px -2px 36px;">
+          Selecciona un Alumno</button>
+        <div class="dropdown1-content">
+          <a href="#canalizar">Alvarez Moreno Maria Isabel</a>
+          <a href="#enviar-aviso">Coria Soria Alejandro</a>
+          <a href="#ver-carnet">Dominguez Figueroa Mario</a>
+          <a href="#ver-info">Escobedo Martinez Joahan Noe</a>
+          <a href="#ver-info">...</a>
+        </div>
+      </div>
+    </div>
+   <!-- Profile Edit Form -->
+   <div>
+      <div class="" >
+        <div class="card-boody  text-center">
+          <!-- Bordered Tabs -->
+          
+          <form action="">
+            <div class="row ">  
+              <div class="col-lg">
+                <!-- Segundo card -->
+                <div class="">
+                   
+                    <div style="width: px;">
+                      <div class="" >
+
+                        <div class="card" style=" padding-left: 5px; padding-right: px;">
+                          <div class=" pt-3">
+                            <!-- Bordered Tabs -->
+                            <div class="row">
+                              <div class="col-md-6">
+                                <div class=""> 
+                                  <div class="card"  style="  margin-right: 8px;">
+                                    <div class="card-body">
+                                      <h5 class="card-title text-center"  style="  margin-bottom: -25px;">TUTORIA INDIVIDUAL (ENTREVISTAS) <button class="add-button" onclick="addTable()">+</button><hr></h5>
+                                      
+                                      <p style="font-size: 10px; margin-top: -30px; margin-bottom: 12px;"><b>
+                                        Nota: La Entrevista puede ser Personal, académica, Social, Profecional y/o Administrativa</b>
+                                      </p>
+                                      <table class="tabla-desktop">
+                                        
+                                        <tr>
+                                          <th>Tema de la Entrevista</th>
+                                          <th></th>
+                                          <th>Fecha de Solicitud</th>
+                                        </tr>
+                                        <tr>
+                                          <td style="padding-bottom: 30px;">
+                                            
+                                            <div class="col-md-8 col-lg-9">
+                                              <input name="fullName" type="text" class="form-control"  id="fullName" value="Materias Atrasadas">
+                                             </div>
+                                            </td>
+                                          <td style="padding-bottom: 30px;"></td>
+                                          <td style="padding-bottom: 30px;">
+                                            
+                                            <div class="col-md-8 col-lg-9 mx-auto ">
+                                              <input name="fullName" type="date" class="form-control" style="text-align: center;" id="fullName" value="">
+
+                                             </div></td>
+                                        </tr>
+                                        <tr style="  padding-top: 0px;" >
+                                          
+                                          <th>Nombre y Firma del Alumno</th>
+                                          <th></th>
+                                          <th>Nombre y Firma del Tutor</th>
+                                        </tr>
+                                        <tr>
+                                          <td style="padding-bottom: 36px;">
+                                            
+                                            <div class="col-md-8 col-lg-9">
+                                              <input name="fullName" type="text" class="form-control" id="fullName" value="José Antonio Medina Esquivel">
+                                              <label for="myFile">Selecciona un archivo:</label>
+                                                <label for="myFile" class="btn btn-primary">
+                                                  <i class="bi bi-upload"></i> Selecciona un archivo
+                                              </label>
+                                              <input type="file" id="myFile" name="myFile" style="display: none;">
+                                             </div>
+                                           
+                                            
+                                          </td>
+                                          <td></td>
+                                          <td style="padding-bottom: 36px;" >
+                                            
+                                            <div class="col-md-8 col-lg-9">
+                                              
+                                              
+                                                <input name="fullName" type="text" class="form-control" id="fullName" value="Juan Carlos Madrigal Perez">
+                                                <label for="myFile">Selecciona un archivo:</label>
+                                                <label for="myFile" class="btn btn-primary">
+                                                  <i class="bi bi-upload"></i> Selecciona un archivo
+                                              </label>
+                                              <input type="file" id="myFile" name="myFile" style="display: none;">
+                                              
+                                               
+                                              
+                                               
+                                             </div>
+                                          </td>
+                                          
+                                        </tr>
+                                       
+                                      </table>
+                                      
+                                      <div class="tabla-mobile table-hover">
+                                        <div class="fila">
+                                          <div class="columna">
+                                            <div class="headeer">Tema de la Entrevista</div>
+                                              <div class="contenidoo">
+                                                Materias Atrasadas
+                                              </div> 
+                                          </div>
+
+                                          
+
+                                          <div class="columna">
+                                            <div class="headeer">Fecha de Solicitud</div>
+                                              <div class="contenidoo">
+                                                15/12/2023
+                                              </div>
+                                          </div>
+
+                                        </div>
+
+                                        <div class="fila">
+                                          <div class="columna">
+                                            <div class="headeer">Nombre y Firma del Alumno</div>
+                                              <div class="contenidoo">
+                                                José Antonio Medina Esquivel
+                                            <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                            <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                            </a>  
+                                              </div> 
+                                          </div>
+
+                                          <div class="columna">
+                                            <div class="headeer">Nombre y Firma del Tutor</div>
+                                              <div class="contenidoo">
+                                                Juan Carlos Madrigal Perez
+                                            <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                            <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                            </a>
+                                              </div>
+                                          </div>
+
+                                          
+
+                                        </div>
+                                      </div>
+                        
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            
+                              <div class="col-md-6" >
+                                <div class="" >
+                                  <div class="">
+                                    <!-- Contenido de la primera tarjeta -->
+                                    <div class="row">
+                                      <div class="col-md-">
+                                        <div class="" > 
+                                          <div class="card" style="  margin-right: 8px;" >
+                                            <div class="card-body">
+                                              <h5 class="card-title text-center"  style="  margin-bottom: 5px;">CANALIZACIÓN ACADEMICA <button class="add-button" onclick="addTable()">+</button><hr></h5>
+                                
+                                              <!-- Table with hoverable rows -->
+                                              <table class="tabla-desktop table-hover">
+                                                <tr>
+                                                  <th>Asesoria Academica</th>
+                                                  <th>Nombre de la Asignatura</th>
+                                                  <th>Fecha de Solicitud</th>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <input type="checkbox" id="perfilCheckbox"> <label for="perfilCheckbox">Perfil</label><br>
+                                                    <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Ciencias Básicas</label>
+                                                  </td>
+                                                  <td>ProWeb</td>
+                                                  <td>15/12/2023</td>
+                                                </tr>
+                                                <tr>
+                                                  <th>Status</th>
+                                                  <th>Nombre y Firma del Tutor</th>
+                                                  <th>Fecha de Atención</th>
+                                                </tr>
+                                                <tr>
+                                                  <td>
+                                                    <input type="checkbox" id="OrdinariaCheckbox"> <label for="OrdinariaCheckbox">Ordinaria</label><br>
+                                                    <input type="checkbox" id="RepeticiónCheckbox"> <label for="RepeticiónCheckbox">Repetición</label><br>
+                                                    <input type="checkbox" id="EspecialCheckbox"> <label for="EspecialCheckbox">Especial</label><br>
+                                                        
+                                                  </td>
+                                                  <td>
+                                                    Juan Carlos Madrigal Perez
+                                                    <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                                    <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                                    </a>
+                                                  </td>
+                                                  <td>15/12/2023</td>
+                                                </tr>
+                                              </table>
+  
+                                              <div class="tabla-mobile table-hover">
+                                                <div class="fila">
+                                                  <div class="columna">
+                                                    <div class="headeer">Asesoria Academica</div>
+                                                      <div class="contenidoo">
+                                                        <input type="checkbox" id="perfilCheckbox"> <label for="perfilCheckbox">Perfil</label><br>
+                                                    <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Ciencias Básicas</label>        
+                                                      </div> 
+                                                  </div>
+  
+                                                  <div class="columna">
+                                                    <div class="headeer">Nombre de la Asignatura</div>
+                                                      <div class="contenidoo">
+                                                        ProWeb
+                                                      </div>
+                                                  </div>
+  
+                                                  <div class="columna">
+                                                    <div class="headeer">Fecha de Solicitud</div>
+                                                      <div class="contenidoo">
+                                                        15/12/2023
+                                                      </div>
+                                                  </div>
+  
+                                                </div>
+  
+                                                <div class="fila">
+                                                  <div class="columna">
+                                                    <div class="headeer">Status</div>
+                                                      <div class="contenidoo">
+                                                        <input type="checkbox" id="OrdinariaCheckbox"> <label for="OrdinariaCheckbox">Ordinaria</label><br>
+                                                        <input type="checkbox" id="RepeticiónCheckbox"> <label for="RepeticiónCheckbox">Repetición</label><br>
+                                                        <input type="checkbox" id="EspecialCheckbox"> <label for="EspecialCheckbox">Especial</label><br>
+                                                            
+                                                      </div> 
+                                                  </div>
+  
+                                                  <div class="columna">
+                                                    <div class="headeer">Nombre y Firma del Tutor</div>
+                                                      <div class="contenidoo">
+                                                        Juan Carlos Madrigal Perez
+                                                    <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                                    <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                                    </a>
+                                                      </div>
+                                                  </div>
+  
+                                                  <div class="columna">
+                                                    <div class="headeer">Fecha de Atención</div>
+                                                      <div class="contenidoo">
+                                                        15/12/2023
+                                                      </div>
+                                                  </div>
+  
+                                                </div>
+                                              </div>
+                                              <!-- End Table with hoverable rows -->                                    
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>          
+                                      <div>                                              
+                                     </div>
+                                    </div>                                                                                                                      
+                                 </div>
+                                </div>
+                              </div>  
+
+                              <div class="row">
+                                <div class="col-md-">
+                                  <div class="" > 
+                                    <div class="card" style="  margin-right: 8px;" >
+                                      <div class="card-body">
+                                        <h5 class="card-title text-center"  style="  margin-bottom: -25px;">CANALIZACIÓN <button class="add-button" onclick="addTable()">+</button><hr></h5>
+                          
+                                        <!-- Table with hoverable rows -->
+                                        <table class="tabla-desktop table-hover">
+                                          <tr>
+                                            <th class="text-center"></th>
+                                            <th style="margin-left: -50px;">Área de Canalización</th>
+                                            <th>Fecha de Solicitud</th>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Adicciones</label> <br>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Aptitudes Sobresalientes</label> <br>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Beca Alimenticia</label> <br>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Beca Manutención</label>
+                                              
+                                            </td>
+                                            <td>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Beca Transporte</label><br>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Procesos Administrativos</label><br>
+                                              <input type="checkbox" id="perfilCheckbox"> <label for="perfilCheckbox">Psicologia</label><br>
+                                              <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Salud</label>
+                                            </td>
+                                            <td>15/12/2023</td>
+                                          </tr>
+                                          <tr>
+                                            <th>Departamento y Observaciones</th>
+                                            <th>Nombre y Firma del Tutor</th>
+                                            <th>Fecha de Atención</th>
+                                          </tr>
+                                          <tr>
+                                            <td>
+                                             El alumno Antonio Medina <br> 
+                                             Requiere de una merecida beca Alimenticia.
+                                            </td>
+                                            <td>
+                                              Juan Carlos Madrigal Perez
+                                              <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                              <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                              </a>
+                                            </td>
+                                            <td>15/12/2023</td>
+                                          </tr>
+                                        </table>
+
+                                        <div class="tabla-mobile table-hover">
+                                          <div class="fila">
+                                            <div class="columna">
+                                              <div class="headeer">Área de Canalización</div>
+                                                <div class="contenidoo">
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Adicciones</label> <br>
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Aptitudes Sobresalientes</label> <br>
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Beca Alimenticia</label> <br>
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Beca Manutención</label><br>
+                                                  
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Beca Transporte</label><br>
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Procesos Administrativos</label><br>
+                                                  <input type="checkbox" id="perfilCheckbox"> <label for="perfilCheckbox">Psicologia</label><br>
+                                                  <input type="checkbox" id="cienciasCheckbox"> <label for="cienciasCheckbox">Salud</label>
+                                                </div> 
+                                            </div>
+
+                                            
+
+                                            <div class="columna">
+                                              <div class="headeer">Fecha de Solicitud</div>
+                                                <div class="contenidoo">
+                                                  15/12/2023
+                                                </div>
+                                            </div>
+
+                                          </div>
+
+                                          <div class="fila">
+                                            <div class="columna">
+                                              <div class="headeer">Departamento y Observaciones</div>
+                                                <div class="contenidoo">
+                                                  El alumno Antonio Medina 
+                                             Requiere de una merecida beca Alimenticia.  
+                                                </div> 
+                                            </div>
+
+                                            <div class="columna">
+                                              <div class="headeer">Nombre y Firma del Tutor</div>
+                                                <div class="contenidoo">
+                                                  Juan Carlos Madrigal Perez
+                                              <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
+                                              <img style="height: auto; width: 39px; margin-bottom:-6px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
+                                              </a>
+                                                </div>
+                                            </div>
+
+                                            <div class="columna">
+                                              <div class="headeer">Fecha de Atención</div>
+                                                <div class="contenidoo">
+                                                  15/12/2023
+                                                </div>
+                                            </div>
+
+                                          </div>
+                                        </div>
+                                        <!-- End Table with hoverable rows -->                                    
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>          
+                                <div>                                              
+                               </div>
+                              </div> 
+
+                              
+                              <div>                                      
+                             </div>
+                            </div>                                 
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div><br><br>
+            
+            <div class="text-center">
+              <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+            </div>
+          </form>   
+          
+          
+        </div>
+
+        
+      </div>
+
+     
+      <!-- Profile Edit Form -->
+     
+
+    </div>
+    
+ </div>
+
+  </div>
                  
   
                 </div><!-- End Bordered Tabs -->

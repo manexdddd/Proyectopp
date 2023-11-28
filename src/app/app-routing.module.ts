@@ -36,6 +36,8 @@ import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
 import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
 import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
 import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
+import { AvisosTutorComponent } from './avisos-tutor/avisos-tutor.component';
+import { CavisosTutorComponent } from './cavisos-tutor/cavisos-tutor.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -59,6 +61,8 @@ const routes: Routes = [
   {path:'grupoalumnos-tutores',component:GrupoalumnosTutoresComponent},
   {path:'edit-alumno-tutor',component:EditAlumnoTutorComponent},
   {path:'tutor-seccion-tutorias',component:TutorSeccionTutoriasComponent },
+  {path:'avisos-tutor',component:AvisosTutorComponent },
+  {path:'cavisos-tutor',component:CavisosTutorComponent },
 
   {path:'avisos-root',component:AvisosRootComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,
