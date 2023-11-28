@@ -2249,6 +2249,13 @@ text-decoration: none;
   overflow: hidden;
   text-overflow: ellipsis;
 }
+.limitado4 {
+  width: 200px; 
+  width: 300px; 
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 .mercedes {
   object-fit: cover;
   object-position: center;

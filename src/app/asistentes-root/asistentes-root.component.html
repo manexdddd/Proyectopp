@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tutores</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+   
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+ <app-sidebar-root></app-sidebar-root>
+
+  <main id="main" class="main">
+    <section  class="section dashboard;" style="background-image: url('assets/images/magic.png');
+    opacity: 1; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Todos los Tutores</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item active"><a href="home-root"class="text-dark">Home</a></li>
+            <li class="breadcrumb-item active">Tutores</li>
+            <li class="breadcrumb-item active">Todos los tutores</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+
+   <p class="text-dark fw-bold">Todos los tutores</p><br>
+   
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
+    </section>
+    
+   
+
+  <div class="container-xl">
+    <div class="table-responsive">
+        <div class="table-wrapper">
+            <div class="table-title">
+                <div class="row">
+                    <div class="col-sm-12 col-lg-12">
+                        <h2>Asistentes {{platica.tema}}</h2>
+                    </div>
+                    
+                </div>
+            </div>
+            <table class="table table-striped table-hover">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Nombre Completo</th>						
+                        <th>Control</th>
+                        <th>Grupo</th>
+                        <th>Status</th>
+                        <th>carrera</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let asitentex of asistentesx  index as i">
+                        <td>{{i + 1}}</td>
+                        <td><a href="#"><img src="{{ asitentex.data.foto }}" class="avatar" alt="Avatar">{{ asitentex.data.nombre }} {{ asitentex.data.paterno }} {{ asitentex.data.materno }}</a></td>
+                        <td>{{ asitentex.data.control }}</td>                        
+                        <td>{{ asitentex.data.grupo }}</td>
+                        <td><span class="status text-success">&bull;</span> Active</td>
+                        <td>
+                          {{ asitentex.data.carrera }}
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+            
+        </div>
+    </div>
+</div>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>Spartan Web</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">Spartan Web</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

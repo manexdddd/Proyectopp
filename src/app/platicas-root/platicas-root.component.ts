@@ -162,8 +162,8 @@ export class PlaticasRootComponent {
  }
  
  detalle(id:string){
-   localStorage.setItem("detalleid",id)
-   this.router.navigate(['blog-root']);
+   localStorage.setItem("as",id)
+   this.router.navigate(['people-root']);
  
  }
 }

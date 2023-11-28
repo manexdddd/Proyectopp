@@ -22,6 +22,7 @@ import { Role } from './services/roles';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
 import { CplaticasRootComponent } from './cplaticas-root/cplaticas-root.component';
+import { AsistentesRootComponent } from './asistentes-root/asistentes-root.component';
 import { PlaticasRootComponent } from './platicas-root/platicas-root.component';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
@@ -52,6 +53,7 @@ const routes: Routes = [
   {path:'platicas-root',component:PlaticasRootComponent},
   {path:'avisos-public',component:AvisosPublicComponent},
   {path:'avisos-root',component:AvisosRootComponent},
+  {path:'people-root',component:AsistentesRootComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,
   data: { requiredRole: Role.Admin}},
   {path: 'perfil-admin', component:PerfilAdminComponent,canActivate: [AuthGuard] ,
