@@ -37,20 +37,20 @@
       <div class="container-fluid d-flex justify-content-between align-items-start align-items-md-center flex-column flex-md-row">
         <nav class="mb-0" aria-label="breadcrumb">
           <ol class="breadcrumb m-0">
-            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">User Management</li>
+            <li class="breadcrumb-item"><a href="home-root">Home</a></li>
+              <li class="breadcrumb-item active" aria-current="page">Tablero de Super Usuario</li>
           </ol>
       </nav>
       <div class="d-flex justify-content-end align-items-center mt-3 mt-md-0">
-        <a class="btn btn-sm btn-primary" href="#"><i class="ri-add-circle-line align-bottom"></i> New Project</a>
-        <a class="btn btn-sm btn-primary-faded ms-2" href="#"><i class="ri-settings-3-line align-bottom"></i> Settings</a>
-        <a class="btn btn-sm btn-secondary-faded ms-2 text-body" href="#"><i class="ri-question-line align-bottom"></i> Help</a>
+        <a class="btn btn-sm btn-primary text-white" href="cavisos"><i class="ri-add-circle-line align-bottom"></i> Nuevo Aviso</a>
+        <a class="btn btn-sm btn-primary-faded ms-2" href="create-tutor"><i class="ri-settings-3-line align-bottom"></i> Nuevo tutor</a>
+      
       </div>
       </div>
     </div>
  <!-- Page Title-->
- <h2 class="fs-3 fw-bold mb-2">Bienvenida  👋</h2>
- <p class="text-muted ">Aqui podras ver algunos consejos para poder usar el software</p>
+ <h2 class="fs-3 fw-bold mb-2">Bienvenid@  {{ usuario.nombre}}  {{ usuario.paterno}} {{ usuario.materno}} 👋</h2>
+ <p class="text-muted ">Aqui podras realzar varias operaciones sobre la pagina web</p>
  <!-- / Page Title-->
     <section class="section dashboard">
       
@@ -66,27 +66,19 @@
   
                   <div class="filter">
                     <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                    </ul>
+                   
                   </div>
   
                   <div class="card-body">
-                    <h5 class="card-title">Sales <span>| Today</span></h5>
+                    <h5 class="card-title">Platicas <span>| Total</span></h5>
   
                     <div class="d-flex align-items-center">
                       <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                         <i class="bi bi-cart"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>145</h6>
-                        <span class="text-success small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">increase</span>
+                        <h6>{{ count}}</h6>
+                    
   
                       </div>
                     </div>
@@ -94,41 +86,91 @@
   
                 </div>
               </div><!-- End Sales Card -->
-  
-              <!-- Revenue Card -->
-              <div class="col-xxl-4 col-md-6">
-                <div class="card info-card revenue-card">
-  
-                  <div class="filter">
-                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                    </ul>
-                  </div>
-  
-                  <div class="card-body">
-                    <h5 class="card-title">Revenue <span>| This Month</span></h5>
-  
-                    <div class="d-flex align-items-center">
-                      <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                        <i class="bi bi-currency-dollar"></i>
-                      </div>
-                      <div class="ps-3">
-                        <h6>$3,264</h6>
-                        <span class="text-success small pt-1 fw-bold">8%</span> <span class="text-muted small pt-2 ps-1">increase</span>
-  
-                      </div>
-                    </div>
-                  </div>
-  
-                </div>
-              </div><!-- End Revenue Card -->
+    <!-- Sales Card -->
+    <div class="col-xxl-4 col-md-6">
+      <div class="card info-card sales-card">
+
+        <div class="filter">
+          <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+         
+        </div>
+
+        <div class="card-body">
+          <h5 class="card-title">Avisos <span>| Total</span></h5>
+
+          <div class="d-flex align-items-center">
+            <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+              <i class="bi bi-file-earmark-text"></i>
+            </div>
+            <div class="ps-3">
+              <h6>{{count3}}</h6>
+              
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div><!-- End Sales Card -->
+
+
+<!-- Sales Card -->
+<div class="col-xxl-4 col-md-6">
+  <div class="card info-card sales-card">
+
+    <div class="filter">
+      <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+     
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">Tutores<span>| Total</span></h5>
+
+      <div class="d-flex align-items-center">
+        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+          <i class="bi bi-people"></i>
+        </div>
+        <div class="ps-3">
+          <h6>{{count4}}</h6>
+         
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- End Sales Card -->
+
+<!-- Sales Card -->
+<div class="col-xxl-4 col-md-6">
+  <div class="card info-card sales-card">
+
+    <div class="filter">
+      <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
+     
+    </div>
+
+    <div class="card-body">
+      <h5 class="card-title">Psicologas<span>| Total</span></h5>
+
+      <div class="d-flex align-items-center">
+        <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+          <i class="bi bi-people"></i>
+        </div>
+        <div class="ps-3">
+          <h6>{{count5}}</h6>
+        
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div><!-- End Sales Card -->
+
+
+
+
   
               <!-- Customers Card -->
               <div class="col-xxl-4 col-xl-12">
@@ -137,26 +179,18 @@
   
                   <div class="filter">
                     <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                    </ul>
+                  
                   </div>
   
                   <div class="card-body">
-                    <h5 class="card-title">Customers <span>| This Year</span></h5>
+                    <h5 class="card-title">Alumnos <span>| Total</span></h5>
   
                     <div class="d-flex align-items-center">
                       <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                         <i class="bi bi-people"></i>
                       </div>
                       <div class="ps-3">
-                        <h6>1244</h6>
+                        <h6>{{count2 }}</h6>
                         <span class="text-danger small pt-1 fw-bold">12%</span> <span class="text-muted small pt-2 ps-1">decrease</span>
   
                       </div>
@@ -166,37 +200,6 @@
                 </div>
   
               </div><!-- End Customers Card -->
-  
-              <!-- Reports -->
-              <div class="col-12">
-                <div class="card">
-  
-                  <div class="filter">
-                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                    </ul>
-                  </div>
-  
-                  <div class="card-body">
-                    <h5 class="card-title">Reports <span>/Today</span></h5>
-  
-                    <!-- Line Chart -->
-                    <div id="reportsChart"></div>
-  
-                    
-                    <!-- End Line Chart -->
-  
-                  </div>
-  
-                </div>
-              </div><!-- End Reports -->
   
               <!-- Recent Sales -->
               <div class="col-12">
@@ -216,54 +219,27 @@
                   </div>
   
                   <div class="card-body">
-                    <h5 class="card-title">Recent Sales <span>| Today</span></h5>
+                    <h5 class="card-title">Ultimos tutores Recientes <span>| Hoy</span></h5>
   
                     <table class="table table-borderless datatable">
                       <thead>
                         <tr>
                           <th scope="col">#</th>
-                          <th scope="col">Customer</th>
-                          <th scope="col">Product</th>
-                          <th scope="col">Price</th>
+                          <th scope="col">Nombre</th>
+                          <th scope="col">Division</th>
+                          <th scope="col">Grupo</th>
                           <th scope="col">Status</th>
                         </tr>
                       </thead>
                       <tbody>
-                        <tr>
-                          <th scope="row"><a href="#">#2457</a></th>
-                          <td>Brandon Jacob</td>
-                          <td><a href="#" class="text-primary">At praesentium minu</a></td>
-                          <td>$64</td>
-                          <td><span class="badge bg-success">Approved</span></td>
+                        <tr *ngFor="let tutor of tutores; let i = index">
+                          <th scope="row"><a href="#">i+1</a></th>
+                          <td>{{tutor.data.nombre}}</td>
+                          <td><a href="#" class="text-primary">{{tutor.data.division}}</a></td>
+                          <td>{{tutor.data.grupo}}</td>
+                          <td><span class="badge bg-success">Activo</span></td>
                         </tr>
-                        <tr>
-                          <th scope="row"><a href="#">#2147</a></th>
-                          <td>Bridie Kessler</td>
-                          <td><a href="#" class="text-primary">Blanditiis dolor omnis similique</a></td>
-                          <td>$47</td>
-                          <td><span class="badge bg-warning">Pending</span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#">#2049</a></th>
-                          <td>Ashleigh Langosh</td>
-                          <td><a href="#" class="text-primary">At recusandae consectetur</a></td>
-                          <td>$147</td>
-                          <td><span class="badge bg-success">Approved</span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#">#2644</a></th>
-                          <td>Angus Grady</td>
-                          <td><a href="#" class="text-primar">Ut voluptatem id earum et</a></td>
-                          <td>$67</td>
-                          <td><span class="badge bg-danger">Rejected</span></td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#">#2644</a></th>
-                          <td>Raheem Lehner</td>
-                          <td><a href="#" class="text-primary">Sunt similique distinctio</a></td>
-                          <td>$165</td>
-                          <td><span class="badge bg-success">Approved</span></td>
-                        </tr>
+                       
                       </tbody>
                     </table>
   
@@ -272,79 +248,7 @@
                 </div>
               </div><!-- End Recent Sales -->
   
-              <!-- Top Selling -->
-              <div class="col-12">
-                <div class="card top-selling overflow-auto">
-  
-                  <div class="filter">
-                    <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                    <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                      <li class="dropdown-header text-start">
-                        <h6>Filter</h6>
-                      </li>
-  
-                      <li><a class="dropdown-item" href="#">Today</a></li>
-                      <li><a class="dropdown-item" href="#">This Month</a></li>
-                      <li><a class="dropdown-item" href="#">This Year</a></li>
-                    </ul>
-                  </div>
-  
-                  <div class="card-body pb-0">
-                    <h5 class="card-title">Top Selling <span>| Today</span></h5>
-  
-                    <table class="table table-borderless">
-                      <thead>
-                        <tr>
-                          <th scope="col">Preview</th>
-                          <th scope="col">Product</th>
-                          <th scope="col">Price</th>
-                          <th scope="col">Sold</th>
-                          <th scope="col">Revenue</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr>
-                          <th scope="row"><a href="#"><img src="assets/img/product-1.jpg" alt=""></a></th>
-                          <td><a href="#" class="text-primary fw-bold">Ut inventore ipsa voluptas nulla</a></td>
-                          <td>$64</td>
-                          <td class="fw-bold">124</td>
-                          <td>$5,828</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#"><img src="assets/img/product-2.jpg" alt=""></a></th>
-                          <td><a href="#" class="text-primary fw-bold">Exercitationem similique doloremque</a></td>
-                          <td>$46</td>
-                          <td class="fw-bold">98</td>
-                          <td>$4,508</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#"><img src="assets/img/product-3.jpg" alt=""></a></th>
-                          <td><a href="#" class="text-primary fw-bold">Doloribus nisi exercitationem</a></td>
-                          <td>$59</td>
-                          <td class="fw-bold">74</td>
-                          <td>$4,366</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#"><img src="assets/img/product-4.jpg" alt=""></a></th>
-                          <td><a href="#" class="text-primary fw-bold">Officiis quaerat sint rerum error</a></td>
-                          <td>$32</td>
-                          <td class="fw-bold">63</td>
-                          <td>$2,016</td>
-                        </tr>
-                        <tr>
-                          <th scope="row"><a href="#"><img src="assets/img/product-5.jpg" alt=""></a></th>
-                          <td><a href="#" class="text-primary fw-bold">Sit unde debitis delectus repellendus</a></td>
-                          <td>$79</td>
-                          <td class="fw-bold">41</td>
-                          <td>$3,239</td>
-                        </tr>
-                      </tbody>
-                    </table>
-  
-                  </div>
-  
-                </div>
-              </div><!-- End Top Selling -->
+            
   
             </div>
           </div><!-- End Left side columns -->
@@ -354,71 +258,22 @@
   
             <!-- Recent Activity -->
             <div class="card">
-              <div class="filter">
-                <a class="icon" href="#" data-bs-toggle="dropdown"><i class="bi bi-three-dots"></i></a>
-                <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow">
-                  <li class="dropdown-header text-start">
-                    <h6>Filter</h6>
-                  </li>
+              
   
-                  <li><a class="dropdown-item" href="#">Today</a></li>
-                  <li><a class="dropdown-item" href="#">This Month</a></li>
-                  <li><a class="dropdown-item" href="#">This Year</a></li>
-                </ul>
-              </div>
+              <div class="card-body" >
+                <h5 class="card-title">Ultimos avisos agregados <span>| Recientes</span></h5>
   
-              <div class="card-body">
-                <h5 class="card-title">Recent Activity <span>| Today</span></h5>
-  
-                <div class="activity">
+                <div class="activity" *ngFor="let avise of avises; let i = index">
   
                   <div class="activity-item d-flex">
-                    <div class="activite-label">32 min</div>
-                    <i class='bi bi-circle-fill activity-badge text-success align-self-start'></i>
-                    <div class="activity-content">
-                      Quia quae rerum <a href="#" class="fw-bold text-dark">explicabo officiis</a> beatae
+                    <div class="activite-label m-3">{{avise.data.fecha}} </div>
+                    <i class='bi bi-circle-fill activity-badge text-success align-self-start m-3'></i>
+                    <div class="activity-content m-3">
+                      {{avise.data.titulo}} 
                     </div>
                   </div><!-- End activity item-->
   
-                  <div class="activity-item d-flex">
-                    <div class="activite-label">56 min</div>
-                    <i class='bi bi-circle-fill activity-badge text-danger align-self-start'></i>
-                    <div class="activity-content">
-                      Voluptatem blanditiis blanditiis eveniet
-                    </div>
-                  </div><!-- End activity item-->
-  
-                  <div class="activity-item d-flex">
-                    <div class="activite-label">2 hrs</div>
-                    <i class='bi bi-circle-fill activity-badge text-primary align-self-start'></i>
-                    <div class="activity-content">
-                      Voluptates corrupti molestias voluptatem
-                    </div>
-                  </div><!-- End activity item-->
-  
-                  <div class="activity-item d-flex">
-                    <div class="activite-label">1 day</div>
-                    <i class='bi bi-circle-fill activity-badge text-info align-self-start'></i>
-                    <div class="activity-content">
-                      Tempore autem saepe <a href="#" class="fw-bold text-dark">occaecati voluptatem</a> tempore
-                    </div>
-                  </div><!-- End activity item-->
-  
-                  <div class="activity-item d-flex">
-                    <div class="activite-label">2 days</div>
-                    <i class='bi bi-circle-fill activity-badge text-warning align-self-start'></i>
-                    <div class="activity-content">
-                      Est sit eum reiciendis exercitationem
-                    </div>
-                  </div><!-- End activity item-->
-  
-                  <div class="activity-item d-flex">
-                    <div class="activite-label">4 weeks</div>
-                    <i class='bi bi-circle-fill activity-badge text-muted align-self-start'></i>
-                    <div class="activity-content">
-                      Dicta dolorem harum nulla eius. Ut quidem quidem sit quas
-                    </div>
-                  </div><!-- End activity item-->
+                 
   
                 </div>
   
@@ -440,14 +295,14 @@
   <!-- ======= Footer ======= -->
   <footer id="footer" class="footer">
     <div class="copyright">
-      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+      &copy; Copyright <strong><span>Spartan Web</span></strong>. All Rights Reserved
     </div>
     <div class="credits">
       <!-- All the links in the footer should remain intact. -->
       <!-- You can delete the links only if you purchased the pro version. -->
       <!-- Licensing information: https://bootstrapmade.com/license/ -->
       <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
-      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      Designed by <a href="https://bootstrapmade.com/">Spartan Web</a>
     </div>
   </footer><!-- End Footer -->
 

@@ -43,187 +43,29 @@
     <section class="ud-blog-grids">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6" *ngFor="let aviso of avisos ">
             <div class="ud-single-blog">
               <div class="ud-blog-image contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/jovenes.png" alt="blog" />
+                <a href="javascript:void(0)"  (click)="detalle(aviso.id)">
+                  <img src="{{aviso.data.foto}}" alt="{{aviso.data.foto}}" />
                 </a>
               </div>
               <div class="ud-blog-content">
-                <span class="ud-blog-date">Octubre 2, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Resultados Beca Escribiendo el Futuro
+                <span class="ud-blog-date">{{ aviso.data.fecha }}</span>
+                <h3 class="ud-blog-title ">
+                   <a  href="javascript:void(0)"  class="limitado2"   (click)="detalle(aviso.id)">
+                    {{ aviso.data.titulo }}
                   </a>
+                
                 </h3>
-                <p class="ud-blog-desc">
-                Se dan a  conocer los Aspirantes Seleccionados en la Beca...
+                <p class="ud-blog-desc limitado2">
+                  {{ aviso.data.descripcion }}
                 </p>
               </div>
             </div>
           </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/evento1.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Sep 22, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Inicia la jornanda Academica de Industrial
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  El Nuevo director da inicio a la semana academica de insdustrial...
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/evento2.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Agosto 2, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Ultimo dia para realizar encuestas de servivcios
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  Realiza tu Encuesta para Evitar Adeudos..,
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/medal.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Junio 21, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                   Medalla de oro en Programacion 
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  Alumnos de Sistemas Logran Medalla de oro en concurso de programacion
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image  contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/evento3.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Junio 18, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Conferencia Padres Nuevo Ingreso
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  La conferencia de padres de nuevo ingreso  se dara en el
-                  salon audiovisual.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image  contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/sice1.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Mayo 30, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Sicenet cierra calificaciones Por ultima vez
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                 Se da el ultimo Corte de calificaciones del semestre. 
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image  contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/note1.jpeg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Mayo 27, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Mañana no Hay clases en la Institucion
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  Mañana se supenderan clases por el dia del estudiante
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image  contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/samuele.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Noviembre 19, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                    Estudiante Destacado del Mes Sistemas Computacionales
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  El alumno Samuel Pineda es elegido como el estudainte del mes
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 col-md-6">
-            <div class="ud-single-blog">
-              <div class="ud-blog-image contenedor">
-                <a href="">
-                  <img src="assets/images/avisos/note3.jpg" alt="blog" />
-                </a>
-              </div>
-              <div class="ud-blog-content">
-                <span class="ud-blog-date">Abril 27, 2023</span>
-                <h3 class="ud-blog-title">
-                  <a href="">
-                   Dua lipa es la nueva Directora del Tec
-                  </a>
-                </h3>
-                <p class="ud-blog-desc">
-                  Dua lipa se convierte en la directora del insituto junto a su secretario Manuel Vergara
-                </p>
-              </div>
-            </div>
-          </div>
+          
+          
         </div>
       </div>
     </section>
