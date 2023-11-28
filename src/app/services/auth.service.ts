@@ -51,7 +51,7 @@ async login(email:string,psw :string){
    this.changeprogreso(true)
     await this.afauth.signInWithEmailAndPassword(email,psw);
     localStorage.setItem('email', email);
-    alert("incio correcto")
+    alert("Inicio Correcto")
   const ad = await this.afs.collection('admin').doc(email).get().toPromise();
 const alu = await this.afs.collection('alumnos').doc(email).get().toPromise();
 //const tut = await this.afs.collection('tutor').doc(email).get().toPromise();
@@ -76,29 +76,17 @@ case 'root':
 this.router.navigate(['/home-root']);
 this.changeprogreso(false)
 break;
-/*case 'tutor':
-this.router.navigate(['/home-tutor']);
+case 'tutor':
+this.router.navigate(['/home-tutores']);
 this.changeprogreso(false)
-break;*/
+break;
 default:
 this.router.navigate(['/login']);
 this.changeprogreso(false)
- }/*
-    if (localStorage.getItem("rolx")=== 'admin') {
-      this.router.navigate(['/home-admin']);
-    }  if (localStorage.getItem("rolx") === 'alumno') {
-      this.router.navigate(['/home-alumno']);
-    }  else if (localStorage.getItem("rolx") === 'tutor') {
-      this.router.navigate(['/home-tutor']);
-    } else if (localStorage.getItem("rolx") === 'root') {
-      this.router.navigate(['/home-root']);
-    }else {
-      this.router.navigate(['/login']);
-    }*/
-    
+ }
    
     }catch(err){
-   alert("incio incorrecto")
+   alert("Inicio Incorrecto")
   
    localStorage.clear();
    this.changeprogreso(false)

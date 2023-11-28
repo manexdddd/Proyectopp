@@ -54,10 +54,7 @@
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
                       alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                       style="width: 100%; z-index: 1">
-                    <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="white"
-                      style="z-index: 1;">
-                      Edit profile
-                    </button>
+                    
             
                   </div>
                   
@@ -70,16 +67,7 @@
                 </div>
                 
                 <div class="rounded-top p-4" style="background-color: #f8f9fa; border-radius: 15px; margin-bottom: -35px;">
-                  <div class="d-flex justify-content-center  py-5">
-                    <div class="navbar-2" style="background-color: #f8f9fa; border-radius: 15px; margin-bottom: -65px;">
-                        <div class="nav1-item"><a href="#">Mis Datos</a></div>
-                      
-                        <div class="nav1-item"><a href="#carnet">Carnet</a></div>
-                        <div class="nav1-item"><a href="#">Ficha de identificación</a></div>
-                        <div class="nav1-item"><a href="#">Actividades</a></div>
-                        
-                      </div>
-                  </div>
+                  
                 </div>
               
               
@@ -93,9 +81,7 @@
         <section class="" style="background-color: #eee; border-radius: 25px; margin-bottom: 15px;">
         <section class="" style="background-color: #eeeeee91; border-radius: 25px; margin-bottom: 15px;">
             <div class="container py-4">
-                <div class="" style="padding-top: 25px; text-align: center; font-size: 65px;">
-                    <p class="mb-1" style=" font-size: 22px; padding-bottom: 15px;"><b>Información General</b></p>
-                  </div>
+               
 
                   
               <div class="row">
@@ -111,12 +97,8 @@
                               <!-- Bordered Tabs -->
                               <ul class="nav nav-tabs nav-tabs-bordered" style="justify-content: center;">
                                 <li class="nav-item">
-                                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Datos Personales</button>
-                                </li>
-                                
-                                <li class="nav-item">
-                                  <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-edit">Editar Perfil</button>
-                                </li>
+                                  <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#profile-overview">Editar Perfil</button>
+                                </li> 
                                 <li class="nav-item">
                                   <button class="nav-link" data-bs-toggle="tab" data-bs-target="#profile-settings">Configuraciones</button>
                                 </li>
@@ -130,43 +112,71 @@
                                   <div class="card-boody pt-3 text-center">
                                     
                                     <!-- <div class="tab-pane fade pt-3" id="profile-settings"> -->
+                                      
                                     
+                                   <form action="">
                                     <div class="row">
                                       <div class="col-md-6">
                                         <div class="cardxx">
                                           <div class="tab-pane fade show active profile-overview" >
                                             <!-- Contenido de la segunda tarjeta -->
-                                            <h5 class="card-title;">Datos Personales</h5>
+                                            <h5 class="card-title">Datos Personales</h5>
+                                              
+                                            <div class="row mb-3">
+                                              <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Foto del Alumno</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <img src="assets/img/profile-img.jpg" alt="Profile">
+                                                <div class="pt-2">
+                                                  <a href="#" class="btn btn-outline-primary btn-sm" style="margin: 10px;" title="Upload new profile image"><i class="bi bi-upload" style="margin: 1px;">&nbsp; Sube tu foto</i></a>
+                                                  <a href="#" class="btn btn-outline-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash" style="margin: 1px;">&nbsp; Eliminar</i></a>
+                                                </div>
+                                              </div>
+                                            </div><hr>
                         
-                                          <div class="row"> 
-                                            <div class="col-lg-3 col-md-4 label ">Nombre Completo</div>
-                                            <div class="col-lg-9 col-md-8">José Antonio Medina Esquivel</div>
-                                          </div><hr>
+                                            <div class="row mb-3">
+                                              <label for="fullName" class="col-md-4 col-lg-3 col-form-label" style="padding: 3px; margin-bottom: 10px;" >Nombre</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <input name="fullName" type="text" class="form-control" id="fullName" value="Antonio">
+                                              </div>
+                                              <label for="fullName" class="col-md-4 col-lg-3 col-form-label" style="padding: 3px;" >Apellido</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <input name="fullName" type="text" class="form-control" id="fullName" value="Medina">
+                                              </div>
+                                            </div><hr>
+                                            <div class="row mb-3">
+                                              <label for="company" class="col-md-4 col-lg-3 col-form-label">Edad</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <input name="company" type="text" class="form-control" id="company" value="20">
+                                              </div>
+                                            </div><hr>
+                                            <div class="row mb-3">
+                                              <label for="Job" class="col-md-4 col-lg-3 col-form-label">Fecha de Nacimiento</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <input name="job" type="datetime" class="form-control" id="Job" value="20/09/2003">
+                                              </div>
+                                              
+                                            </div><hr>
+                                            
+                                            <div class="row mb-3">
+                                              <label for="company" class="col-md-4 col-lg-3 col-form-label">Direccion</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <input name="company" type="text" class="form-control" id="company" value="A108 Adam Street, New York, NY 535022">
+                                              </div>
+                                            </div><hr>
                         
-                                          <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Edad</div>
-                                            <div class="col-lg-9 col-md-8">20</div>
-                                          </div><hr>
-                                          <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Fecha de Nacimiento</div>
-                                            <div class="col-lg-9 col-md-8">20/09/2003</div>
-                                          </div><hr>
-                        
-                                         
-                        
-                                          <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Dirección</div>
-                                            <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
-                                          </div><hr>
-                        
-                                          <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Telefonoo</div>
-                                            <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
-                                          </div><hr>
+                                            <div class="row mb-3">
+                                              <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Telefono</label>
+                                              <div class="col-md-8 col-lg-9">
+                                                <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
+                                              </div>
+                                            </div><hr>
                         
                                           <div class="row">
                                             <div class="col-lg-3 col-md-4 label">Correo Personal</div>
-                                            <div class="col-lg-9 col-md-8">antoniom.gmail.com</div>
+                                           
+                                            <div class="col-md-8 col-lg-9">
+                                              <input name="company" type="text" class="form-control" id="company" value="antoniom.gmail.com">
+                                            </div>
                                           </div><hr>
                                           </div>
                                         </div>
@@ -174,7 +184,7 @@
                                     
                                       <div class="col-md-6">
                                         <div class="cardxx">
-                                          <div class="tab-pane fade show active profile-overview">
+                                          <div class="tab-pane fade show active profile-overview" >
                                             <!-- Contenido de la primera tarjeta -->
                                             <h5 class="card-title">Datos Academicos</h5>
                         
@@ -198,121 +208,26 @@
                                             <div class="col-lg-9 col-md-8">S20030139</div>
                                           </div><hr>
                         
-                                          <div class="row">
-                                            <div class="col-lg-3 col-md-4 label">Correo Institucional</div>
-                                            <div class="col-lg-9 col-md-8">S20030139.itsch.edu.mx</div>
-                                          </div><hr>                                      
+                                          <div class="row mb-3">
+                                            <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
+                                            
+                                              <div class="col-lg-9 col-md-8">antoniom.gmail.com</div>
+                                            
+                                          </div><hr> 
+                                          <p>Nota: Solo el tutor puede editar tus datos academicos</p>                                     
                                           </div>
                                         </div>
                                       </div>
-                                    </div>                                            
+                                    </div> 
+
+                                    <div class="text-center">
+                                      <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+                                    </div>
+                                   </form>                                           
                                   </div>
                                 </div>
                                 
-                                <div class="tab-pane fade profile-edit pt-3" id="profile-edit">
-                                  <div class="card" >
-                                    <div class="card-boody pt-3 text-center">
-                                      <!-- Bordered Tabs -->
-                                      
-                                      <form action="">
-                                        <div class="row">
-                                          <div class="col-md-6">
-                                            <div class="cardxx">
-                                              <div class="tab-pane fade show active profile-overview" >
-                                                <!-- Contenido de la segunda tarjeta -->
-                                                <h5 class="card-title">Datos Personales</h5>
-                                                  
-                                                <div class="row mb-3">
-                                                  <label for="profileImage" class="col-md-4 col-lg-3 col-form-label">Foto de Perfil</label>
-                                                  <div class="col-md-8 col-lg-9">
-                                                    <img src="assets/img/profile-img.jpg" alt="Profile">
-                                                    <div class="pt-2">
-                                                      <a href="#" class="btn btn-primary btn-sm" title="Upload new profile image"><i class="bi bi-upload"></i></a>
-                                                      <a href="#" class="btn btn-danger btn-sm" title="Remove my profile image"><i class="bi bi-trash"></i></a>
-                                                    </div>
-                                                  </div>
-                                                </div><hr>
-                            
-                                                <div class="row mb-3">
-                                                  <label for="fullName" class="col-md-4 col-lg-3 col-form-label">Nombre Completo</label>
-                                                  <div class="col-md-8 col-lg-9">
-                                                    <input name="fullName" type="text" class="form-control" id="fullName" value="Antonio Medina">
-                                                  </div>
-                                                </div><hr>
-                                                <div class="row mb-3">
-                                                  <label for="company" class="col-md-4 col-lg-3 col-form-label">Edad</label>
-                                                  <div class="col-md-8 col-lg-9">
-                                                    <input name="company" type="text" class="form-control" id="company" value="20">
-                                                  </div>
-                                                </div><hr>
-                                                <div class="row mb-3">
-                                                  <label for="Job" class="col-md-4 col-lg-3 col-form-label">Fecha de Nacimiento</label>
-                                                  <div class="col-md-8 col-lg-9">
-                                                    <input name="job" type="datetime" class="form-control" id="Job" value="20/09/2003">
-                                                  </div>
-                                                </div><hr>
-                            
-                                                <div class="row mb-3">
-                                                  <label for="Phone" class="col-md-4 col-lg-3 col-form-label">Telefono</label>
-                                                  <div class="col-md-8 col-lg-9">
-                                                    <input name="phone" type="text" class="form-control" id="Phone" value="(436) 486-3538 x29071">
-                                                  </div>
-                                                </div><hr>
-                            
-                                              <div class="row">
-                                                <div class="col-lg-3 col-md-4 label">Correo Personal</div>
-                                                <div class="col-lg-9 col-md-8">antoniom.gmail.com</div>
-                                              </div><hr>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        
-                                          <div class="col-md-6">
-                                            <div class="cardxx">
-                                              <div class="tab-pane fade show active profile-overview" >
-                                                <!-- Contenido de la primera tarjeta -->
-                                                <h5 class="card-title">Datos Academicos</h5>
-                            
-                                                <div class="row"> 
-                                                  <div class="col-lg-3 col-md-4 label ">Carrera</div>
-                                                  <div class="col-lg-9 col-md-8">Ing. Sistemas Computacionales</div>
-                                                </div><hr>
-                            
-                                              <div class="row">
-                                                <div class="col-lg-3 col-md-4 label">Especialidad</div>
-                                                <div class="col-lg-9 col-md-8">Ingenieria de Software</div>
-                                              </div><hr>
-                            
-                                              <div class="row">
-                                                <div class="col-lg-3 col-md-4 label">Grupo</div>
-                                                <div class="col-lg-9 col-md-8">077CA</div>
-                                              </div><hr>
-                            
-                                              <div class="row">
-                                                <div class="col-lg-3 col-md-4 label">Numeró de Control</div>
-                                                <div class="col-lg-9 col-md-8">S20030139</div>
-                                              </div><hr>
-                            
-                                              <div class="row mb-3">
-                                                <label for="Email" class="col-md-4 col-lg-3 col-form-label">Email</label>
-                                                <div class="col-md-8 col-lg-9">
-                                                  <input name="email" type="email" class="form-control" id="Email" value="k.anderson@example.com">
-                                                </div>
-                                              </div><hr>                                      
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="text-center">
-                                          <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-                                        </div>
-                                      </form>                                            
-                                    </div>
-                                  </div>
-                                  <!-- Profile Edit Form -->
-                                 
-                
-                                </div>
+                                
                 
                                 <div class="tab-pane fade pt-3" id="profile-settings">
                 
