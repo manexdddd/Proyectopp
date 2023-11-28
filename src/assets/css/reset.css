@@ -369,7 +369,7 @@ big {
 }
 .section-title span{
 	text-transform:capitalize;
-	background: #3e54ff;
+	background: #2A5983;
 	color: #fff;
 	padding: 2px 18px;
 	display: inline-block;
@@ -471,7 +471,7 @@ big {
     color: #ffffff;
 }
 .button .btn {
-    background-color: #000DFF;
+    background-color: #2A5983;
     color: #ffffff;
 }
 .button .btn:hover {
@@ -568,7 +568,6 @@ input[type="submit"] {
 input[type="text"],
 input[type="email"],
 input[type="url"],
-input[type="password"],
 input[type="search"],
 input[type="number"],
 input[type="tel"],

@@ -17,9 +17,7 @@
     <nav class="header-nav ms-auto">
       <ul class="d-flex align-items-center">
         
-        <a class="navbar-brand" href="https://cdhidalgo.tecnm.mx/" target="_blank">
-          <img style="height: g3px; width: 39px;"  src="assets/images/logo/itsch-1.png" alt="Logo"/>
-         </a>
+       
 
         <li class="nav-item dropdown">
 
@@ -174,14 +172,14 @@
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
             <li class="dropdown-header">
               <h6>{{ usuario.paterno}} {{ usuario.materno}}</h6>
-              <span>{{ usuario.carrera}}</span>
+              <span>{{ usuario.puesto}}</span>
             </li>
             <li>
               <hr class="dropdown-divider">
             </li>
 
             <li>
-              <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
+              <a class="dropdown-item d-flex align-items-center" href="profile-root">
                 <i class="bi bi-person"></i>
                 <span>Mi Perfil</span>
               </a>
@@ -193,7 +191,7 @@
             <li>
               <a class="dropdown-item d-flex align-items-center" href="users-profile.html">
                 <i class="bi bi-gear"></i>
-                <span>Account Settings</span>
+                <span>Configuracion</span>
               </a>
             </li>
             <li>
@@ -213,7 +211,7 @@
             <li>
               <a class="dropdown-item d-flex align-items-center" href="javascript:void(0)" (click)="cerrar()">
                 <i class="bi bi-box-arrow-right"></i>
-                <span>Sign Out</span>
+                <span>Cerrar Sesion</span>
               </a>
             </li>
 
@@ -231,7 +229,7 @@
     <ul class="sidebar-nav" id="sidebar-nav">
 
       <li class="nav-item">
-        <a class="nav-link collapsed " href="home-student">
+        <a class="nav-link collapsed " href="home-root">
           <i class="bi bi-grid"></i>
           <span>Tablero</span>
         </a>
@@ -239,7 +237,7 @@
 
 
       <ul class="nav-item">
-        <a class="align-items-center" href="perfil-student" >
+        <a class="align-items-center" href="profile-root" >
           <img style="height: 145px; width: 140px; margin-left: 45px; margin-bottom: 12px; margin-top: 12px;" src="{{ usuario.foto}}" alt="Profile" class="rounded-circle">
           
           
@@ -251,7 +249,7 @@
           </a>
           <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
             <li>
-              <a href="perfil-student">
+              <a href="profile-root">
                 <i class="bi bi-circle"></i><span>Mi  Perfil</span>
               </a>
             </li>
@@ -270,12 +268,12 @@
         </a>
         <ul id="avisos" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="avisos-public">
+            <a href="avisos-root">
               <i class="bi bi-circle"></i><span>Avisos</span>
             </a>
           </li>
           <li>
-            <a href="components-accordion.html">
+            <a href="cavisos" >
               <i class="bi bi-circle"></i><span>Crear Aviso</span>
       
             </a>
@@ -291,36 +289,27 @@
         </a>
         <ul id="usuarios" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="avisos-public">
+            <a href="tutorv-root">
               <i class="bi bi-circle"></i><span>Tutores</span>
             </a>
           </li>
           <li>
-            <a href="avisos-public">
-              <i class="bi bi-circle"></i><span>Psicologos</span>
+            <a href="psyco-root">
+              <i class="bi bi-circle"></i><span>Psicolog@s</span>
             </a>
           </li>
+        
           <li>
-            <a href="avisos-public">
-              <i class="bi bi-circle"></i><span>Alumnos</span>
-            </a>
-          </li>
-          <li>
-            <a href="components-accordion.html">
+            <a href="create-tutor">
               <i class="bi bi-circle"></i><span>Crear tutor</span>
       
             </a>
           </li>
-          <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Crear alumno</span>
-      
-            </a>
-          </li>
+          
        
           <li>
-            <a href="components-accordion.html">
-              <i class="bi bi-circle"></i><span>Crear Psicologo</span>
+            <a href="cpsyco">
+              <i class="bi bi-circle"></i><span>Crear Psicolog@</span>
       
             </a>
           </li>
@@ -333,12 +322,12 @@
         </a>
         <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
           <li>
-            <a href="forms-elements.html">
+            <a href="cplaticas-root">
               <i class="bi bi-circle"></i><span>Crear Platicas</span>
             </a>
           </li>
           <li>
-            <a href="forms-layouts.html">
+            <a href="platicas-root">
               <i class="bi bi-circle"></i><span>Ver Platicas</span>
             </a>
           </li>
@@ -397,29 +386,7 @@
         </ul>
       </li><!-- End Charts Nav -->
 
-      <li class="nav-item">
-        <a class="nav-link collapsed" data-bs-target="#tutorias" data-bs-toggle="collapse" href="areapsicologia-student">
-          <i class="bi bi-bar-chart"></i><span>Tutorias</span><i class="bi bi-chevron-down ms-auto"></i>
-        </a>
-        <ul id="tutorias" class="nav-content collapse " data-bs-parent="#sidebar-nav">
-          <li>
-            <a href="areapsicologia-student">
-              <i class="bi bi-circle"></i><span>Asistencias</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-apexcharts.html">
-              <i class="bi bi-circle"></i><span>Canalizaciones</span>
-            </a>
-          </li>
-          <li>
-            <a href="charts-echarts.html">
-              <i class="bi bi-circle"></i><span>Otros Asuntos</span>
-              <i class="bi bi-circle"></i><span>Historial</span>
-            </a>
-          </li>
-        </ul>
-      </li><!-- End Charts Nav -->
+      
 
       <li class="nav-item">
         <a class="nav-link collapsed" data-bs-target="#icons-nav" data-bs-toggle="collapse" href="#">
