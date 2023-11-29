@@ -55,7 +55,7 @@
                     
                     
 
-                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                    <img src="{{usuario.foto}}"
                       alt="Generic placeholder image" class="img-fluid img-thumbnail mt-4 mb-2"
                       style="width: 100%; z-index: 1">
                     <button  type="button" class="btn btn-outline-dark" data-mdb-ripple-color="white"
@@ -66,8 +66,8 @@
                   </div>
                   
                   <div class="ms-4 text-white" style="margin-top: 130px;">
-                    <h5 style="color: #f0ffff;"><b>Antonio Medina</b></h5>
-                    <p style="color: #f0ffff;">Ing. Sistemas Computacionales</p>
+                    <h5 style="color: #f0ffff;"><b>{{usuario.nombre}}</b></h5>
+                    <p style="color: #f0ffff;">{{usuario.carrera}}</p>
                   </div>
                   
                   
@@ -124,33 +124,33 @@
                   
                                     <div class="row"> 
                                       <div class="col-lg-3 col-md-4 label ">Nombre Completo</div>
-                                      <div class="col-lg-9 col-md-8">José Antonio Medina Esquivel</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.nombre}} {{usuario.paterno}} {{usuario.materno}}</div>
                                     </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Edad</div>
-                                      <div class="col-lg-9 col-md-8">20</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.edad}}</div>
                                     </div><hr>
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Fecha de Nacimiento</div>
-                                      <div class="col-lg-9 col-md-8">20/09/2003</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.fnacimiento}}</div>
                                     </div><hr>
                   
                                    
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Direccion</div>
-                                      <div class="col-lg-9 col-md-8">A108 Adam Street, New York, NY 535022</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.direccion}}</div>
                                     </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Telefono</div>
-                                      <div class="col-lg-9 col-md-8">(436) 486-3538 x29071</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.telefono}}</div>
                                     </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Correo Personal</div>
-                                      <div class="col-lg-9 col-md-8">antoniom.gmail.com</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.emailp}}</div>
                                     </div><hr>
                                     </div>
                                   </div>
@@ -164,27 +164,27 @@
                   
                                       <div class="row"> 
                                         <div class="col-lg-3 col-md-4 label ">Carrera</div>
-                                        <div class="col-lg-9 col-md-8">Ing. Sistemas Computacionales</div>
+                                        <div class="col-lg-9 col-md-8">{{usuario.carrera}}</div>
                                       </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Especialidad</div>
-                                      <div class="col-lg-9 col-md-8">Ingenieria de Software</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.especialidad}}</div>
                                     </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Grupo</div>
-                                      <div class="col-lg-9 col-md-8">077CA</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.grupo}}</div>
                                     </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Numeró de Control</div>
-                                      <div class="col-lg-9 col-md-8">S20030139</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.control}}</div>
                                     </div><hr>
                   
                                     <div class="row">
                                       <div class="col-lg-3 col-md-4 label">Correo Institucional</div>
-                                      <div class="col-lg-9 col-md-8">S20030139.itsch.edu.mx</div>
+                                      <div class="col-lg-9 col-md-8">{{usuario.email}}</div>
                                     </div><hr>                                                                                                      
                                    </div>
                                   </div>
@@ -273,7 +273,7 @@
                     
                                         <div class="row justify-content-center">
                                           <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
-                                            SISTEMAS COMPUTACIONALES
+                                            {{usuario.carrera}}
                                           </div><hr>
                                           <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
                                             CARRERA
@@ -282,7 +282,7 @@
                     
                                         <div class="row justify-content-center">
                                           <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
-                                            077CA
+                                            {{usuario.grupo}}
                                           </div><hr>
                                           <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
                                             GRUPO
@@ -291,7 +291,7 @@
                     
                                         <div class="row justify-content-center">
                                           <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
-                                            S20030139
+                                            {{usuario.control}}
                                           </div><hr>
                                           <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
                                             NO. CONTROL
@@ -299,11 +299,12 @@
                                         </div>  
                                         <div class="row justify-content-center">
                                           <div class="col-lg- col-md- label text-center" style="margin-top: 30px; margin-bottom: -3px;">
-                                           MEDINA ESQUIVEL JOSÉ ANTONIO  
+                                           {{usuario.paterno}} {{usuario.materno}} {{usuario.nombre}}        
+
                                            
                                           </div><hr>
                                           <div class="col-lg- col-md- label text-center" style="margin-top: -18px; margin-bottom: -5px;">
-                                            NOMBRE (Apellidos y nombres)
+                                            NOMBRE COMPLETO
                                           </div>
                                         </div>
                                         <div class="row justify-content-center">
@@ -699,21 +700,21 @@
                       <!-- contenido de la tarjeta -->
                       <div class="row g-0">
                         <div class="col-md-4">
-                          <img style="width: 150px; margin: 27px  10px 20px 28px;" src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp" class="img-fluid rounded-start" alt="...">
+                          <img style="width: 150px; margin: 27px  10px 20px 28px;" src="{{usuario.foto}}" class="img-fluid rounded-start" alt="...">
                           
                         </div>
                         <div class="col-md-8">
                           <div class="card-body">
                             <h5 class="card-title text-center text-white">TECNOLOGICO <br> NACIONAL DE MEXICO</h5>
                             <p class="card-text">
-                            <p style="font-size: 20px; color: white;"><strong>Nombre:</strong> José Antonio Medina Esquivel</p>
-                            <p style="font-size: 20px; color: white;"><strong>Carrera:</strong> Sistemas Computacionales</p>
-                            <p style="font-size: 20px; color: white;"><strong>Grupo:</strong> 077CA</p>
-                            <p style="font-size: 20px; color: white;"><strong>Numero de control:</strong> 123456789</p>
+                            <p style="font-size: 20px; color: white;"><strong>Nombre:</strong> {{usuario.nombre}}</p>
+                            <p style="font-size: 20px; color: white;"><strong>Carrera:</strong> {{usuario.carrera}}</p>
+                            <p style="font-size: 20px; color: white;"><strong>Grupo:</strong> {{usuario.grupo}}</p>
+                            <p style="font-size: 20px; color: white;"><strong>Numero de control:</strong> {{usuario.control}}</p>
                             <br>
                             <div class="d-flex justify-content-between">
                               <p style="font-size: 15px; color: white;">Agosto - Diciembre 2020</p>
-                              <p style="font-size: 15px; color: white;">Tipo de Sangre B+</p>
+                              <p style="font-size: 15px; color: white;">{{usuario.tsangre}}</p>
                             </div>
                             
                           </div>

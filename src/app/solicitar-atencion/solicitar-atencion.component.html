@@ -1,33 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <!-- ====== Header Start ====== -->
-   <app-navbar-public></app-navbar-public>
-    <!-- ====== Header End ====== -->
-    
-    <!-- ====== Banner Start ====== -->
-    <section class="ud-page-banner">
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-12">
-            <div class="ud-banner-content">
-              <h1>Solicitar Atención 🚀</h1>
-              
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- ====== Banner End ====== -->
 
-    
-    <!-- ====== Login Start ====== -->
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body>
+
+<app-sidebar-student></app-sidebar-student>
+
+  <main id="main" class="main">
+
+    <section  class="section dashboard;" style="background-color: #0073f74e; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Tablero</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active">Tablero</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+   <h2 class="fs-3 fw-bold mb-2">Solicitudes de Sesión</h2>
+   <p class="text-muted ">Get a quick overview of your company's current status below, or click into one of the sections for a more detailed breakdown.</p><br>
+   <div class="navbar-2" style="size: 200px; border-radius: 15px; margin-right: 15px;" >
+    <div class="button d-sm-inline-block">
+      <a href="solicitar-atencion" class="btn white-bg mouse-dir">Solicitar Atención <span class="dir-part"></span></a>
+  </div>
+    <div class="nav1-item" ><a href="#">Avisos</a></div>
+    <div class="nav1-item"><a href="#">Platicas</a></div>
+    <div class="nav1-item"><a href="#">Concursos</a></div>
+    <div class="nav1-item"><a href="#">Eventos</a></div>
+   
+  </div>
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
+    </section>
+ 
+ <!-- / Page Title-->
+    <section class="section dashboard">
+       <!-- ====== Login Start ====== -->
     <div class="containeer" >
       <div class="row" >
         <div class="col-lg-9" >
@@ -47,25 +103,15 @@
                     </div>
                     <div class="" style="display: flex; justify-content: center; ">
                       
-                      <form class="form" style="border-radius: 12px; margin-top: -70px;" >
+                      <form class="form" style="border-radius: 12px; margin-top: -70px;" (ngSubmit)="onSubmit()" [formGroup]="solicitudForm">
 
-                        <label>
-                          <input class="inputa" required id="name" type="text" placeholder="">
+                        <label for="nombre">
+                          <input class="inputa" id="nombre" type="text" formControlName="nombre" required="">
                           <span>Nombre Completo</span>
-                          <div *ngIf="registroForm.get('name')?.hasError('required') && registroForm.get('name')?.touched"  class="alert alert-danger">
-                            Tu nombre es obligatorio.
-                          </div>
                         </label>
-                        
-                        
-
-
-
-
-
                       <div class="flex justify-content-center">
-                        <label>
-                          <select  [(ngModel)]="usuario.grupo" class="inputa" style="width: 192px;" type="text" placeholder="" required id="grupo" name="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
+                        <label for="grupo">
+                          <select  class="inputa" style="width: 192px;" type="text" id="grupo" name="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
                             <option selected>Elige tu Grupo</option>
                             <option value="071CA">071CA</option>
                             <option value="071DB">071DB</option>
@@ -85,30 +131,19 @@
                             <option value="079CA">079CA</option>
                           </select>
                           <span>Grupo</span>
-                          <div *ngIf="registroForm.get('grupo')?.touched && registroForm.get('grupo')?.errors?.['required']"
-                          class="alert alert-danger">Este campo es Obligatorio</div>
                           
                       
-                          <div *ngIf="registroForm.get('grupo')?.hasError('pattern') && registroForm.get('grupo')?.touched"  class="alert alert-danger">
-                            Ingresa correctamente tu Grupo.
-                          </div>
                         </label>
                       
                         
-                        <label>
-                          <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
+                        <label for="numeroC">
+                          <input class="inputa" style="width: 192px;" type="text" id="numeroC" formControlName="numeroC" required="">
                           <span>Numero de Control</span>
-                          <div *ngIf="registroForm.get('nocontrol')?.hasError('required') && registroForm.get('nocontrol')?.touched"  class="alert alert-danger">
-                            Tu Numero de Control es obligatorio.
-                          </div>
-                          <div *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched"  class="alert alert-danger">
-                            El Numero de Control debe tener 9 caracteres.
-                          </div>
                       </label>
                             
                       </div>
 
-                      <label>
+                      <label for="carrera">
                         <select class="inputa" required id="carrera" formControlName="carrera">
                           <option value="" disabled selected>Selecciona tu Carrera</option>
                           <option value="ingenieria">Sistemas Computacionales</option>
@@ -121,76 +156,49 @@
                           <!-- Agrega más opciones según sea necesario -->
                         </select>
                         <span>Carrera</span>
-                        <div *ngIf="registroForm.get('carrera')?.hasError('required') && registroForm.get('carrera')?.touched"  class="alert alert-danger">
-                          La selección de carrera es obligatoria.
-                        </div>
                       </label>
-
-                      
-
                       <div class="flex justify-content-center">
-                        <label>
-                          <input class="inputa" style="width: 192px;" type="tel" placeholder="" pattern="[0-9]{10}" required title="Ingresa un número de teléfono válido de 10 dígitos">
+                        <label for="telefono">
+                          <input class="inputa" style="width: 192px;" type="number" id="telefono" formControlName="telefono" pattern="[0-9]{10}" required title="Ingresa un número de teléfono válido de 10 dígitos">
                           <span>Teléfono</span>
-                          <div *ngIf="registroForm.get('tel')?.touched && registroForm.get('tel')?.errors?.['required']"
-                          class="alert alert-danger">Este campo es Obligatorio</div>
-                          
-                      
-                          <div *ngIf="registroForm.get('tel')?.hasError('pattern') && registroForm.get('tel')?.touched"  class="alert alert-danger">
-                            Ingresa correctamente tu Numero.
-                          </div>
                         </label>
-                        <label>
-                          <input class="inputa" style="width: 192px;" type="datetime-local" placeholder="" required
-                                 name="fecha">
-                          <span>Fecha y Hora</span>
-                          <div *ngIf="registroForm.get('fecha')?.touched && registroForm.get('fecha')?.errors?.['required']"
-                               class="alert alert-danger">Este campo es Obligatorio
-                          </div>
+                        <label for="fecha">
+                          <input class="inputa" style="width: 192px;" type="date" id="fecha" formControlName="fecha">
+                          <span>Fecha</span>
                       </label>
-                        
                     </div>
-                    <label>
-                      <input class="inputa" required id="name" type="text" placeholder="">
-                      <span>Nombre Completo del Tutor</span>
-                      <div *ngIf="registroForm.get('name')?.hasError('required') && registroForm.get('name')?.touched"  class="alert alert-danger">
-                        El nombre es obligatorio.
-                      </div>
+                    <label for="hora">
+                      <input class="inputa" required id="hora" type="time" formControlName="hora">
+                      <span>Hora</span>
                     </label>
-
-
-                    
-                    
+                    <label for="tutor">
+                      <input class="inputa" required id="tutor" type="text" formControlName="tutor">
+                      <span>Nombre Completo del Tutor</span>
+                    </label>
                      <label style="margin-bottom: 15px;">
                       <input class="inputa" required id="name" type="text" placeholder="Canalizado por:" disabled><br>
                       <div style="position: relative; display: flex; align-items: center; gap: 40px; margin-right: 31px; margin-top: -50px; flex-wrap: nowrap;align-content: center;justify-content: flex-end;">
-                        <input type="checkbox" class="btn-check" name="options" id="btn-check-outlined" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btn-check-outlined">Tutor</label>
-                        <input type="checkbox" class="btn-check" name="options" id="btn-check-outlined1" autocomplete="off">
-                        <label class="btn btn-outline-primary" for="btn-check-outlined1">Voluntaria</label>
+                        <input type="checkbox" class="btn-check" id="canalizacion" formControlName="canalizacion" id="btn-check-outlined" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="canalizacion">Tutor</label>
+                        <input type="checkbox" class="btn-check" id="canalizacion" formControlName="canalizacion" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="canalizacion">Voluntaria</label>
                         
                       </div>
                       
                      </label>
                       
 
-                     <label>
+                     <label for="motivo">
                       
-                      <textarea class="inputa" style="height: 100px; width: 100%; overflow: auto;" required id="name" name="name"></textarea>
+                      <textarea class="inputa" style="height: 100px; width: 100%; overflow: auto;" required id="motivo" formControlName="motivo"></textarea>
                       <span>Motivo de Solicitud de Atención: </span>
-                      <div *ngIf="registroForm.get('name')?.hasError('required') && registroForm.get('name')?.touched" class="alert alert-danger">
-                      Tu nombre es obligatorio.
-                      </div>
                      </label>
                    
 
-                     <label>
+                     <label for="observaciones">
                       
-                      <textarea class="inputa" style="height: 100px; width: 100%; overflow: auto;" required id="name" name="name"></textarea>
+                      <textarea class="inputa" style="height: 100px; width: 100%; overflow: auto;" id="observaciones" formControlName="observaciones"></textarea>
                       <span>Observaciones... </span>
-                      <div *ngIf="registroForm.get('name')?.hasError('required') && registroForm.get('name')?.touched" class="alert alert-danger">
-                      Tu nombre es obligatorio.
-                      </div>
                      </label>
                     <button class="button-submit" type="submit">Solicitar Atencion Psicologica</button> 
                   </form>               
@@ -207,18 +215,39 @@
     </div>
 
     <!-- ====== Login End ====== -->
+  </section>
 
-<app-footer-public></app-footer-public>
+  </main><!-- End #main -->
 
-    <!-- ====== Back To Top Start ====== -->
-    
-    <!-- ====== Back To Top End ====== -->
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
 
-    <!-- ====== All Javascript Files ====== -->
-    <script src="assets/js/bootstrap.bundle.min.js"></script>
-    <script src="assets/js/wow.min.js"></script>
-    <script src="assets/js/main.js"></script>
-     <script  src="https://cdpn.io/cpe/boomboom/pen.js?key=pen.js-79264a40-3c75-01f9-5df8-3943faaf4806" crossorigin></script>
-  </body>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
 </html>
-

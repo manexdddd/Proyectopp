@@ -61,6 +61,13 @@ import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey
 import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
+import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
+import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
+import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
+import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
+import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
+import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
+import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
 
 
 @NgModule({
@@ -113,6 +120,13 @@ import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
       SurveysessionAdminComponent,
       PsycoRootComponent,
       CpsycoRootComponent,
+      CtutorRootComponent,
+      SolicitarAtencionComponent,
+      HomeTutoresComponent,
+      SidebarTutorComponent,
+      GrupoalumnosTutoresComponent,
+      EditAlumnoTutorComponent,
+      TutorSeccionTutoriasComponent,
      
 
   ],

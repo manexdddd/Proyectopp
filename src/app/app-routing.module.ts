@@ -32,6 +32,23 @@ import { EditperfilStudentComponent } from './editperfil-student/editperfil-stud
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
 import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
+import { NewsessionAdminComponent } from './newsession-admin/newsession-admin.component';
+import { FollowupAdminComponent } from './followup-admin/followup-admin.component';
+import { RescheduledAdminComponent } from './rescheduled-admin/rescheduled-admin.component';
+import { RequestsAdminComponent } from './requests-admin/requests-admin.component';
+import { CavisosAdminComponent } from './cavisos-admin/cavisos-admin.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { CplaticasAdminComponent } from './cplaticas-admin/cplaticas-admin.component';
+import { VplaticasAdminComponent } from './vplaticas-admin/vplaticas-admin.component';
+import { SatisfactionsurveyAdminComponent } from './satisfactionsurvey-admin/satisfactionsurvey-admin.component';
+import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey-admin.component';
+import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
+import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
+import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
+import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
+import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
+import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
+
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'about-public',component:AboutPublicComponent},
