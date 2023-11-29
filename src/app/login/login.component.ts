@@ -78,52 +78,13 @@ this.auth.login(email,psw)
     this.subscription = this.auth.currentprogreso.subscribe(value => {
       this.progreso = value;
     });
+    this.showUp();
+
+
+    
   }
   showUp() {
     this.contentPage.nativeElement.scrollIntoView();
   }
-  ngAfterViewInit() {
-    document.addEventListener("mousemove", event => this.handleMouseMove(event));
-    this.passwordField.nativeElement.addEventListener('focus', event => this.handleFocusPassword(event));
-    this.passwordField.nativeElement.addEventListener('focusout', event => this.handleFocusOutPassword(event));
-    this.submit.nativeElement.addEventListener("mouseover", event => this.ball.nativeElement.classList.toggle('look_at'));
-    this.submit.nativeElement.addEventListener("mouseout", event => this.ball.nativeElement.classList.toggle('look_at'));
-    }
-    handleMouseMove(event) {
-      if (!this.passwordField.nativeElement.matches(":focus") && !this.passwordField.nativeElement.matches(":user-invalid")) {
-          const eyes = this.eyes.nativeElement.getElementsByClassName('eye');
-          for (let eye of eyes) {
-              const x = eye.getBoundingClientRect().left + 10;
-              const y = eye.getBoundingClientRect().top + 10;
-              const rad = Math.atan2(event.pageX - x, event.pageY - y);
-              const rot = (rad * (180 / Math.PI) * -1) + 180;
-              eye.style.transform = `rotate(${rot}deg)`;
-          }
-      }
-    }
-   
-    handleFocusPassword(event) {
-      this.face.nativeElement.style.transform = 'translateX(30px)';
-      const eyes = this.eyes.nativeElement.getElementsByClassName('eye');
-      for (let eye of eyes) {
-          eye.style.transform = `rotate(100deg)`;
-      }
-    }
-   
-    handleFocusOutPassword(event) {
-      this.face.nativeElement.style.transform = 'translateX(0)';
-      if(event.target.checkValidity()) {
-          this.ball.nativeElement.classList.toggle('sad');
-      } else {
-          this.ball.nativeElement.classList.toggle('sad');
-          const eyes = this.eyes.nativeElement.getElementsByClassName('eye');
-          for (let eye of eyes) {
-              eye.style.transform = `rotate(215deg)`;
-          }
-      }
-    }
- }
 
-
-      
-
+}

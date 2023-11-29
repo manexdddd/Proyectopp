@@ -28,20 +28,10 @@ import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
 import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
 import { AvisosRootComponent } from './avisos-root/avisos-root.component';
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
+import { EditperfilStudentComponent } from './editperfil-student/editperfil-student.component';
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
 import { SidebarPerfilStudentComponent } from './sidebar-perfil-student/sidebar-perfil-student.component';
 import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsicologia-student.component';
-import { NewsessionAdminComponent } from './newsession-admin/newsession-admin.component';
-import { FollowupAdminComponent } from './followup-admin/followup-admin.component';
-import { RescheduledAdminComponent } from './rescheduled-admin/rescheduled-admin.component';
-import { RequestsAdminComponent } from './requests-admin/requests-admin.component';
-import { CavisosAdminComponent } from './cavisos-admin/cavisos-admin.component';
-import { BlogAdminComponent } from './blog-admin/blog-admin.component';
-import { CplaticasAdminComponent } from './cplaticas-admin/cplaticas-admin.component';
-import { VplaticasAdminComponent } from './vplaticas-admin/vplaticas-admin.component';
-import { SatisfactionsurveyAdminComponent } from './satisfactionsurvey-admin/satisfactionsurvey-admin.component';
-import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey-admin.component';
-import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'about-public',component:AboutPublicComponent},
@@ -58,6 +48,13 @@ const routes: Routes = [
   {path:'tutorv-root',component:TutorvRootComponent},
   {path:'profile-root',component:ProfileRootComponent},
   {path:'avisos-public',component:AvisosPublicComponent},
+
+  {path:'solicitar-atencion',component:SolicitarAtencionComponent},
+  {path:'home-tutores',component:HomeTutoresComponent},
+  {path:'grupoalumnos-tutores',component:GrupoalumnosTutoresComponent},
+  {path:'edit-alumno-tutor',component:EditAlumnoTutorComponent},
+  {path:'tutor-seccion-tutorias',component:TutorSeccionTutoriasComponent },
+
   {path:'avisos-root',component:AvisosRootComponent},
   {path: 'home-admin', component:HomeAdminComponent,canActivate: [AuthGuard] ,
   data: { requiredRole: Role.Admin}},
@@ -77,6 +74,8 @@ const routes: Routes = [
   {path:'perfil-student',component:PerfilStudentComponent},
   {path:'carnet-student',component:CarnetStudentComponent},
   {path:'sidebar-perfil-student',component:SidebarPerfilStudentComponent},
+  
+  {path:'editperfil-student',component:EditperfilStudentComponent},
   {path:'areapsicologia-student',component:AreapsicologiaStudentComponent},
   {path: 'newsession-admin',component:NewsessionAdminComponent},
   {path: 'followup-admin',component:FollowupAdminComponent},

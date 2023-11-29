@@ -471,7 +471,7 @@ big {
     color: #ffffff;
 }
 .button .btn {
-    background-color: #2A5983;
+    background-color: #1B396A;
     color: #ffffff;
 }
 .button .btn:hover {
@@ -581,7 +581,7 @@ input[type="datetime-local"],
 input[type="color"],
 textarea {
 	color: #666;
-	border: 1px solid #ccc;
+	
 	border-radius: 3px;
 	padding: 3px;
 }

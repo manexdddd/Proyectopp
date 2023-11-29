@@ -24,11 +24,12 @@ import { environment } from '../enviroments/environment';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
 import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
-import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
 import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+
 import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
@@ -39,6 +40,7 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 import { FormsModule } from '@angular/forms';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
+import { EditperfilStudentComponent } from './editperfil-student/editperfil-student.component';
 
 import { ProfileRootComponent } from './profile-root/profile-root.component';
 import { CavisosRootComponent } from './cavisos-root/cavisos-root.component';
@@ -59,7 +61,6 @@ import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey
 import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
-import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
 
 
 @NgModule({
@@ -87,7 +88,9 @@ import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
     PerfilStudentComponent,
     CarnetStudentComponent,
     SidebarPerfilStudentComponent,
+    SidebarPerfilStudentComponent,
     AreapsicologiaStudentComponent,
+    EditperfilStudentComponent,
     HomeRootComponent,
     SidebarRootComponent,
    
@@ -110,7 +113,6 @@ import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
       SurveysessionAdminComponent,
       PsycoRootComponent,
       CpsycoRootComponent,
-      CtutorRootComponent,
      
 
   ],
