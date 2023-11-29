@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AvisosService } from '../services/avisos.service';
 import { RootService } from '../services/root.service';
 import { Router } from '@angular/router';
+import { PlaticasService } from '../services/platicas.service';
 
 
 
@@ -18,9 +19,10 @@ export class HomePublicComponent  {
   aviso: any;
   detalleid = localStorage.getItem("detalleid")
   avises:any[];
+  talks:any[];
   admin:any
   meta: any;
-  constructor(private av:AvisosService,private router:Router,private ro:RootService){
+  constructor(private av:AvisosService,private router:Router,private ro:RootService,private pl:PlaticasService){
   
    
      this.av.getAll().subscribe(data => {
@@ -28,6 +30,11 @@ export class HomePublicComponent  {
       console.log(this.avises);
      });
 
+   
+     this.pl.getAll().subscribe(data => {
+      this.talks = this.RecentAvisos(data);
+    
+     });
 
      
   }

@@ -128,58 +128,85 @@
                 <div *ngIf="registroForm.get('carrera')?.hasError('required') && registroForm.get('carrera')?.touched"  class="alert alert-danger">
                   La selección de carrera es obligatoria.
                 </div>
-              </label>
-              
-              
-              
-                  
-
-                  <div class="flex justify-content-center">
-                    <label>
-                      <select  [(ngModel)]="usuario.grupo" class="inputa" style="width: 192px;" type="text" placeholder="" required id="grupo" name="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
-                        <option selected>Elige tu Grupo</option>
-                        <option value="071CA">071CA</option>
-                        <option value="071DB">071DB</option>
-                        <option value="072CA">072CA</option>
-                        <option value="072DB">072DB</option>
-                        <option value="073CA">073CA</option>
-                        <option value="073DB">073DB</option>
-                        <option value="074CA">074CA</option>
-                        <option value="074DB">074DB</option>
-                        <option value="075CA">075CA</option>
-                        <option value="075DB">075DB</option>
-                        <option value="076CA">076CA</option>
-                        <option value="076DB">076DB</option>
-                        <option value="077CA">077CA</option>
-                        <option value="078CA">078CA</option>
-                        <option value="078DB">078DB</option>
-                        <option value="079CA">079CA</option>
-                      </select>
-                      <span>Grupo</span>
-                      <div *ngIf="registroForm.get('grupo')?.touched && registroForm.get('grupo')?.errors?.['required']"
-                      class="alert alert-danger">Este campo es Obligatorio</div>
-                      
-                  
-                      <div *ngIf="registroForm.get('grupo')?.hasError('pattern') && registroForm.get('grupo')?.touched"  class="alert alert-danger">
-                        Ingresa correctamente tu Grupo.
-                      </div>
-                    </label>
-
-                  
+                <div class="ud-form-group">
+                  <input
+                    type="text"
+                    id="surnameP"
+                    placeholder="Apellido Paterno"
+                    formControlName="surnameP"
+                    [(ngModel)]="usuario.paterno"
+                    required
+                  />
+                  <div *ngIf="registroForm.get('surnameP')?.touched && registroForm.get('surnameP')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                </div>
+                <div class="ud-form-group">
+                  <input
+                    type="text"
+                    id="surnameM"
+                    placeholder="Apellido Materno"
+                    formControlName="surnameM"
+                    required
+                    [(ngModel)]="usuario.materno"
+                  />
+                  <div *ngIf="registroForm.get('surnameM')?.touched && registroForm.get('surnameM')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                </div>
+                
+               
+                
+                <div class="ud-form-group">
+                  <input
+                    type="text"
+                    id="numberC"
+                    placeholder="Numero de Control"
+                    formControlName="numberC"
+                    required=""
+                    [(ngModel)]="usuario.control"
+                  />
+                  <div *ngIf="registroForm.get('numberC')?.touched && registroForm.get('numberC')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                </div>
+                
+                <div class="ud-form-group">
+                  <select  [(ngModel)]="usuario.carrera" class="form-select" name="career" formControlName="career" required>
+                    <option selected>Elige tu Carrera</option>
+                    <option value="Tic's">Ingeniería en Tic's</option>
+                    <option value="Nanotecnologia">Ingeniería en Nanotecnologia</option>
+                    <option value="Mecatronica">Ingeniería Mecatrónica</option>
+                    <option value="Gestion Empresarial">Ingeniería en Gestión Empresarial</option>
+                    <option value="Bioquimica">Ingeniería Bioquímica</option>
+                    <option value="Sistemas Computacionales">Ingeniería en Sistemas Computacionales</option>
+                    <option value="Industrial">Ingeniería Industrial</option>
                     
-                    <label>
-                        <input class="inputa" style="width: 192px;" type="text" placeholder="" required="">
-                        <span>Numero de Control</span>
-                        <div *ngIf="registroForm.get('nocontrol')?.hasError('required') && registroForm.get('nocontrol')?.touched"  class="alert alert-danger">
-                          Tu Numero de Control es obligatorio.
-                        </div>
-                        <div *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched"  class="alert alert-danger">
-                          El Numero de Control debe tener 9 caracteres.
-                        </div>
-                    </label>
-                    
-                  
-                  
+                  </select>
+                  <div *ngIf="registroForm.get('career')?.touched && registroForm.get('career')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                </div>
+
+                <div class="ud-form-group">
+                  <label>Grupo</label>
+                  <select  [(ngModel)]="usuario.grupo" class="form-select" name="grupo" formControlName="grupo" required>
+                    <option selected>Elige tu Grupo</option>
+                    <option value="071CA">071CA</option>
+                    <option value="071DB">071DB</option>
+                    <option value="072CA">072CA</option>
+                    <option value="072DB">072DB</option>
+                    <option value="073CA">073CA</option>
+                    <option value="073DB">073DB</option>
+                    <option value="074CA">074CA</option>
+                    <option value="074DB">074DB</option>
+                    <option value="075CA">075CA</option>
+                    <option value="075DB">075DB</option>
+                    <option value="076CA">076CA</option>
+                    <option value="076DB">076DB</option>
+                    <option value="077CA">077CA</option>
+                    <option value="078CA">078CA</option>
+                    <option value="078DB">078DB</option>
+                    <option value="079CA">079CA</option>
+                  </select>
+                  <div *ngIf="registroForm.get('grupo')?.touched && registroForm.get('grupo')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
                 </div>
 
                   

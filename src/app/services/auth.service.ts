@@ -51,7 +51,7 @@ async login(email:string,psw :string){
    this.changeprogreso(true)
     await this.afauth.signInWithEmailAndPassword(email,psw);
     localStorage.setItem('email', email);
-    alert("incio correcto")
+    alert("inicio correcto")
   const ad = await this.afs.collection('admin').doc(email).get().toPromise();
 const alu = await this.afs.collection('alumnos').doc(email).get().toPromise();
 //const tut = await this.afs.collection('tutor').doc(email).get().toPromise();
@@ -98,7 +98,7 @@ this.changeprogreso(false)
     
    
     }catch(err){
-   alert("incio incorrecto")
+   alert("inicio incorrecto")
   
    localStorage.clear();
    this.changeprogreso(false)

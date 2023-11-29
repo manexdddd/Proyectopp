@@ -25,6 +25,9 @@ export class SignupComponent {
    control:'',
    carrera:'Elige tu Carrera',
    grupo:'Elige tu Carrera',
+   entrevista: [],
+   canalizacion: [],
+   academicas: []
    }
    
   ngOnInit(): void{

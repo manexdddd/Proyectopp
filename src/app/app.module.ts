@@ -62,6 +62,9 @@ import { SurveysessionAdminComponent } from './surveysession-admin/surveysession
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
 import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
+import { CplaticasRootComponent } from './cplaticas-root/cplaticas-root.component';
+import { PlaticasRootComponent } from './platicas-root/platicas-root.component';
+import { AsistentesRootComponent } from './asistentes-root/asistentes-root.component';
 import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
 import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
 import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
@@ -121,6 +124,9 @@ import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-se
       PsycoRootComponent,
       CpsycoRootComponent,
       CtutorRootComponent,
+      CplaticasRootComponent,
+      PlaticasRootComponent,
+      AsistentesRootComponent,
       SolicitarAtencionComponent,
       HomeTutoresComponent,
       SidebarTutorComponent,
