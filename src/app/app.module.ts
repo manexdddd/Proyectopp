@@ -71,6 +71,9 @@ import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
 import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
 import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
 import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
+import { PlaticasStudentComponent } from './platicas-student/platicas-student.component';
+import { BlogStudentComponent } from './blog-student/blog-student.component';
+import { PdetalleStudentComponent } from './pdetalle-student/pdetalle-student.component';
 
 
 @NgModule({
@@ -133,6 +136,9 @@ import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-se
       GrupoalumnosTutoresComponent,
       EditAlumnoTutorComponent,
       TutorSeccionTutoriasComponent,
+      PlaticasStudentComponent,
+      BlogStudentComponent,
+      PdetalleStudentComponent,
      
 
   ],

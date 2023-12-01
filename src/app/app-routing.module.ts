@@ -51,6 +51,9 @@ import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
 import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
 import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
 import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
+import { PlaticasStudentComponent } from './platicas-student/platicas-student.component';
+import { BlogStudentComponent } from './blog-student/blog-student.component';
+import { PdetalleStudentComponent } from './pdetalle-student/pdetalle-student.component';
 
 const routes: Routes = [
   {path:'login',component:LoginComponent},
@@ -111,6 +114,9 @@ const routes: Routes = [
   {path: 'satisfacsurvey-admin', component: SatisfactionsurveyAdminComponent},
   {path: 'servicesurvey-admin', component: ServicesurveyAdminComponent},
   {path: 'surveysession-admin', component: SurveysessionAdminComponent},
+  {path: 'platicas-student', component: PlaticasStudentComponent},
+  {path: 'blog-student', component: BlogStudentComponent},
+  {path: 'pdetalle-student', component: PdetalleStudentComponent},
   {path:'',redirectTo: '/home-public',pathMatch:'full'},
 ];
 

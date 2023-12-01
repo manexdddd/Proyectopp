@@ -62,6 +62,7 @@
   <div class="nav1-item"><a href="platicas-student">Platicas</a></div>
   <div class="nav1-item"><a href="#">Mis Platicas</a></div>
 
+   
   </div>
   <div class="circles">
     <li></li>
@@ -82,27 +83,28 @@
     </section>
 
     
+   
      <!-- ====== Blog Start ====== -->
      <section class="ud-blog-grids">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4 col-md-6" *ngFor="let aviso of avisos ">
+          <div class="col-lg-4 col-md-6" *ngFor="let platica of platicas ">
             <div class="ud-single-blog">
               <div class="ud-blog-image contenedor">
-                <a href="javascript:void(0)"  (click)="detalle(aviso.id)">
-                  <img src="{{aviso.data.foto}}" alt="{{aviso.data.foto}}" />
+                <a href="javascript:void(0)"  (click)="detalle(platica.id)">
+                  <img src="{{platica.data.foto}}" alt="{{platica.data.foto}}" />
                 </a>
               </div>
               <div class="ud-blog-content">
-                <span class="ud-blog-date">{{ aviso.data.fecha }}</span>
+                <span class="ud-blog-date">{{ platica.data.fecha }}</span>
                 <h3 class="ud-blog-title ">
-                   <a  href="javascript:void(0)"  class="limitado2"   (click)="detalle(aviso.id)">
-                    {{ aviso.data.titulo }}
+                   <a  href="javascript:void(0)"  class="limitado2"   (click)="detalle(platica.id)">
+                    {{ platica.data.tema }}
                   </a>
                 
                 </h3>
                 <p class="ud-blog-desc limitado2">
-                  {{ aviso.data.descripcion }}
+                  {{ platica.data.descripcion }}
                 </p>
               </div>
             </div>

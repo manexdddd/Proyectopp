@@ -25,108 +25,126 @@
     <!-- ====== Banner End ====== -->
 
     <!-- ====== Login Start ====== -->
-    <section class="ud-login" style="border-radius: 12px; margin-top: -70px; text-align: center;">
+    <section class="ud-login">
       <div class="container">
         <div class="row">
           <div class="col-lg-12">
-            <div style="width: 100%; max-width: 550px; border-radius: 15px; margin: auto;" class="ud-logiiin-wrapper ">
-              <div class="uds-logiin-logo" style="margin-top: 20px;">
-                <img style="width: 300px; margin-bottom: -27px; margin-left: auto; margin-top: 40px; border-radius: 500px;" src="assets/images/logo/Logo-registro.jpeg" alt="logo" />
+            <div class="ud-login-wrapper">
+              <div class="ud-login-logo">
+                <img src="assets/images/registro.png" alt="logo" />
               </div>
-              <div class="" style="display: flex; justify-content: center; ">
-
-                <form class=" form " style="border-radius: 12px; margin-top: 28px;" [formGroup]="registroForm" (ngSubmit)="onSubmit()">
-                  <p class="title1 justify-content-start">&nbsp;&nbsp;Registrate Ahora</p><br>
-                  <p class="message">
-                    ¡Regístrate ahora y obtén acceso completo a nuestra aplicación! </p><br>
-                      
-                    <div class="flex-column ">
-                      
-                        
-                      
-                      
-                      <label>
-                        
-                        <form class="inputa" style="width: 390px;" action="/ruta/del/servidor" method="post" enctype="multipart/form-data">
-                          <span style="margin-left: 30spx; padding-bottom: 15px; padding-left: -30px;" for="archivo">Selecciona un archivo para tu foto de perfil:</span>
-                          <input type="file" id="archivo" name="archivo" accept=".jpg, .jpeg, .png">
-                          <input class="submit2" type="submit" value="Subir archivo">
-                        </form>
-                        
-                      </label>
-                    </div>
-                    <div class="flex justify-content-center">
-                      <label>
-                          <input class="inputa" style="width: 192px; " type="text" placeholder="" required>
-                          <span>Nombre</span>
-                          <div *ngIf="registroForm.get('name')?.touched && registroForm.get('name')?.errors?.['required']"
-                    class="alert alert-danger">Este campo es Obligatorio</div>
-                      </label>
-                      <label>
-                          <input class="inputa" style="width: 192px;" type="text" placeholder="" required>
-                          <span>Apellido</span>
-                          <div *ngIf="registroForm.get('ape')?.touched && registroForm.get('ape')?.errors?.['required']"
-                    class="alert alert-danger">Este campo es Obligatorio</div>
-                      </label>
-                      
-                  </div>
-                  <div class="flex justify-content-center">
-                    <label>
-                      <input class="inputa" style="width: 192px;" type="number" placeholder="" required min="15" max="99">
-                      <span>Edad</span>
-                      <div *ngIf="registroForm.get('edad')?.touched && registroForm.get('edad')?.errors?.['required']"
-                    class="alert alert-danger">Este campo es Obligatorio</div>
-                    </label>
-                    <label>
-                        <input class="inputa" style="width: 192px;" type="date" placeholder="" required>
-                        <span>Fecha de Nacimiento</span>
-                        <div *ngIf="registroForm.get('fecha')?.touched && registroForm.get('fecha')?.errors?.['required']"
-                    class="alert alert-danger">Este campo es Obligatorio</div>
-                    </label>
-                    
-                </div>
-                <div class="flex justify-content-center">
-                  <label>
-                    <select class="inputa" style="width: 192px;" required>
-                      <option value="" disabled selected>Selecciona tu sexo</option>
-                      <option value="masculino">Masculino</option>
-                      <option value="femenino">Femenino</option>
-                      <option value="otro">Otro</option>
-                    </select>
-                    <span>Sexo</span>
-                    <div *ngIf="registroForm.get('sex')?.touched && registroForm.get('sex')?.errors?.['required']"
-                    class="alert alert-danger">Este campo es Obligatorio</div>
-                  </label>
-                  <label>
-                    <input class="inputa" style="width: 192px;" type="tel" placeholder="" pattern="[0-9]{10}" required title="Ingresa un número de teléfono válido de 10 dígitos">
-                    <span>Teléfono</span>
-                    <div *ngIf="registroForm.get('tel')?.touched && registroForm.get('tel')?.errors?.['required']"
-                    class="alert alert-danger">Este campo es Obligatorio</div>
-                    
-                
-                    <div *ngIf="registroForm.get('tel')?.hasError('pattern') && registroForm.get('tel')?.touched"  class="alert alert-danger">
-                      Ingresa correctamente tu Numero.
-                    </div>
-                  </label>
+              <div class="text-center bg-color load " *ngIf="progreso"><h1>Registrandote </h1>
+                <div  class=" container d-flex align-items-center justify-content-center">
+                  <svg class="pencil" viewBox="0 0 200 200" width="200px" height="200px" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                      <clipPath id="pencil-eraser">
+                        <rect rx="5" ry="5" width="30" height="30"></rect>
+                      </clipPath>
+                    </defs>
+                    <circle class="pencil__stroke" r="70" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="439.82 439.82" stroke-dashoffset="439.82" stroke-linecap="round" transform="rotate(-113,100,100)" />
+                    <g class="pencil__rotate" transform="translate(100,100)">
+                      <g fill="none">
+                        <circle class="pencil__body1" r="64" stroke="hsl(223,90%,50%)" stroke-width="30" stroke-dasharray="402.12 402.12" stroke-dashoffset="402" transform="rotate(-90)" />
+                        <circle class="pencil__body2" r="74" stroke="hsl(223,90%,60%)" stroke-width="10" stroke-dasharray="464.96 464.96" stroke-dashoffset="465" transform="rotate(-90)" />
+                        <circle class="pencil__body3" r="54" stroke="hsl(223,90%,40%)" stroke-width="10" stroke-dasharray="339.29 339.29" stroke-dashoffset="339" transform="rotate(-90)" />
+                      </g>
+                      <g class="pencil__eraser" transform="rotate(-90) translate(49,0)">
+                        <g class="pencil__eraser-skew">
+                          <rect fill="hsl(223,90%,70%)" rx="5" ry="5" width="30" height="30" />
+                          <rect fill="hsl(223,90%,60%)" width="5" height="30" clip-path="url(#pencil-eraser)" />
+                          <rect fill="hsl(223,10%,90%)" width="30" height="20" />
+                          <rect fill="hsl(223,10%,70%)" width="15" height="20" />
+                          <rect fill="hsl(223,10%,80%)" width="5" height="20" />
+                          <rect fill="hsla(223,10%,10%,0.2)" y="6" width="30" height="2" />
+                          <rect fill="hsla(223,10%,10%,0.2)" y="13" width="30" height="2" />
+                        </g>
+                      </g>
+                      <g class="pencil__point" transform="rotate(-90) translate(49,-30)">
+                        <polygon fill="hsl(33,90%,70%)" points="15 0,30 30,0 30" />
+                        <polygon fill="hsl(33,90%,50%)" points="15 0,6 30,0 30" />
+                        <polygon fill="hsl(223,10%,10%)" points="15 0,20 10,10 10" />
+                      </g>
+                    </g>
+                  </svg>
                   
-              </div> <br>
-              
+                </div>
+              </div>
 
-              <label>
-                <select class="inputa" required id="carrera" formControlName="carrera">
-                  <option value="" disabled selected>Selecciona tu Carrera</option>
-                  <option value="ingenieria">Sistemas Computacionales</option>
-                  <option value="informatica">Gestión Empresarial</option>
-                  <option value="nanotecnologia">Nanotecnología</option>
-                  <option value="mecatronica">Mecatrónica</option>
-                  <option value="bioquimica">Bioquímica</option>
-                  <option value="industrial">Industrial</option>
-                  <option value="tics">TIC's</option>
-                  <!-- Agrega más opciones según sea necesario -->
-                </select>
-                <span>Carrera</span>
-                <div *ngIf="registroForm.get('carrera')?.hasError('required') && registroForm.get('carrera')?.touched"  class="alert alert-danger">
-                  La selección de carrera es obligatoria.
+              <form class="ud-login-form" (ngSubmit) = "onSubmit()" [formGroup]="registroForm" *ngIf="!progreso">
+                <div class="ud-form-group">
+                  <label class="form-label">Foto Infantil</label>
+                  <input
+                    type="file"
+                    name="file"
+                    class="form-control"
+                    required
+                    formControlName="foto"
+                    
+                    [(ngModel)]="usuario.email"
+                    (change)="uploadImage($event)"
+                  />
+                  <div *ngIf="registroForm.get('file')?.touched && registroForm.get('email')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                  <div *ngIf="registroForm.get('file')?.touched && registroForm.get('email')?.errors?.['file']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                </div>
+                <div class="ud-form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Correo Insitucional @itsch.edu.mx"
+                    required
+                    formControlName="email"
+                    (input)="lowecase()"
+                    [(ngModel)]="usuario.email"
+                  />
+                  <div *ngIf="registroForm.get('email')?.touched && registroForm.get('email')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                  <div *ngIf="registroForm.get('email')?.touched && registroForm.get('email')?.errors?.['email']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                </div>
+                
+                <div class="ud-form-group">
+                  <input
+                    type="password"
+                    id="password"
+                    placeholder="Contraseña"
+                    formControlName="password"
+                    required
+                   
+                  />
+                  <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                  <div *ngIf="registroForm.get('password')?.touched && registroForm.get('password')?.errors?.['minlength']"
+                  class="alert alert-danger">La contraseña debe de ser de 6 numeros o más</div>
+                </div>
+                
+                <div class="ud-form-group">
+                  <input
+                    type="password"
+                    name="confirmPassword"
+                    placeholder="Confirmar Contraseña"
+                    formControlName="confirmPassword"
+                    [(ngModel)]="usuario.psw"
+                    required
+                  />
+                  <div *ngIf="registroForm.get('confirmPassword')?.touched && registroForm.get('confirmPassword')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
+                  <div  *ngIf="registroForm.errors?.['mismatch']"
+                  class="alert alert-danger">Las contraseñas no coinciden</div>
+                </div>
+                
+                <div class="ud-form-group">
+                  <input
+                    type="text"
+                    id="name"
+                    placeholder="Nombre"
+                    formControlName="name"
+                    required
+                    [(ngModel)]="usuario.nombre"
+                  />
+                  <div *ngIf="registroForm.get('name')?.touched && registroForm.get('name')?.errors?.['required']"
+                  class="alert alert-danger">Este campo es Obligatorio</div>
                 </div>
                 <div class="ud-form-group">
                   <input
@@ -208,58 +226,31 @@
                   <div *ngIf="registroForm.get('grupo')?.touched && registroForm.get('grupo')?.errors?.['required']"
                   class="alert alert-danger">Este campo es Obligatorio</div>
                 </div>
-
-                  
-                  <label>
-                    <input class="inputa" type="password" placeholder="" required id="password" formControlName="password">
-                    <span>Contraseña</span>
-                    <div *ngIf="registroForm.get('password')?.hasError('required') && registroForm.get('password')?.touched"  class="alert alert-danger">
-                      La contraseña es obligatoria.
-                    </div>
-                    <div *ngIf="registroForm.get('password')?.hasError('minlength') && registroForm.get('password')?.touched"  class="alert alert-danger">
-                      La contraseña debe tener al menos 6 caracteres.
-                    </div>
-                  </label>
-                  
-                  <label>
-                    <input class="inputa" type="password" placeholder="" required id="confirmPassword" formControlName="confirmPassword">
-                    <span>Confirma tu contraseña</span>
-                    <div *ngIf="registroForm.hasError('mismatch') && registroForm.get('confirmPassword')?.touched"  class="alert alert-danger">
-                      Las contraseñas no coinciden.
-                    </div>
-                  </label>
-                  <br style="line-height: 0.5">
-                  <button class="submit1" type="submit">Registrarse</button> <br>
-                  <p class="signin">¿Ya tienes una cuenta? <a href="#">Iniciar Sesión</a> </p>
-
-                  <p class="p line">O Inicia Sesión con:</p>
-                  <div class="flex-row">
-                    <button class="btno google">
-                      <svg xml:space="preserve" style="enable-background:new 0 0 512 512;" viewBox="0 0 512 512" y="0px" x="0px" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" id="Layer_1" width="20" version="1.1">
-                      <path d="M113.47,309.408L95.648,375.94l-65.139,1.378C11.042,341.211,0,299.9,0,256
-                        c0-42.451,10.324-82.483,28.624-117.732h0.014l57.992,10.632l25.404,57.644c-5.317,15.501-8.215,32.141-8.215,49.456
-                        C103.821,274.792,107.225,292.797,113.47,309.408z" style="fill:#FBBB00;"></path>
-                      <path d="M507.527,208.176C510.467,223.662,512,239.655,512,256c0,18.328-1.927,36.206-5.598,53.451
-                        c-12.462,58.683-45.025,109.925-90.134,146.187l-0.014-0.014l-73.044-3.727l-10.338-64.535
-                        c29.932-17.554,53.324-45.025,65.646-77.911h-136.89V208.176h138.887L507.527,208.176L507.527,208.176z" style="fill:#518EF8;"></path>
-                      <path d="M416.253,455.624l0.014,0.014C372.396,490.901,316.666,512,256,512
-                        c-97.491,0-182.252-54.491-225.491-134.681l82.961-67.91c21.619,57.698,77.278,98.771,142.53,98.771
-                        c28.047,0,54.323-7.582,76.87-20.818L416.253,455.624z" style="fill:#28B446;"></path>
-                      <path d="M419.404,58.936l-82.933,67.896c-23.335-14.586-50.919-23.012-80.471-23.012
-                        c-66.729,0-123.429,42.957-143.965,102.724l-83.397-68.276h-0.014C71.23,56.123,157.06,0,256,0
-                        C318.115,0,375.068,22.126,419.404,58.936z" style="fill:#F14336;"></path></svg>
-                 
-                      Google 
-                      
-                    </button></div>
+                <div class="ud-form-group">
+                  <button type="submit" class="ud-main-btn w-100" [disabled]="!registroForm.valid">Registrarse</button>
+                </div>
               </form>
 
-              
-               </div>
+              <div class="ud-socials-connect" >
+                <p>O Inicia Sesion con</p>
 
-              
+                <ul>
+                  
+                  
+                  <li>
+                    <a href="javascript:void(0)" class="google">
+                      <i class="lni lni-google"></i>
+                    </a>
+                  </li>
+                </ul>
+              </div>
 
-             
+              <a class="forget-pass" href="javascript:void(0)" >
+                Olvidaste la contraseña?
+              </a>
+              <p class="signup-option" >
+                Ya estas Registrado? <a href="login" > Inicia sesion Aqui </a>
+              </p>
             </div>
           </div>
         </div>

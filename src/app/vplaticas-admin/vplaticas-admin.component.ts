@@ -1,10 +1,12 @@
 import { ChangeDetectorRef, Component } from '@angular/core';
-import { AvisosService } from '../services/avisos.service';
-import { AngularFireStorage } from '@angular/fire/compat/storage';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
-import { finalize } from 'rxjs';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { AngularFireStorage } from '@angular/fire/compat/storage';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+import { finalize } from 'rxjs';
+import { AvisosService } from '../services/avisos.service';
+import { PlaticasService } from '../services/platicas.service';
+import * as firebase from 'firebase/compat';
 
 @Component({
   selector: 'app-vplaticas-admin',
@@ -12,15 +14,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./vplaticas-admin.component.css']
 })
 export class VplaticasAdminComponent {
-  avisos: any[];
-  avisof:any
-  avisoe ={
-   titulo:'',
-   descripcion:'',
-   fecha:'',
-   contenido:'',
-   foto:'',
-      lugar:'',
+  platicas: any[];
+  platicaf:any
+  platicae ={
+    ponente:'',
+    tema:'',
+    asistentes:'',
+    cupo:'',
+    foto:'',
+       descripcion:'',
+       lugar:'',
+       fecha:'',
+       hora:''
   };
   
   
@@ -29,16 +34,16 @@ export class VplaticasAdminComponent {
   imagen:boolean=false;
   newe:any
  
- constructor(private av:AvisosService,private  storage: AngularFireStorage, private afs: AngularFirestore
+ constructor(private av:PlaticasService,private  storage: AngularFireStorage, private afs: AngularFirestore
    ,private changeDetector: ChangeDetectorRef,
    private  fb: FormBuilder,private router:Router){
  
   
  
-   this.av.getAll().subscribe(data => {
-     this.avisos = data;
-     console.log(this.avisos)
-    });
+     this.av.getAll().subscribe(data => {
+       this.platicas = data.sort((a, b) => new Date(b.data.fecha).getTime() - new Date(a.data.fecha).getTime());
+       console.log(this.platicas);
+      });
   
  }
  
@@ -47,11 +52,11 @@ export class VplaticasAdminComponent {
  }
  
  eliminar(id:string): void {
- this.av.getaviso(id).subscribe(avisofa => {
-     this.avisof = avisofa;
+ this.av.getplatica(id).subscribe(platicaf => {
+     this.platicaf = this.platicaf;
      
-   const url = this.avisof.foto
-     console.log(avisofa)
+   const url = this.platicaf.foto
+     
    return this.storage.storage.refFromURL(url).delete();
    });
    this.av.delete(id).then(() => {
@@ -60,7 +65,7 @@ export class VplaticasAdminComponent {
      
      console.log(id);
    }).catch((error) => {
-     console.error('Error deleting aviso:', error);
+     console.error('Error deleting platica:', error);
    });
    
   }
@@ -69,14 +74,17 @@ export class VplaticasAdminComponent {
    
    localStorage.setItem("avid","");
     localStorage.setItem("avid",id);
-   this.av.getaviso(id).subscribe(avisoe => {
-     this.avisoe = avisoe as { titulo:'',
-     descripcion:'',
-     fecha:'',
-     contenido:'',
+   this.av.getaviso(id).subscribe(platicae => {
+     this.platicae = platicae as {  ponente:'',
+     tema:'',
+     asistentes:'',
+     cupo:'',
      foto:'',
-        lugar:'',};
-     if(this.avisoe.foto == ""){
+        descripcion:'',
+        lugar:'',
+        fecha:'',
+        hora:''};
+     if(this.platicae.foto == ""){
        this.imagen =true;
      }
  
@@ -85,9 +93,9 @@ export class VplaticasAdminComponent {
   }
  
   eliminaf(){
-   const url = this.avisoe.foto
+   const url = this.platicae.foto
      imagen:true;
-     this.afs.doc('avisos/'+localStorage.getItem("avid")).update({ foto: '' });
+     this.afs.doc('platicas/'+localStorage.getItem("avid")).update({ foto: '' });
      
      return this.storage.storage.refFromURL(url).delete();
      
@@ -96,14 +104,14 @@ export class VplaticasAdminComponent {
   uploadImage(event) {
    const file = event.target.files[0];
    this.imagen=false;
-   const filePath = `avisos/${new Date().getTime()}_${file.name}`;
+   const filePath = `platicas/${new Date().getTime()}_${file.name}`;
    const fileRef = this.storage.ref(filePath);
    const task = this.storage.upload(filePath, file);
  
    task.snapshotChanges().pipe(
      finalize(() => {
        fileRef.getDownloadURL().subscribe(url => {
-         this.avisoe.foto = url;
+         this.platicae.foto = url;
          
        });
      })
@@ -112,18 +120,22 @@ export class VplaticasAdminComponent {
  
  editardocumento(){
    
-   console.log(this.avisoe.titulo);
-   this.av.update(localStorage.getItem("avid"),{ foto:  this.avisoe.foto,
-      titulo :
-     this.avisoe.titulo,
+   console.log(this.platicae.tema);
+   this.av.update(localStorage.getItem("avid"),{ foto:  this.platicae.foto,
+      tema:
+     this.platicae.tema,
      descripcion :
-     this.avisoe.descripcion,
-     contenido :
-     this.avisoe.contenido,
+     this.platicae.descripcion,
+     hora :
+     this.platicae.hora,
      fecha :
-     this.avisoe.fecha,
+     this.platicae.fecha,
      lugar :
-     this.avisoe.lugar
+     this.platicae.lugar,
+     ponente :
+     this.platicae.ponente,
+     cupo :
+     this.platicae.cupo
    }).then(() => {
      
    
@@ -139,19 +151,19 @@ export class VplaticasAdminComponent {
  
  initForm(): FormGroup{
    return this.fb.group({
-     titulo: [''],
+     tema: [''],
      lugar: [''],
      fecha: [''],
      descripcion:[''],
-     contenido: [''],
-     
+     hora: [''],
+     cupo: [''],
+     ponente: [''],
    });
  }
  
  detalle(id:string){
-   localStorage.setItem("detalleid",id)
-   this.router.navigate(['blog-admin']);
+   localStorage.setItem("as",id)
+   this.router.navigate(['people-root']);
  
  }
- }
- 
+}

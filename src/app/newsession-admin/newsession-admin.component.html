@@ -84,21 +84,21 @@
     <section class="section dashboard">
         <div class="row">
             <!-- Inicia el bucle *ngFor para iterar sobre sesiones -->
-            <div class="col-sm-4" *ngFor="let sesion of sesiones; index as i">
+            <div class="col-sm-4 " *ngFor="let sesion of sesiones; index as i">
               <!-- Contenido del bucle -->
-              <div class="card">
+              <div class="card" style="margin: 10px;">
                 <div class="card-body">
                   <h5 class="card-title">Tipo: {{ sesion.data.tipo }}</h5>
                   <p class="card-text">Nombre: {{ sesion.data.nombreAlumno }}</p>
-                  <p class="card-text">Nombre Piscolog@: {{ sesion.data.nombreMedico }}</p>
+                  <p class="card-text">Correo Piscolog@: {{ sesion.data.nombreMedico }}</p>
                   <p class="card-text">Numero de C°: {{ sesion.data.numeroC }}</p>
                   <p class="card-text">Fecha: {{ sesion.data.fecha }}</p>
                   <p class="card-text">Hora: {{ sesion.data.hora }}</p>
-                  <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editar(sesion.id)">Modificar</button>
-                    <button class="btn btn-danger" type="button" (click)="eliminar(sesion.id)">Cancelar Sesión</button>
+                  <div class="d-grid gap-2 d-md-block" style="margin: 10px;">
+                    <button class="btn btn-primary" style="margin: 5px; background-color: #b89856;" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="editar(sesion.id)">Modificar</button>
+                    <button class="btn btn-danger" style="margin: 5px; background-color: #295a83;"  type="button" (click)="eliminar(sesion.id)">Cancelar Sesión</button>
                   </div>
-                </div>
+                </div>      
               </div>
               <!-- Fin del contenido del bucle -->
             </div>
@@ -127,8 +127,8 @@
                   <label for="nombreMedico" class="col-form-label">Nombre del Psicologo:</label>
                   <select class="form-select" id="nombreMedico" value="{{sesionee.nombreMedico}}" [(ngModel)]="sesionee.nombreMedico" formControlName="nombreMedico">
                     <option selected disabled value="">Psicologo</option>
-                    <option>Narce</option>
-                    <option>Citalli</option>
+                    <option>narce@gmail.com</option>
+                    <option>citla@gmail.com</option>
                   </select>
                 </div>
                 <div class="mb-3">

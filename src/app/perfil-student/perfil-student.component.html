@@ -364,8 +364,8 @@
                                                 <th></th>
                                                 <th>Fecha de Solicitud</th>
                                               </tr>
-                                              <tr>
-                                                <td style="padding-bottom: 30px;">Materias Atrasadas</td>
+                                              <tr >
+                                                <td style="padding-bottom: 30px;">{{entrevistas}}</td>
                                                 <td style="padding-bottom: 30px;"></td>
                                                 <td style="padding-bottom: 30px;">15/12/2023</td>
                                               </tr>
@@ -769,6 +769,27 @@
         
        
         </section>
+        <div *ngIf="entrevistas.length > 0; else noEntrevistas">
+          <h3>Entrevistas:</h3>
+          <ul>
+            <li *ngFor="let entrevista of entrevistas">
+              <div *ngIf="entrevista.mapa">
+                <p>Tema: {{ entrevista.mapa.tema }}</p>
+                <p>Tutor: {{ entrevista.mapa.tutor }}</p>
+                <p>Fecha: {{ entrevista.mapa.fecha | date:'dd/MM/yyyy' }}</p>
+                <!-- Agrega más líneas según las propiedades de tu mapa -->
+              </div>
+            </li>
+          </ul>
+        </div>
+        <ng-template #noEntrevistas>
+          <p>No hay entrevistas disponibles.</p>
+        </ng-template>
+        
+        <!-- Resto de tu código HTML -->
+        
+        
+        
     </section></main>        
     
              
