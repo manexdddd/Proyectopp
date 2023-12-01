@@ -71,6 +71,8 @@ import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
 import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
 import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
 import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
+import { CavisosTutorComponent } from './cavisos-tutor/cavisos-tutor.component';
+import { AvisosTutorComponent } from './avisos-tutor/avisos-tutor.component';
 import { PlaticasStudentComponent } from './platicas-student/platicas-student.component';
 import { BlogStudentComponent } from './blog-student/blog-student.component';
 import { PdetalleStudentComponent } from './pdetalle-student/pdetalle-student.component';
@@ -136,6 +138,8 @@ import { PdetalleStudentComponent } from './pdetalle-student/pdetalle-student.co
       GrupoalumnosTutoresComponent,
       EditAlumnoTutorComponent,
       TutorSeccionTutoriasComponent,
+      CavisosTutorComponent,
+      AvisosTutorComponent,
       PlaticasStudentComponent,
       BlogStudentComponent,
       PdetalleStudentComponent,

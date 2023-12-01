@@ -3,8 +3,10 @@ import { AuthService } from '../services/auth.service';
 import { RootService } from '../services/root.service';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { AngularFireStorage } from '@angular/fire/compat/storage';
-import { finalize } from 'rxjs';
-import * as $ from 'jquery';
+import { Subscription, finalize } from 'rxjs';
+import { AbstractControl, FormBuilder, FormGroup, ValidationErrors, Validators } from '@angular/forms';
+
+
 
 @Component({
   selector: 'app-edit-alumno-tutor',
@@ -12,6 +14,12 @@ import * as $ from 'jquery';
   styleUrls: ['./edit-alumno-tutor.component.css']
 })
 export class EditAlumnoTutorComponent {
+
+  registroForm! : FormGroup;
+  progreso: boolean;
+  canalizadoPorTutor: boolean = false;
+  canalizadoPorVoluntario: boolean = false;
+  subscription: Subscription;
 
   constructor(private renderer: Renderer2, private elementRef: ElementRef, private ro:RootService,
     private auth:AuthService, private afs: AngularFirestore,private storage: AngularFireStorage) {
