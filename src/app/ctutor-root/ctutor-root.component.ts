@@ -94,7 +94,7 @@ onSubmit(): void {
           // El usuario ha iniciado sesión con éxito
           this.ro.crearPsyco(email,this.admin)
           alert("Registro correcto")
-          this.router.navigate(['/create-tutor']);
+          this.router.navigate(['/tutorv-root']);
         })
         .catch(error => {
           // Manejo de errores de inicio de sesión
