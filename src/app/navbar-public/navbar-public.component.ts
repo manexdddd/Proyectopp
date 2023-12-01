@@ -60,10 +60,10 @@ export class NavbarPublicComponent implements AfterViewInit  {
 
     if (window.pageYOffset > sticky) {
       udHeader.classList.add("sticky");
-      logo.src = "assets/images/logo/logo-2.svg";
+      logo.src = "assets/images/logo/Logo-PsicoItsch1-web-color1.png";
     } else {
       udHeader.classList.remove("sticky");
-      logo.src = "assets/images/logo/logo.svg";
+      logo.src = "assets/images/logo/Logo-PsicoItsch1-web-color.png";
     }
   }
 }

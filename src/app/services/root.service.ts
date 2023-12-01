@@ -64,7 +64,7 @@ export class RootService {
     return documentRef.set(data)
       .then(() => {
         alert('Documento creado con éxito');
-        
+        this.router.navigate(['/tutorv-root']);
       })
       .catch(error => {
         alert('Error al crear el documento:');
