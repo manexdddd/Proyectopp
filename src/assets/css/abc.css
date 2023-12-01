@@ -2238,7 +2238,6 @@ text-decoration: none;
 }
 .limitado2 {
   width: 300px; 
-  height: 100px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
