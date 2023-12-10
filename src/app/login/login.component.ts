@@ -78,6 +78,10 @@ this.auth.login(email,psw)
     this.subscription = this.auth.currentprogreso.subscribe(value => {
       this.progreso = value;
     });
+    this.showUp();
+
+
+    
   }
   showUp() {
     this.contentPage.nativeElement.scrollIntoView();
@@ -126,4 +130,10 @@ this.auth.login(email,psw)
 
 
       
+
+
+
+
+
+
 

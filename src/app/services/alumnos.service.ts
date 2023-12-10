@@ -1,13 +1,20 @@
 import { Injectable } from '@angular/core';
+import { AngularFireDatabase, AngularFireList } from '@angular/fire/compat/database';
 import { AngularFirestore } from '@angular/fire/compat/firestore';
 import { Observable, map } from 'rxjs';
+import { entrevista } from './entrevista.interface';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AlumnosService {
+  private entrevistaDB: AngularFireList<entrevista>
 
-  constructor(private afs: AngularFirestore) { }
+  constructor(private afs: AngularFirestore, private db: AngularFireDatabase) { 
+    this.entrevistaDB = this.db.list('/entrevista', (ref) =>
+    ref.orderByChild('fecha')
+    );
+  }
 
   getalumno(alumid: string) {
     return this.afs.collection('alumnos').doc(alumid).valueChanges();
@@ -25,4 +32,9 @@ export class AlumnosService {
     );
   }
   
+ 
+
+  getentre(collectionName: string): Observable<any[]> {
+    return this.afs.collection('alumnos').valueChanges({ idField: 'entrevista' });
+  }
 }

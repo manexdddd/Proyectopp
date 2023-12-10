@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  
+</head>
+
+<body>
+
+<app-sidebar-student></app-sidebar-student>
+
+  <main id="main" class="main">
+
+    <section  class="section dashboard;" style="background-color: #0073f74e; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Tablero</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active">Tablero</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+   <h2 class="fs-3 fw-bold mb-2">Solicitudes de Sesión</h2>
+   <p class="text-muted ">Get a quick overview of your company's current status below, or click into one of the sections for a more detailed breakdown.</p><br>
+   <div class="navbar-2" style="size: 200px; border-radius: 15px; margin-right: 15px;" >
+    <div class="button d-sm-inline-block">
+      <a href="solicitar-atencion" class="btn white-bg mouse-dir">Solicitar Atención <span class="dir-part"></span></a>
+  </div>
+    <div class="nav1-item" ><a href="#">Avisos</a></div>
+    <div class="nav1-item"><a href="#">Platicas</a></div>
+    <div class="nav1-item"><a href="#">Concursos</a></div>
+    <div class="nav1-item"><a href="#">Eventos</a></div>
+   
+  </div>
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
+    </section>
+ 
+ <!-- / Page Title-->
+    <section class="section dashboard">
+       <!-- ====== Login Start ====== -->
+    <div class="containeer" >
+      <div class="row" >
+        <div class="col-lg-9" >
+          <!-- Aquí va tu formulario de inicio de sesión -->
+          <section class="ud-login" id="#up" style="border-radius: 12px; margin-top: -70px;">
+            <div class="container" style="margin-top: 16px;">
+             
+              
+              <div class="row">
+                <div class="col-lg-12" >
+                  <div class="ud-login-wrapper">
+                    <div class="ud-login-logo">
+                      <img style="width: 200px; margin-bottom: -30px; margin-left: auto;" src="assets/images/logo/logo-ajjaj.png" alt="logo" /> <br><br><br>
+                      <label style="font-size: 28px; margin-bottom: 9px;"><b>Bienvenido a PsicoItsch</b> </label> <br><br>
+
+                      <label style="font-size: 16px; margin-bottom: 9px;"><b>¡Solicita Tu Atención Psicologica ahora!</b> </label>
+                    </div>
+                    <div class="" style="display: flex; justify-content: center; ">
+                      
+                      <form class="form" style="border-radius: 12px; margin-top: -70px;" (ngSubmit)="onSubmit()" [formGroup]="solicitudForm">
+
+                        <label for="nombre">
+                          <input class="inputa" id="nombre" type="text" formControlName="nombre" required="">
+                          <span>Nombre Completo</span>
+                        </label>
+                      <div class="flex justify-content-center">
+                        <label for="grupo">
+                          <select  class="inputa" style="width: 192px;" type="text" id="grupo" name="grupo" formControlName="grupo" pattern="\d{3}[A-Za-z]{1}">
+                            <option selected>Elige tu Grupo</option>
+                            <option value="071CA">071CA</option>
+                            <option value="071DB">071DB</option>
+                            <option value="072CA">072CA</option>
+                            <option value="072DB">072DB</option>
+                            <option value="073CA">073CA</option>
+                            <option value="073DB">073DB</option>
+                            <option value="074CA">074CA</option>
+                            <option value="074DB">074DB</option>
+                            <option value="075CA">075CA</option>
+                            <option value="075DB">075DB</option>
+                            <option value="076CA">076CA</option>
+                            <option value="076DB">076DB</option>
+                            <option value="077CA">077CA</option>
+                            <option value="078CA">078CA</option>
+                            <option value="078DB">078DB</option>
+                            <option value="079CA">079CA</option>
+                          </select>
+                          <span>Grupo</span>
+                          
+                      
+                        </label>
+                      
+                        
+                        <label for="numeroC">
+                          <input class="inputa" style="width: 192px;" type="text" id="numeroC" formControlName="numeroC" required="">
+                          <span>Numero de Control</span>
+                      </label>
+                            
+                      </div>
+
+                      <label for="carrera">
+                        <select class="inputa" required id="carrera" formControlName="carrera">
+                          <option value="" disabled selected>Selecciona tu Carrera</option>
+                          <option value="ingenieria">Sistemas Computacionales</option>
+                          <option value="informatica">Gestión Empresarial</option>
+                          <option value="nanotecnologia">Nanotecnología</option>
+                          <option value="mecatronica">Mecatrónica</option>
+                          <option value="bioquimica">Bioquímica</option>
+                          <option value="industrial">Industrial</option>
+                          <option value="tics">TIC's</option>
+                          <!-- Agrega más opciones según sea necesario -->
+                        </select>
+                        <span>Carrera</span>
+                      </label>
+                      <div class="flex justify-content-center">
+                        <label for="telefono">
+                          <input class="inputa" style="width: 192px;" type="number" id="telefono" formControlName="telefono" pattern="[0-9]{10}" required title="Ingresa un número de teléfono válido de 10 dígitos">
+                          <span>Teléfono</span>
+                        </label>
+                        <label for="fecha">
+                          <input class="inputa" style="width: 192px;" type="date" id="fecha" formControlName="fecha">
+                          <span>Fecha</span>
+                      </label>
+                    </div>
+                    <label for="hora">
+                      <input class="inputa" required id="hora" type="time" formControlName="hora">
+                      <span>Hora</span>
+                    </label>
+                    <label for="tutor">
+                      <input class="inputa" required id="tutor" type="text" formControlName="tutor">
+                      <span>Nombre Completo del Tutor</span>
+                    </label>
+                     <label style="margin-bottom: 15px;">
+                      <input class="inputa" required id="name" type="text" placeholder="Canalizado por:" disabled><br>
+                      <div style="position: relative; display: flex; align-items: center; gap: 40px; margin-right: 31px; margin-top: -50px; flex-wrap: nowrap;align-content: center;justify-content: flex-end;">
+                        <input type="checkbox" class="btn-check" id="canalizacion" formControlName="canalizacion" id="btn-check-outlined" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="canalizacion">Tutor</label>
+                        <input type="checkbox" class="btn-check" id="canalizacion" formControlName="canalizacion" autocomplete="off">
+                        <label class="btn btn-outline-primary" for="canalizacion">Voluntaria</label>
+                        
+                      </div>
+                      
+                     </label>
+                      
+
+                     <label for="motivo">
+                      
+                      <textarea class="inputa" style="height: 100px; width: 100%; overflow: auto;" required id="motivo" formControlName="motivo"></textarea>
+                      <span>Motivo de Solicitud de Atención: </span>
+                     </label>
+                   
+
+                     <label for="observaciones">
+                      
+                      <textarea class="inputa" style="height: 100px; width: 100%; overflow: auto;" id="observaciones" formControlName="observaciones"></textarea>
+                      <span>Observaciones... </span>
+                     </label>
+                    <button class="button-submit" type="submit">Solicitar Atencion Psicologica</button> 
+                  </form>               
+                     </div>                                     
+                  </div>                  
+                </div>                
+              </div>      
+            </div>
+           
+          </section>
+        </div>
+        
+      </div>
+    </div>
+
+    <!-- ====== Login End ====== -->
+  </section>
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

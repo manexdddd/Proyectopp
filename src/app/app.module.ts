@@ -24,11 +24,12 @@ import { environment } from '../enviroments/environment';
 import { HomeAdminComponent } from './home-admin/home-admin.component';
 import { SesionesAdminComponent } from './sesiones-admin/sesiones-admin.component';
 import { SidebarAdminComponent } from './sidebar-admin/sidebar-admin.component';
-import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
 import { PerfilAdminComponent } from './perfil-admin/perfil-admin.component';
 import { AttentionAdminComponent } from './attention-admin/attention-admin.component';
 import { SurveyAdminComponent } from './survey-admin/survey-admin.component';
 import { NoticesAdminComponent } from './notices-admin/notices-admin.component';
+import { AngularFireMessagingModule } from '@angular/fire/compat/messaging';
+
 import { AvisosStudentComponent } from './avisos-student/avisos-student.component';
 import { PerfilStudentComponent } from './perfil-student/perfil-student.component';
 import { CarnetStudentComponent } from './carnet-student/carnet-student.component';
@@ -39,6 +40,7 @@ import { AreapsicologiaStudentComponent } from './areapsicologia-student/areapsi
 import { FormsModule } from '@angular/forms';
 import { HomeRootComponent } from './home-root/home-root.component';
 import { SidebarRootComponent } from './sidebar-root/sidebar-root.component';
+import { EditperfilStudentComponent } from './editperfil-student/editperfil-student.component';
 
 import { ProfileRootComponent } from './profile-root/profile-root.component';
 import { CavisosRootComponent } from './cavisos-root/cavisos-root.component';
@@ -46,12 +48,34 @@ import { AvisosRootComponent } from './avisos-root/avisos-root.component';
 import { TutorvRootComponent } from './tutorv-root/tutorv-root.component';
 import { BlogPublicComponent } from './blog-public/blog-public.component';
 import { BlogRootComponent } from './blog-root/blog-root.component';
+import { NewsessionAdminComponent } from './newsession-admin/newsession-admin.component';
+import { FollowupAdminComponent } from './followup-admin/followup-admin.component';
+import { RescheduledAdminComponent } from './rescheduled-admin/rescheduled-admin.component';
+import { RequestsAdminComponent } from './requests-admin/requests-admin.component';
+import { CavisosAdminComponent } from './cavisos-admin/cavisos-admin.component';
+import { BlogAdminComponent } from './blog-admin/blog-admin.component';
+import { CplaticasAdminComponent } from './cplaticas-admin/cplaticas-admin.component';
+import { VplaticasAdminComponent } from './vplaticas-admin/vplaticas-admin.component';
+import { SatisfactionsurveyAdminComponent } from './satisfactionsurvey-admin/satisfactionsurvey-admin.component';
+import { ServicesurveyAdminComponent } from './servicesurvey-admin/servicesurvey-admin.component';
+import { SurveysessionAdminComponent } from './surveysession-admin/surveysession-admin.component';
 import { PsycoRootComponent } from './psyco-root/psyco-root.component';
 import { CpsycoRootComponent } from './cpsyco-root/cpsyco-root.component';
 import { CtutorRootComponent } from './ctutor-root/ctutor-root.component';
 import { CplaticasRootComponent } from './cplaticas-root/cplaticas-root.component';
 import { PlaticasRootComponent } from './platicas-root/platicas-root.component';
 import { AsistentesRootComponent } from './asistentes-root/asistentes-root.component';
+import { SolicitarAtencionComponent } from './solicitar-atencion/solicitar-atencion.component';
+import { HomeTutoresComponent } from './home-tutores/home-tutores.component';
+import { SidebarTutorComponent } from './sidebar-tutor/sidebar-tutor.component';
+import { GrupoalumnosTutoresComponent } from './grupoalumnos-tutores/grupoalumnos-tutores.component';
+import { EditAlumnoTutorComponent } from './edit-alumno-tutor/edit-alumno-tutor.component';
+import { TutorSeccionTutoriasComponent } from './tutor-seccion-tutorias/tutor-seccion-tutorias.component';
+import { CavisosTutorComponent } from './cavisos-tutor/cavisos-tutor.component';
+import { AvisosTutorComponent } from './avisos-tutor/avisos-tutor.component';
+import { PlaticasStudentComponent } from './platicas-student/platicas-student.component';
+import { BlogStudentComponent } from './blog-student/blog-student.component';
+import { PdetalleStudentComponent } from './pdetalle-student/pdetalle-student.component';
 
 
 @NgModule({
@@ -79,7 +103,9 @@ import { AsistentesRootComponent } from './asistentes-root/asistentes-root.compo
     PerfilStudentComponent,
     CarnetStudentComponent,
     SidebarPerfilStudentComponent,
+    SidebarPerfilStudentComponent,
     AreapsicologiaStudentComponent,
+    EditperfilStudentComponent,
     HomeRootComponent,
     SidebarRootComponent,
    
@@ -89,12 +115,34 @@ import { AsistentesRootComponent } from './asistentes-root/asistentes-root.compo
       TutorvRootComponent,
       BlogPublicComponent,
       BlogRootComponent,
+      NewsessionAdminComponent,
+      FollowupAdminComponent,
+      RescheduledAdminComponent,
+      RequestsAdminComponent,
+      CavisosAdminComponent,
+      BlogAdminComponent,
+      CplaticasAdminComponent,
+      VplaticasAdminComponent,
+      SatisfactionsurveyAdminComponent,
+      ServicesurveyAdminComponent,
+      SurveysessionAdminComponent,
       PsycoRootComponent,
       CpsycoRootComponent,
       CtutorRootComponent,
       CplaticasRootComponent,
       PlaticasRootComponent,
       AsistentesRootComponent,
+      SolicitarAtencionComponent,
+      HomeTutoresComponent,
+      SidebarTutorComponent,
+      GrupoalumnosTutoresComponent,
+      EditAlumnoTutorComponent,
+      TutorSeccionTutoriasComponent,
+      CavisosTutorComponent,
+      AvisosTutorComponent,
+      PlaticasStudentComponent,
+      BlogStudentComponent,
+      PdetalleStudentComponent,
      
 
   ],

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <app-sidebar-student></app-sidebar-student>
+
+
+
+  <main id="main" class="main">
+
+    <section  class="section dashboard;" style="background-color: #0073f74e; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Tablero</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">{{aviso.titulo}}</a></li>
+            <li class="breadcrumb-item active">Tablero</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+   <h2 class="fs-3 fw-bold mb-2">Avisos</h2>
+   <p class="text-muted ">Get a quick overview of your company's current status below, or click into one of the sections for a more detailed breakdown.</p><br>
+   <div class="navbar-2" style="size: 200px; border-radius: 15px; margin-right: 15px;" >
+    <div class="button d-sm-inline-block">
+      <a href="solicitar-atencion" class="btn white-bg mouse-dir">Solicitar Atención <span class="dir-part"></span></a>
+  </div>
+  <div class="nav1-item" ><a href="home-student">Inicio</a></div>
+  <div class="nav1-item" ><a href="avisos-student">Avisos</a></div>
+  <div class="nav1-item"><a href="platicas-student">Platicas</a></div>
+  <!--   <div class="nav1-item"><a href="#">Concursos</a></div>
+    <div class="nav1-item"><a href="#">Eventos</a></div> --> 
+   
+  </div>
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
+    </section>
+
+    
+     <!-- ====== Blog Details Start ====== -->
+     <section class="ud-blog-details">
+        <div class="container">
+         
+          
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="ud-blog-details-image">
+                <img
+                  src="{{aviso.foto}}"
+                  alt="blog details"
+                />
+                <div class="ud-blog-overlay">
+                  <div class="ud-blog-overlay-content">
+                    <div class="ud-blog-author">
+                      <img src="{{admin.foto}}" alt="author" />
+                      <span>
+                        By <a href="javascript:void(0)"> {{admin.nombre}} </a>
+                      </span>
+                    </div>
+  
+                    <div class="ud-blog-meta">
+                      <p class="date">
+                        <i class="lni lni-calendar"></i> <span>{{aviso.fecha}}</span>
+                      </p>
+                      <p class="comment">
+                        <i class="lni lni-comments"></i> <span>50</span>
+                      </p>
+                      <p class="view">
+                        <i class="lni lni-eye"></i> <span>35</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+  
+            <div class="col-lg-8">
+              <div class="ud-blog-details-content">
+                <h2 class="ud-blog-details-title">
+                  {{aviso.titulo}}
+                </h2>
+                <p class="ud-blog-details-para">
+                  {{aviso.descripcion}}
+                </p>
+                <p class="ud-blog-details-para">
+                  {{aviso.contenido}}
+                </p>
+               
+  
+                <div class="ud-blog-quote">
+                  <i class="lni lni-quotation"></i>
+                  <p>
+                   
+  "La salud mental es tan importante como la salud física, ya que un equilibrio emocional sólido es la base de una vida plena y satisfactoria."
+                  </p>
+                  <h6>“Anonimo”</h6>
+                </div>
+                <h3 class="ud-blog-details-subtitle">
+                  Psicoitsch
+                </h3>
+                <p class="ud-blog-details-para">
+                  La importancia de la salud mental es fundamental en la vida de una persona y en la sociedad en su conjunto. Aquí hay algunas razones que destacan su relevancia:
+                </p>
+                <p class="ud-blog-details-para">
+                  La salud mental influye directamente en la calidad de vida de una persona. Un buen estado mental permite a las personas experimentar emociones positivas, mantener relaciones satisfactorias, y enfrentar desafíos de manera efectiva. Contribuye a la sensación de felicidad y plenitud en la vida cotidiana.
+                  <i class="lni lni-calendar"></i>
+              </p>
+  <h5><a class="mb-5"href="javascript:void(0)" (click)="back()"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-backspace" viewBox="0 0 16 16">
+      <path d="M5.83 5.146a.5.5 0 0 0 0 .708L7.975 8l-2.147 2.146a.5.5 0 0 0 .707.708l2.147-2.147 2.146 2.147a.5.5 0 0 0 .707-.708L9.39 8l2.146-2.146a.5.5 0 0 0-.707-.708L8.683 7.293 6.536 5.146a.5.5 0 0 0-.707 0z"/>
+      <path d="M13.683 1a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-7.08a2 2 0 0 1-1.519-.698L.241 8.65a1 1 0 0 1 0-1.302L5.084 1.7A2 2 0 0 1 6.603 1h7.08zm-7.08 1a1 1 0 0 0-.76.35L1 8l4.844 5.65a1 1 0 0 0 .759.35h7.08a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1h-7.08z"/>
+    </svg> Regresar</a></h5>
+                <div class="ud-blog-details-action">
+                  <ul class="ud-blog-tags">
+                    <li>
+                      <a >Psicoitsch</a>
+                    </li>
+                    <li>
+                      <a>ITSCH</a>
+                    </li>
+                    <li>
+                      <a >Avisos</a>
+                    </li>
+                  </ul>
+                  <div class="ud-blog-share">
+                    <h6>Sigue nuestras redes sociales</h6>
+                    <ul class="ud-blog-share-links">
+                      <li>
+                        <a href="javascript:void(0)" class="facebook">
+                          <i class="lni lni-facebook-filled"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="twitter">
+                          <i class="lni lni-twitter-filled"></i>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="javascript:void(0)" class="linkedin">
+                          <i class="lni lni-linkedin-original"></i>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-4">
+              <div class="ud-blog-sidebar">
+                <div class="ud-newsletter-box">
+                  <img
+                    src="assets/images/blog/dotted-shape.svg"
+                    alt="shape"
+                    class="shape shape-1"
+                  />
+                  <img
+                    src="assets/images/blog/dotted-shape.svg"
+                    alt="shape"
+                    class="shape shape-2"
+                  />
+                  <h3 class="ud-newsletter-title">Inicia Sesion</h3>
+                  <p>Para poder socilicitar atencion Psicologica.</p>
+                  <button class="ud-main-btn" (click)="log()">Iniciar Sesion</button>
+                </div>
+  
+                <div class="ud-articles-box">
+                  <h3 class="ud-articles-box-title">Avisos Recientes</h3>
+                  <ul class="ud-articles-list" *ngFor="let avise of avises; let i = index">
+                    <li *ngIf="i < avises.length - 1">
+                      <div class="ud-article-image rounded-circle" >
+                        <img
+                          src="{{avise.data.foto}}"
+                          alt="author"
+                        />
+                      </div>
+                      <div class="ud-article-content">
+                        <h5 class="ud-article-title">
+                          <a href="javascript:void(0)"  (click)="detalle(avise.id)">
+                              {{avise.data.titulo}}
+                          </a>
+                        </h5>
+                        
+                      </div>
+                    </li>
+                   
+                  
+                  
+                  </ul>
+                </div>
+  
+                <div class="ud-banner-ad">
+                  <a href="javascript:void(0)">
+                    <img
+                      src="assets/images/info3.jpg"
+                      alt="ad banner"
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ====== Blog Details End ====== -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

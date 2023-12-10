@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dashboard - NiceAdmin Bootstrap Template</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  
+  <link href="/../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="/../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.snow.css" rel="stylesheet">
+  <link href="/../assets/vendor/quill/quill.bubble.css" rel="stylesheet">
+  <link href="/../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="/../assets/vendor/simple-datatables/style.css" rel="stylesheet">
+
+
+
+  <!-- =======================================================
+  * Template Name: NiceAdmin
+  * Updated: Sep 18 2023 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+  <app-sidebar-student></app-sidebar-student>
+
+
+
+  <main id="main" class="main">
+
+    <section  class="section dashboard;" style="background-color: #0073f74e; padding-left: 15px; padding-bottom: 20px; padding-top: 20px; border-radius: 15px;">
+      <div class="pagetitle">
+        <h1>Tablero</h1>
+        <nav>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+            <li class="breadcrumb-item active">Tablero</li>
+          </ol>
+        </nav>
+      </div><!-- End Page Title -->
+   <!-- Page Title-->
+   <h2 class="fs-3 fw-bold mb-2">Avisos</h2>
+   <p class="text-muted ">Get a quick overview of your company's current status below, or click into one of the sections for a more detailed breakdown.</p><br>
+   <div class="navbar-2" style="size: 200px; border-radius: 15px; margin-right: 15px;" >
+    <div class="button d-sm-inline-block">
+      <a href="solicitar-atencion" class="btn white-bg mouse-dir">Solicitar Atención <span class="dir-part"></span></a>
+  </div>
+  <div class="nav1-item" ><a href="home-student">Inicio</a></div>
+  <div class="nav1-item" ><a href="avisos-student">Avisos</a></div>
+  <div class="nav1-item"><a href="platicas-student">Platicas</a></div>
+  <div class="nav1-item"><a href="#">Mis Platicas</a></div>
+
+   
+  </div>
+  <div class="circles">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </div>
+    </section>
+
+    
+   
+     <!-- ====== Blog Start ====== -->
+     <section class="ud-blog-grids">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4 col-md-6" *ngFor="let platica of platicas ">
+            <div class="ud-single-blog">
+              <div class="ud-blog-image contenedor">
+                <a href="javascript:void(0)"  (click)="detalle(platica.id)">
+                  <img src="{{platica.data.foto}}" alt="{{platica.data.foto}}" />
+                </a>
+              </div>
+              <div class="ud-blog-content">
+                <span class="ud-blog-date">{{ platica.data.fecha }}</span>
+                <h3 class="ud-blog-title ">
+                   <a  href="javascript:void(0)"  class="limitado2"   (click)="detalle(platica.id)">
+                    {{ platica.data.tema }}
+                  </a>
+                
+                </h3>
+                <p class="ud-blog-desc limitado2">
+                  {{ platica.data.descripcion }}
+                </p>
+              </div>
+            </div>
+          </div>
+          
+          
+        </div>
+      </div>
+    </section>
+    <!-- ====== Blog End ====== -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+    <div class="copyright">
+      &copy; Copyright <strong><span>NiceAdmin</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+      <!-- All the links in the footer should remain intact. -->
+      <!-- You can delete the links only if you purchased the pro version. -->
+      <!-- Licensing information: https://bootstrapmade.com/license/ -->
+      <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/nice-admin-bootstrap-admin-html-template/ -->
+      Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+    </div>
+  </footer><!-- End Footer -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/chart.js/chart.umd.js"></script>
+  <script src="assets/vendor/echarts/echarts.min.js"></script>
+  <script src="assets/vendor/quill/quill.min.js"></script>
+  <script src="assets/vendor/simple-datatables/simple-datatables.js"></script>
+  <script src="assets/vendor/tinymce/tinymce.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
